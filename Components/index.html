@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<!-- Load React. -->
+  	 <!-- Note: when deploying, replace "development.js" with "production.min.js". -->
+
+	<!--Core React Lib-->
+   	<script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
+	<!-- Core React DOM Lib -->
+	<script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
+  	<!--Because JSX not supported by the browser natively I must load it using babel-->
+  	 <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+	<title>Document</title>
+</head>
+<body>
+	<div id="app"></div>
+
+	<script type="text/babel">
+		//inherit all the basic built-in functionality of the library within the class App
+		//this is a class based Component and all class Based Components must have at least one function
+		//called render
+		
+		//the content within the curly brace is dynamic js content 
+		class App extends React.Component{
+			render(){
+				return(
+					<div className="app-content">
+						<h1>Nelan is a Pintos 56837</h1>
+						<p>{Math.random()*256837}</p>
+					</div>
+				)
+			}
+		}
+	
+		//ReactDOM.render(whichcomponenttorender, locationofwheretorenderthedom)
+		ReactDOM.render(<App />, document.getElementById("app"));
+	</script>
+</body>
+</html>
