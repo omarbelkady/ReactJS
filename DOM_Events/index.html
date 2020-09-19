@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<!-- Load React. -->
+  	 <!-- Note: when deploying, replace "development.js" with "production.min.js". -->
+
+	<!--Core React Lib-->
+   	<script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
+	<!-- Core React DOM Lib -->
+	<script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
+  	<!--Because JSX not supported by the browser natively I must load it using babel-->
+  	 <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+	<title>Document</title>
+</head>
+<body>
+	<div id="app"></div>
+
+	<script type="text/babel">
+		//inherit all the basic built-in functionality of the library within the class App
+		//this is a class based Component and all class Based Components must have at least one function
+		//called render
+		
+		class App extends React.Component{
+		
+			//the content within the curly brace is dynamic js content 
+			state = {
+				name: "Nelan_Ngo",
+				nickName: "Enthusiast C-Family, Pintos, Assembly, LL Programmer"
+			}
+
+			handleMyClickEv(e){
+				console.log(e.target);
+			}
+
+			handleMouseOver(e){
+				console.log(e.target, e.pageX);
+			}
+
+			handleCopy(e){
+				console.log("63526 47 2 2-56837 2LL DAY LEarning About Assembly! Your goto source for help in Assembly!");
+			}
+			render(){
+				return(
+					<div className="app-content">
+						<h1>Nelan is a Pintos 56837</h1>
+						<p>His Full name is: {this.state.name} but his actual name is {this.state.nickName}</p>
+						{/*how to attach an event handler: place a curly brace and place the function you want to call when the event is raised
+						//I must use the this keyword because I am referencing the component */}
+						<button onClick={this.handleMyClickEv}>Click t_h_i_s Button</button>
+						{/*Attaching Event #2: onMouseOver*/}
+						<button onMouseOver={this.handleMouseOver}>Hover Here</button>
+						<p onCopy={this.handleCopy}>Nelan 47 2 2-56837</p>
+					</div>
+				)
+			}
+		}
+	
+		//ReactDOM.render(whichcomponenttorender, locationofwheretorenderthedom)
+		ReactDOM.render(<App />, document.getElementById("app"));
+	</script>
+</body>
+</html>
