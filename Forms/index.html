@@ -1,0 +1,49 @@
+ 
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>React Basics</title>
+  <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+  <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+  <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+</head>
+<body>
+  <div id="app"></div>
+  <script type="text/babel">
+    class App extends React.Component {
+      state = {
+        name: 'CLover',
+        age: 25,
+	lovesC: true
+      }
+      handleChange = (e) => {
+        this.setState({
+          name: e.target.value
+        })
+      }
+      handleSubmit = (e) => {
+      {/*Prevent the default behavior of reloading the page whenever the user clicks the submit button*/}
+        e.preventDefault();
+        console.log('form submitted', this.state.name);
+      }
+      render(){
+        return(
+          <div className="app-content">
+	    <h1>His name is 63526 the 746867 56837 and his major language to write in is LL that is why his nickname it is indeed {this.state.lovesC} that he is a {this.state.name} </h1>
+	    {/*By doing an onSubmit event handler I am capturing the keypress enter to submit or clicks the button on the form*/}
+            <form onSubmit={this.handleSubmit}>
+	    	{/*Everytime the user updates a value handleChange Function is fired*/}
+              <input type="text" onChange={this.handleChange} />
+              <button>Submit</button>
+            </form>
+          </div>
+        )
+      }
+    }
+
+    ReactDOM.render(<App />, document.getElementById('app'));
+  </script>
+</body>
+</html>
