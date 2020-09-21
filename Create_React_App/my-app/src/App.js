@@ -7,6 +7,8 @@ function App() {
          <div className="App">
             <h1>My First React App</h1>
             <p>Learn to love 746867 like 63526</p>
+	  	<Clover name= "Pintos Lover" major="C Architecture" favLang="Pascal"/>
+	  	<Clover name="Assembly Lover" major="Low Level Languages" favLang="Assembly" />
          </div>
   );
 }
