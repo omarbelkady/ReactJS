@@ -9,7 +9,7 @@ const Clovers = ({clovers, deleteClover}) => {
 					<div>Name: {clover.name}</div>					
 					<div>Major: {clover.major}</div>
 					<div>FavLang: {clover.favLang}</div>
-					<button onClick={() => {deleteClover(clover.id)}>Delete clover</button>
+					<button onClick={() => {deleteClover(clover.id)}}>Delete clover}</button>
 				</div>
 			)
 		}
