@@ -1,0 +1,9 @@
+body{
+	background: blue;
+	transition: all 1s;
+}
+
+.clovers form{
+	background: #fff;
+	padding: 20px;
+}
