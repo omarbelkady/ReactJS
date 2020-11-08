@@ -1,0 +1,18 @@
+body{
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+.home .post img{
+  position: absolute;
+  top: 20px;
+  left: -100px;
+  opacity: 0.6;
+}
+
+.home .post{
+  overflow: hidden;
+  padding-left: 50px;
+}
+
