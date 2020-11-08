@@ -2,6 +2,7 @@
 - Redux is a central data store for all the app data
 - Any component within my application can access data from the central data store
 - Dealing with state management is very easy to cope with
+- Denoted as an object which represents the global state of the application
 
 
 ### The component Structuree of Our React Application
@@ -63,3 +64,35 @@ want to pass along the action). I pass along the data of the new post along with
  action as an input and looks at the type and knows that it is a addacstsfpost action
 - Step 5: The reducer takes the data given to it and goes to the central data store aka
 the state and updates 
+
+
+
+### Example Of A Redux Store
+```js
+//I use this as my cdn: https://cdnjs.cloudflare.com/ajax/libs/redux/4.0.0-rc.1/redux.js
+const { createStore } = Redux;
+/*I pass in a reducer to the store to make the two
+are linked together. A reducer is just a function
+that interracts with the store
+*/
+
+const initState = {
+  todos: [],
+  posts: []
+}
+/*The first time the reducer fires it will not know
+what state was passed in and take initState as the
+default value for the state
+*/
+function myReducer(state=initState, action){
+  console.log(action, state);
+}
+
+const store = createStore(myReducer);
+
+//1: Create the action
+const todoAction = {type: 'ADD_TODO', todo: 'buy a cobol textbook'};
+
+//2: Dispatch the action
+store.dispatch(todoAction);
+```
