@@ -80,7 +80,7 @@ ReactDOM.render(<h1>Helloworld React!</h1>, document.getElementById('root'));
 ```
 
 
-### 5: Paste the required script in your package.json file so that you can automate with scripts your projects
+### 6: Paste the required script in your package.json file so that you can automate with scripts your projects
 ```json
 {
 	"name": "my-react-tutorial-app",
