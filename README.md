@@ -134,7 +134,7 @@ ReactDOM.render(<h1>Helloworld React!</h1>, document.getElementById('root'));
 ```js
 import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import { Navigation, Footer, Home, NameOfYourSecondPage, NameOfYourThirdPage, NameOfYourFourthPage,  } from "./components";
+import { Navigation, Footer, Home, NameOfYourSecondPage, NameOfYourThirdPage, NameOfYourFourthPage} from "./components";
 function App() {
   return (
     <div className="App">
