@@ -1,6 +1,11 @@
 
 # React Repo Which 63526 843 2-56837 263 27736259 56837 HELPED ME Make
 
+### Fragments In React:
+```
+<> </>
+```
+
 
 ### 1 How to install prereqs for react and all other dependencies necessary to your project
 ```bash
@@ -11,16 +16,20 @@ npm install react react-dom
 npm install --save-dev webpack webpack-dev-server html-webpack-plugin @babel/core babel-loader @babel/preset-env @babel/preset-react 
 ```
 
-### 2: 
+### 2: Create React Application using the create-react-app command
 ```bash
-touch webpack.config.js
-mkdir src
-cd src/
-touch index.js
-touch index.html
+npx create-react-app 
 ```
+### 3: Remove the following files that come shipped with the create-react-app command
+- setupTests.js
+- serviceWorker.js
+- logo.svg
+- index.css
+- App.test.js
 
-### 3: Paste the required script in the webpack.config.js file for webpack setup
+
+
+### 4: Paste the required script in the webpack.config.js file for webpack setup
 ```js
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
@@ -57,7 +66,7 @@ module.exports = {
 };
 ```
 
-### 4: Paste the required script in the index.js file that is in your src directory aka source
+### 5: Paste the required script in the index.js file that is in your src directory aka source
 ```js
 import React from 'react';
 import ReactDOM from 'react-dom';
@@ -66,7 +75,7 @@ ReactDOM.render(<h1>Helloworld React!</h1>, document.getElementById('root'));
 ```
 
 
-### 5: Paste the required script in the index.html file that is in your src directory aka source
+### 6: Paste the required script in the index.html file that is in your src directory aka source
 ```html
 <html>
   <head>
@@ -80,7 +89,7 @@ ReactDOM.render(<h1>Helloworld React!</h1>, document.getElementById('root'));
 ```
 
 
-### 6: Paste the required script in your package.json file so that you can automate with scripts your projects
+### 7: Paste the required script in your package.json file so that you can automate with scripts your projects
 ```json
 {
 	"name": "my-react-tutorial-app",
@@ -116,6 +125,35 @@ ReactDOM.render(<h1>Helloworld React!</h1>, document.getElementById('root'));
     ├── App.css
     ├── App.js
     ├── App.test.js
+    ├── index.css
+    ├── index.js
+    ├── logo.svg
+    └── serviceWorker.js
+
+```
+
+### Create a components folder in your src folder
+```
+├── README.md
+├── node_modules
+├── package.json
+├── .gitignore
+├── public
+│   ├── favicon.ico
+│   ├── index.html
+│   └── manifest.json
+└── src
+    ├── App.css
+    ├── App.js
+    ├── App.test.js
+    └── components
+      └── Footer
+      └── Navbar
+         ├──index.js
+         ├──
+    └── images
+    └── pages
+    └── videos
     ├── index.css
     ├── index.js
     ├── logo.svg
