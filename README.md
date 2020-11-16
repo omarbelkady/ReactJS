@@ -102,7 +102,7 @@ ReactDOM.render(<h1>Helloworld React!</h1>, document.getElementById('root'));
 }
 ```
 
-### Sample Layout of your React Project Should Look like this
+### 7. React Project Layout. If you are build a SPA no need for components dir ignore this step and any subsequent one
 ```
 ├── README.md
 ├── node_modules
@@ -116,9 +116,73 @@ ReactDOM.render(<h1>Helloworld React!</h1>, document.getElementById('root'));
     ├── App.css
     ├── App.js
     ├── App.test.js
+    ├── components
+        ├── Home.jsx
+	├── NameOfYourSecondPage.jsx
+	├── NameOfYourThirdPage.jsx
+	├── NameOfYourFourthPage.jsx
+	├── NameOfYourNthPage.jsx
+	├── Navigation.jsx
+	├── Footer.jsx
     ├── index.css
     ├── index.js
     ├── logo.svg
     └── serviceWorker.js
 
 ```
+### 8. Go to your main component(App.js) to setup the routing
+```js
+import React from "react";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { Navigation, Footer, Home, NameOfYourSecondPage, NameOfYourThirdPage, NameOfYourFourthPage,  } from "./components";
+function App() {
+  return (
+    <div className="App">
+      <Router>
+        <Navigation />
+        <Switch>
+          <Route path="/" exact component={() => <Home />} />
+          <Route path="/NameOfYourSecondPage" exact component={() => <NameOfYourSecondPage />} />
+          <Route path="/NameOfYourThirdPage" exact component={() => <NameOfYourThirdPage />} />
+	  <Route path="/NameOfYourFourthPage" exact component={() => <NameOfYourFourthPage />} />
+        </Switch>
+        <Footer />
+      </Router>
+    </div>
+  );
+}
+
+export default App;
+```
+
+### 9. If you are a build a MPA run this command to setup routing
+```bash
+npm i react-router-dom
+```
+
+### 10. If you want bootstrap here is the boiler plate index.html
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta
+      name="description"
+      content="Web site created using create-react-app"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    />
+    <title>React App</title>
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+  </body>
+</html>
+```
+
