@@ -10,7 +10,7 @@
 #### Without Destructuring
 ```js
 //Without destructuring I would have the following
-var example = useState('yourStateGoesHere');
+var example = useState('yourStateGoesHereAndAskNelanToLearnLLP');
 var firstElement = example [0];
 var secondElement = example[1];
 ```
