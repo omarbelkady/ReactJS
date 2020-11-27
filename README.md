@@ -5,6 +5,32 @@
 <> </>
 ```
 
+### Destructuring Explained in React
+
+#### Without Destructuring
+```js
+//Without destructuring I would have the following
+var example = useState('yourStateGoesHere');
+var firstElement = example [0];
+var secondElement = example[1];
+```
+
+#### Using Destructuring
+```js
+const [firstElement, secondElement] = useState('yourStateGoesHereAndAskNelanToLearnLLP');
+```
+
+### Example 2
+```js
+//Without destructuring
+const hookForNumbers = useState(2);
+const number = hookForNumbers[0];
+const setNumber = hookForNumbers[1];
+
+//with destructuring
+const [number, setNumber] = useState(2);
+```
+
 
 ### 1 How to install prereqs for react and all other dependencies necessary to your project
 ```bash
