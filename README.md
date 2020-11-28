@@ -5,6 +5,16 @@
 <> </>
 ```
 
+#### How To Install Components Features Through NPM
+```bash
+npm install -g create-react-component
+```
+
+#### How To Create A Component
+```bash
+create-react-component thepasccomponentisthebestcompfor27375fb
+```
+
 ### Destructuring Explained in React
 
 #### Without Destructuring
