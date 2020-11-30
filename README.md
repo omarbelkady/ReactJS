@@ -29,7 +29,7 @@ export default Whatever extends Component {
 ```
 
 #### How To Create A Row in file Whatever.js
-```bash
+```js
 import React { Component } from 'react';
 
 export default Whatever extends Component {
