@@ -15,6 +15,33 @@ npm install -g create-react-component
 create-react-component thepasccomponentisthebestcompfor27375fb
 ```
 
+#### How To Create A Column in file Whatever.js
+```js
+import React { Component } from 'react';
+
+export default Whatever extends Component {
+	render() {
+		return (
+			<div className="col-md-4"></div>
+		)
+	}
+}
+```
+
+#### How To Create A Row in file Whatever.js
+```bash
+import React { Component } from 'react';
+
+export default Whatever extends Component {
+	render() {
+		return (
+			<div className="row"></div>
+		)
+	}
+}
+```
+
+
 ### Destructuring Explained in React
 
 #### Without Destructuring
