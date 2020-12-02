@@ -41,6 +41,10 @@ export default Whatever extends Component {
 }
 ```
 
+#### How To Get the FE communicate with the BE:
+- SOAP
+- REST
+
 
 ### Destructuring Explained in React
 
