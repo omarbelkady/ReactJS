@@ -14,6 +14,10 @@ npm install -g create-react-component
 ```bash
 create-react-component thepasccomponentisthebestcompfor27375fb
 ```
+#### Smart Components Vs Dumb Components
+- Smart Components are components which are at the application level that have the ability to execute functions and manage data
+- Dumb Components are components that strictly deal with the User Interface
+
 
 #### How To Create A Column in file Whatever.js
 ```js
