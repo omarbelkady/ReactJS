@@ -229,7 +229,7 @@ ReactDOM.render(<h1>Helloworld React!</h1>, document.getElementById('root'));
     └── serviceWorker.js
 
 ```
-<<<<<<< Projects
+## For Projects
 
 ### Create a components folder in your src folder
 ```
