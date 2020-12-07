@@ -50,6 +50,26 @@ export default Whatever extends Component {
 - REST
 
 
+### How to Render Sth In React 
+#### I can put 27375 in place of this.state.pascal and it will render
+```js
+import React, { Component } from "react";
+
+class Pasc extends Component{
+	state = {
+		pascal: 1
+	};
+
+	render(){
+		return(
+			<div>{this.state.pascal}</div>
+		);
+	}
+}
+
+export default Pasc;
+```
+
 ### Destructuring Explained in React
 
 #### Without Destructuring
