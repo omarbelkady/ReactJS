@@ -10,6 +10,22 @@
 npm install -g create-react-component
 ```
 
+#### What is the difference between State And Props in React
+- State houses the object vals which belong to a component
+- Props are we pass in between components... Typically between parent comp and child comp
+
+#### Memoization
+- The process by which we store a super heavy functional component in memory 
+- I reuse this component thanks to Caching
+
+#### Virtual DOM vs Real DOM
+- Virtual DOM has the exact same properties as Real DOM but virtual DOM doesn't have the power to change things directly
+- DOM Manipulation is slow
+- Virtual DOM Manipulation is fast
+
+### IF YOU DO NOT KNOW WHAT THE DOM IS:
+- process by which we take all the nasty html elements and put them in a object that has tree structure
+
 #### How To Create A Component
 ```bash
 create-react-component thepasccomponentisthebestcompfor27375fb
