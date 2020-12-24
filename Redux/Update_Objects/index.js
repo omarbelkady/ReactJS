@@ -7,6 +7,20 @@ const individual = { name: "Javafb"};
 //const updatedIndividual = Object.assign({}, individual, {name: "CS37532", favActivity: "Coding In Pascal"});
 
 //Using the spread operator to dump all the properties of the individual object to the updatedIndividual Object
-const updatedIndividual = {...individual, name: "CS37532", favActivity:"Coding In Pascal"};
+const updatedIndividual = {...individual, name: "CS37532", favActivity:"Coding In Java", favThings:
+{
+    anotherFavClass:"CS429",
+    bestOS: "Windows10"
+}};
+updatedIndividual.favThings.bestOS="Pintos";
 
-console.log(updatedIndividual);
+//the right way to update
+const updatedIndividualA = {
+...updatedIndividual,
+name: "CS37532", 
+favActivity:"Coding In Pascal", 
+...updatedIndividual.favThings.bestOS="Pintos"
+}
+console.log(updatedIndividualA);//Pascal
+console.log("\n\n");
+console.log(updatedIndividual);//Java

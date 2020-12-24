@@ -1,0 +1,15 @@
+{
+  "name": "immer",
+  "version": "1.0.0",
+  "description": "```bash npm i immer ```",
+  "main": "index.js",
+  "dependencies": {
+    "immer": "^8.0.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
