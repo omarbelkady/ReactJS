@@ -5,6 +5,14 @@
 <> </>
 ```
 
+### Default Port Which React Runs On:
+- 3000
+
+### Other Ports To Run React On:
+- 37532
+- 42932
+- Range Of Ports: [0,65535]  .... I am using Interval Notation FYI
+
 #### How To Install Components Features Through NPM
 ```bash
 npm install -g create-react-component
