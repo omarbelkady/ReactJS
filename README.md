@@ -4,9 +4,42 @@
 ```
 <> </>
 ```
+### Module Not Found: Cannot Resolve ...
+- This means that you are trying to use a file that isn't created or its path is incorrect when you imported it
+
+
 
 ### Default Port Which React Runs On:
 - 3000
+
+
+### CodeSnippets
+- rfc: React Functional Component
+- race: React Arrow Function Component Export
+- rcc: class component skeleton
+- rrc: class component skeleton with react-redux connect
+- rrdc: class component skeleton with react-redux connect and dispatch
+- rccp: class component skeleton with prop types after the class
+- rcjc: class component skeleton without import and default export lines
+- rcfc: class component skeleton that contains all the lifecycle methods
+- rwwd: class component without import statements
+- cwm: component will mount method skeleton
+- cdm: componentDidMount method skeleton
+- cwr: componentWillReceiveProps method
+- scu: shouldComponentUpdate method
+- cwup: componentWillUpdate method
+- cdup: componentDidUpdate method
+- cwun: componentWillUnmount method
+- ren: render method
+- sst: this.setState with object as parameter
+- ssf: this.setState with function as parameter
+- props: this.props
+- state: this.state
+- bnd: binds the this of method inside the constructor
+- disp: MapDispatchToProps redux function
+
+
+
 
 ### Other Ports To Run React On:
 - 37532
@@ -17,6 +50,13 @@
 ```bash
 npm install -g create-react-component
 ```
+
+
+#### Files Which Are Usually Deleted
+- App.css
+- App.test.js
+- logo.svg
+- setupTests.js
 
 #### What is the difference between State And Props in React
 - State houses the object vals which belong to a component
