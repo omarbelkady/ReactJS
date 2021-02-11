@@ -1,0 +1,31 @@
+{
+    "posts":[
+        {
+            "id":"1",
+            "title":"Post 37532",
+            "body":"2526 56837 26265",
+            "publishedAt":"02-10-2021"
+        },
+        {
+            "id":"2",
+            "title":"Post 42932",
+            "body":"2526 56837 429",
+            "publishedAt":"02-10-2021"
+        },
+        {
+            "id":"3",
+            "title":"Post 76532",
+            "body":"2526 56837 7652626",
+            "publishedAt":"02-10-2021"
+        }
+
+    ],
+    "users":[
+        {
+            "id":"1",
+            "name": "Pascal Fb",
+            "email": "ftnandtsfbestcourses@gmail.com"
+        }
+    ]
+
+}
