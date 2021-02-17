@@ -323,38 +323,13 @@ ReactDOM.render(<h1>Helloworld React!</h1>, document.getElementById('root'));
     └── serviceWorker.js
 
 ```
-=======
-### 8. Go to your main component(App.js) to setup the routing
-```js
-import React from "react";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import { Navigation, Footer, Home, NameOfYourSecondPage, NameOfYourThirdPage, NameOfYourFourthPage} from "./components";
-function App() {
-  return (
-    <div className="App">
-      <Router>
-        <Navigation />
-        <Switch>
-          <Route path="/" exact component={() => <Home />} />
-          <Route path="/NameOfYourSecondPage" exact component={() => <NameOfYourSecondPage />} />
-          <Route path="/NameOfYourThirdPage" exact component={() => <NameOfYourThirdPage />} />
-	  <Route path="/NameOfYourFourthPage" exact component={() => <NameOfYourFourthPage />} />
-        </Switch>
-        <Footer />
-      </Router>
-    </div>
-  );
-}
 
-export default App;
-```
-
-### 9. If you are a build a MPA run this command to setup routing
+### 8. If you are a build a MPA run this command to setup routing
 ```bash
 npm i react-router-dom
 ```
 
-### 10. If you want bootstrap here is the boiler plate index.html
+### 9. If you want bootstrap here is the boiler plate index.html
 ```html
 <!DOCTYPE html>
 <html lang="en">
