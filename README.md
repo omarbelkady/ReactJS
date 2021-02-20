@@ -65,7 +65,7 @@ npm install -g create-react-component
 
 
 
-### How To Pass From One Part Of Your App to annother
+### How To Pass Data From One Part Of Your App to annother
 - The end goal of passing data is for it to reach the tree of the child component. Now to move data from the child to the parent component I use props.
 
 ### What Is State? You will always here this keyword when dealing with ReactJS
