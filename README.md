@@ -13,6 +13,7 @@
 - 3000
 
 
+
 ### CodeSnippets
 - rfc: React Functional Component
 - race: React Arrow Function Component Export
@@ -61,6 +62,24 @@ npm install -g create-react-component
 #### What is the difference between State And Props in React
 - State houses the object vals which belong to a component
 - Props are we pass in between components... Typically between parent comp and child comp
+
+
+
+### How To Pass From One Part Of Your App to annother
+- The end goal of passing data is for it to reach the tree of the child component. Now to move data from the child to the parent component I use props.
+
+### What Is State? You will always here this keyword when dealing with ReactJS
+- State is just an object. State is used in the class component, and we must remember that state stores the component data and determines the component behavior
+
+### What is a Component?
+- Your application is made up of thousands of pieces. Every piece is what we call a "component"
+	- Example: navigation bar, sidebar
+
+
+### Difference between Functional And Class Based Components:
+- We Use a Class Based Ccmponent when you want a specific component to be aware of another component
+- We use a Functional Component aka functions to perform certain tasks indepedent of another. Say Function A is unaware and doesn't know Function B nor of its role
+
 
 #### Memoization
 - The process by which we store a super heavy functional component in memory 
