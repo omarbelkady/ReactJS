@@ -1,3 +1,6 @@
+
+
+
 # React Repo Which 63526 843 2-56837 263 27736259 56837 HELPED ME Make
 
 ### Fragments In React:
@@ -9,35 +12,75 @@
 
 
 
+
+
 ### Default Port Which React Runs On:
 - 3000
 
 
+### ReactJS Fundamentals You Must Know:
+
+ 
+ 1. Create React App Command 
+ 2. JSX Syntax
+ 3. Components
+	 - Functional
+	 - Class Based Components
+4. The Difference between Props And State
+5. Conditional Rendering
+6. Component Lifecycle
+7. Lists And Keys
+8. The Difference Between Composition And Inheritance
+9. The Basic Hooks
+	i. useState
+	ii. useEffect
+
+### ReactJS Advanced Topics
+1. Hooks
+	a. Custom Hooks
+	b. Common Hooks:			
+	- [ ] useCallback
+	- [ ] useRef
+	- [ ] useMemo
+	- [ ] useReducer
+	- [ ] useContext
+2. Context
+3. Refs
+4. Render Props
+5. Code Splitting
+6. Higher Order Components
+7. Portals
+8. Error Boundaries
+9.  Fiber Architecture
+
+
+### Next Step: Keep Learning...........
+
 
 ### CodeSnippets
-- rfc: React Functional Component
-- race: React Arrow Function Component Export
-- rcc: class component skeleton
-- rrc: class component skeleton with react-redux connect
-- rrdc: class component skeleton with react-redux connect and dispatch
-- rccp: class component skeleton with prop types after the class
-- rcjc: class component skeleton without import and default export lines
-- rcfc: class component skeleton that contains all the lifecycle methods
-- rwwd: class component without import statements
-- cwm: component will mount method skeleton
-- cdm: componentDidMount method skeleton
-- cwr: componentWillReceiveProps method
-- scu: shouldComponentUpdate method
-- cwup: componentWillUpdate method
-- cdup: componentDidUpdate method
-- cwun: componentWillUnmount method
-- ren: render method
-- sst: this.setState with object as parameter
-- ssf: this.setState with function as parameter
-- props: this.props
-- state: this.state
-- bnd: binds the this of method inside the constructor
-- disp: MapDispatchToProps redux function
+ 1. rfc: React Functional Component
+ 2. race: React Arrow Function Component Export
+ 3. rcc: class component skeleton
+ 4. rrc: class component skeleton with react-redux connect
+ 5. rrdc: class component skeleton with react-redux connect and dispatch
+ 6. rccp: class component skeleton with prop types after the class
+ 7. rcjc: class component skeleton without import and default export lines
+ 8. rcfc: class component skeleton that contains all the lifecycle methods
+ 9. rwwd: class component without import statements
+ 10. cwm: component will mount method skeleton
+ 11. cdm: componentDidMount method skeleton
+ 12. cwr: componentWillReceiveProps method
+ 13. scu: shouldComponentUpdate method
+ 14. cwup: componentWillUpdate method
+ 15. cdup: componentDidUpdate method
+ 16. cwun: componentWillUnmount method
+ 17. ren: render method
+ 18. sst: this.setState with object as parameter
+ 19. ssf: this.setState with function as parameter
+ 20. props: this.props
+ 21. state: this.state
+ 22. bnd: binds the this of method inside the constructor
+ 23. disp: MapDispatchToProps redux function
 
 
 
