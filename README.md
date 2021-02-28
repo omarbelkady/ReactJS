@@ -10,7 +10,8 @@
 ### Module Not Found: Cannot Resolve ...
 - This means that you are trying to use a file that isn't created or its path is incorrect when you imported it
 
-
+### JSX expressions must have one parent element.ts(2657)
+- You have a closing tag placed in the wrong location (8355 63526 86 5683 227243)
 
 
 
