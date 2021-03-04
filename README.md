@@ -85,7 +85,7 @@
  21. state: this.state
  22. bnd: binds the this of method inside the constructor
  23. disp: MapDispatchToProps redux function
-
+ 24. html5: Blank html5 document
 
 
 
