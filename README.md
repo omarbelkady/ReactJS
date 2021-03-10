@@ -13,11 +13,28 @@
 ### JSX expressions must have one parent element.ts(2657)
 - You have a closing tag placed in the wrong location (8355 63526 86 5683 227243)
 
+### JSX
+- The ReactJS Syntax for writing stuff a mix of XML and VanillaJS
 
+### How To accept the default package.json
+```bash
+npm init -y
+```
 
 ### Default Port Which React Runs On:
 - 3000
 
+
+### Truthy or False Vals
+```js
+//checking for truthy or falsy values
+//toBeNull matches only to null
+//toBeUndefined matches only to Undefined
+//toBeDefined is the opposite of toBeUndefined
+//toBeTruthy matches anything that an if statement treats as true
+//toBeFalsy matches anything that an if statement treats as false
+
+```
 
 ### ReactJS Fundamentals You Must Know:
 
