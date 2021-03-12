@@ -7,6 +7,11 @@
 ```
 <> </>
 ```
+
+
+### What is onChange Event
+- An onChange Event is when the state/value of anything changes
+
 ### Module Not Found: Cannot Resolve ...
 - This means that you are trying to use a file that isn't created or its path is incorrect when you imported it
 
@@ -193,9 +198,13 @@ export default Whatever extends Component {
 ```
 
 #### How To Get the FE communicate with the BE:
-- SOAP
-- REST
+- axios
 
+#### prevents the form from acting in the default way
+```js
+ev.preventDefault()
+//when you submit an application the whole page refreshes in the case of forms
+```
 
 ### How to Render Sth In React 
 #### I can put 27375 in place of this.state.pascal and it will render
@@ -437,3 +446,7 @@ npm i react-router-dom
   </body>
 </html>
 ```
+
+
+### 10. Schema hasn't been registered for model
+- Check your arguments for mongoose.model call
