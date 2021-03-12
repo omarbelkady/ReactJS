@@ -1,7 +1,8 @@
 //file responsible for the routes coming to our server
 const express = require("express");
 const router = express.Router();
-const signeduptempcopy = require("../models/SignUpModels");
+const signeduptemp = require("../models/SignUpModels");
+const bcrypt = require('bcrypt')
 
 /*
 creating a post request aka when users click sign up or submit on a form 
@@ -11,13 +12,23 @@ it means they have sent a post request
     Argument 2: Callback function: obv request res
 */ 
 
-router.post('/signup', (req, res) =>{
+router.post('/signup', async(req, res) =>{
+
+    //generate a password salt
+    var saltPass = await bcrypt.genSalt(10);
+
+    //hashing the password that is in the body of what the user sent
+    const securePass = await bcrypt.hash(req.body.password);
+
+    
+
     //res.send("send")
-    var signedUpUser = new signeduptempcopy({
+    var signedUpUser = new signeduptemp({
         fullName: req.body.fullName,
         username: req.body.username,
         email: req.body.email,
-        password: req.body.password
+        //generate the salt for the password
+        password: securePass
     })
     //save the data
     signedUpUser.save()

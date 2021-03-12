@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 
 
 //What details I want from the users when they are signing up in our application
-const signuptemp = new mongoose.Schema({
+const signeduptemp = new mongoose.Schema({
     fullName:{
         type: String,
         required: true
@@ -31,4 +31,6 @@ const signuptemp = new mongoose.Schema({
 });
 
 //arg1: name of table arg2: name of the schema
-module.exports = mongoose.model('mytable', 'signuptemp')
+module.exports = mongoose.model('SignUpModels', signeduptemp)
+
+//Goto MongoDB===> Collections===> 
