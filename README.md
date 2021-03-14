@@ -8,6 +8,11 @@
 <> </>
 ```
 
+### ReactJs VS. NodeJS
+- ReactJS: Client Side/Front End ====> API Consumer/Customer
+- NodeJS: Server Side/Back End ====> API Exposer/Kitchen
+- API: Communicator/Waiter
+
 
 ### What is onChange Event
 - An onChange Event is when the state/value of anything changes
