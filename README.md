@@ -8,6 +8,11 @@
 <> </>
 ```
 
+### ReactJs VS. NodeJS
+- ReactJS: Client Side/Front End ====> API Consumer/Customer
+- NodeJS: Server Side/Back End ====> API Exposer/Kitchen
+- API: Communicator/Waiter
+
 
 ### What is onChange Event
 - An onChange Event is when the state/value of anything changes
@@ -450,26 +455,3 @@ npm i react-router-dom
 
 ### 10. Schema hasn't been registered for model
 - Check your arguments for mongoose.model call
-
-### Can't resolve 'x
-##### Solution #1
-- Check your folder structure and imports
-
-##### Solution #2
-```bash
-npm install --save x
-```
-
-### Sometimes a core functional import will not work if you do not destructure it You import it this way because it is not a component
-```js
-import makeStyles from '@material-ui/core/makeStyles';
-```
-
-##### Here is how it is fixed 
-```js
-import { makeStyles } from '@material-ui/core/makeStyles';
-```
-
-
-#### An identifier or keyword cannot immediately follow a numeric literal.ts(1351)
-- remove the units you attached to your numeric argument 
