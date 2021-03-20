@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
 //import ButtonGroup from '@material-ui/core/ButtonGroup';
@@ -14,6 +14,7 @@ import AcUnitOutlinedIcon  from "@material-ui/icons/AcUnitOutlined";
 import SendIcon from '@material-ui/icons/Send';
 import KeyboardArrowRightIcon from '@material-ui/icons/KeyboardArrowRight';
 import { makeStyles } from '@material-ui/core';
+import TextField from '@material-ui/core/TextField';
 
 /*import Number 2 by destructuring
 import { Typography } from '@material-ui/core/Typography';
@@ -35,6 +36,9 @@ and rules
 
 each property inside the object is a css class
 */
+
+
+//to track what the user wrote in the form field I use the onChange Event Handler
 const useStyles = makeStyles({
     btn: {
         fontSize: 15,
@@ -47,6 +51,11 @@ const useStyles = makeStyles({
     title:{
         textDecoration: 'underline',
         marginBottom: 15
+    },
+    field: {
+        marginTop: 20,
+        marginBottom: 20,
+        display: 'block'
     }
 });
 
@@ -65,6 +74,35 @@ export default function Create() {
     I simply use the className keyword
     */
     const myCSSClass = useStyles();
+    const [title, setTitle] = useState('');
+    const [codes, setCodes] = useState('');
+    //we want to set the errors to false at first so that they are no shown
+    const [titleError,setTheTitleError] = useState(false);
+    const [codesError, setTheCodesError] = useState(false);
+    const handleMySubmit = (evnt) => {
+        //do not refresh the page
+        evnt.preventDefault();
+
+        //resetting the vals for setTitleError and setCodes to false after the user enters something right or wrong
+        setTheTitleError(false);
+        setTheCodesError(false);
+        
+        //checking if i have a value for title
+        if(title == ''){
+            setTheTitleError(true)
+        }
+
+        //chcecking if I have a value for Codes
+        if(codes == ''){
+            setTheCodesError(true)
+        }
+        
+        if(title && codes){
+            //if the title and codes are not blank
+            console.log(title, codes);
+        }
+    }
+
     return (
         <Container>
             <Typography
@@ -78,19 +116,58 @@ export default function Create() {
                 Create A New 7652626 note
             </Typography>  
 
-            {/*Button To Submit a Form and to use OnClick event I pass in an OnClick Prop to my Button tag 
-            Applying the class to my component(button) 
-            I want to fire the useStyles hook 
-            It will apply the properties in my object to the Button*/}
-            <Button
-                className={myCSSClass.btn}
-                onClick={() => console.log("2526 56837 7652626 ")} 
-                type="submit" 
+            {/*adding an onSubmit Prop*/}
+            <form noValidate="" autoComplete="off" onSubmit={handleMySubmit}>
+                {/*applying the style to Text field in the form and 
+                to make the field multiline I add the boolean multiline prop
+                to specify the number of rows I want in my text field
+                I pass in the rows props to my TextField Fragment
+                
+                error is a boolean prop I pass in to my TextField fragment
+                If set to true it will show error feedback
+                
+                If the user does not enter the professor name or his favorite codes I will raise and error*/} 
+                <TextField
+                className={myCSSClass.field}
+                onChange={(pol)=>{
+                    setTitle(pol.target.value)
+                }}
+                label="Best Prof You Took"
+                variant="outlined"
                 color="secondary"
-                variant="contained"
-                endIcon={<KeyboardArrowRightIcon/>}>
-                Submit
-            </Button>
+                fullWidth
+                required
+                error={titleError}/>
+
+                <TextField
+                className={myCSSClass.field}
+                onChange={(pol)=>{
+                    setCodes(pol.target.value)
+                }}
+                label="What are codes You Like Or Other Hobbies Activities(BD, 429,375)"
+                variant="outlined"
+                color="secondary"
+                multiline="true"
+                rows={3}
+                fullWidth
+                required
+                error={codesError}/> 
+
+                {/*Button To Submit a Form and to use OnClick event I pass in an OnClick Prop to my Button tag 
+                Applying the class to my component(button) 
+                It will apply the properties in my object to the Button
+                For A Form to be submitted I must place the button in the FORM*/}
+                <Button
+                    className={myCSSClass.btn}
+                    type="submit" 
+                    color="secondary"
+                    variant="contained"
+                    endIcon={<KeyboardArrowRightIcon/>}>
+                    Submit
+                </Button>
+
+            </form>
+           
             {/*To have an icon in the beginning of your button I use the:
             startIcon prop
             
