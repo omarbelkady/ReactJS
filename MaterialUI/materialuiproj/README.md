@@ -8,7 +8,7 @@
         - subtitle
         - buttons
 - Components I can Use In MaterialUI Library:
-    - Buttons(5 types) 
+    - Buttons(6 types):  Customized Buttons, icon buttons, Float Action Buttons, Outlined Buttons, Text Buttons, Contained Buttons
     - Icons
     - Layout
     - Inputs

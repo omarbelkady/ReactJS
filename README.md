@@ -392,6 +392,16 @@ npm i react-router-dom
 - Wrong: Fetch the Data from An API then you render it to the DOM and no render if you haven't fetched the data
 - True: Fetch the data from A Resource(aka API). When the data comes in, you update the state thanks to the hook and we render the new state to the dom
 
+### How To Fetch Data Using the Fetch Function From An API using the desired HTTP Method
+```js
+fetch('https://localhost:3000/pages', { 
+  method: 'POST', 
+  headers: {"Content-type": "application/json"}, 
+  body: JSON.stringify({ title, codes, category })
+})
+```
+
+
 
 ### Some Good Practices
 - Fetch Your Data not in the render function but in the lifecycle method componentDidMount Why?

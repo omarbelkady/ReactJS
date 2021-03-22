@@ -13,8 +13,13 @@ import Container from '@material-ui/core/Container';
 import AcUnitOutlinedIcon  from "@material-ui/icons/AcUnitOutlined";
 import SendIcon from '@material-ui/icons/Send';
 import KeyboardArrowRightIcon from '@material-ui/icons/KeyboardArrowRight';
-import { makeStyles } from '@material-ui/core';
+import { FormControlLabel, FormGroup, makeStyles } from '@material-ui/core';
 import TextField from '@material-ui/core/TextField';
+import Radio from '@material-ui/core/Radio';
+import RadioGroup from '@material-ui/core/RadioGroup';
+import FormLabel from '@material-ui/core/FormLabel';
+import FormControl from '@material-ui/core/FormControl';
+import useHistory from 'react-router-dom';
 
 /*import Number 2 by destructuring
 import { Typography } from '@material-ui/core/Typography';
@@ -73,12 +78,15 @@ export default function Create() {
     To apply the title class to the Typography component
     I simply use the className keyword
     */
+    
     const myCSSClass = useStyles();
+    const myHistory = useHistory();
     const [title, setTitle] = useState('');
     const [codes, setCodes] = useState('');
     //we want to set the errors to false at first so that they are no shown
     const [titleError,setTheTitleError] = useState(false);
     const [codesError, setTheCodesError] = useState(false);
+    const [category, setCategory] = useState('DJ')
     const handleMySubmit = (evnt) => {
         //do not refresh the page
         evnt.preventDefault();
@@ -99,7 +107,13 @@ export default function Create() {
         
         if(title && codes){
             //if the title and codes are not blank
-            console.log(title, codes);
+            console.log(title, codes, category);
+            fetch('https://localhost:3000/pages', { 
+                method: 'POST', 
+                headers: {"Content-type": "application/json"}, 
+                body: JSON.stringify({ title, codes, category })
+                //how to redirect user: use the useHistoryHook to the homepage 
+            }).then(()=> myHistory.push('/')
         }
     }
 
@@ -152,6 +166,26 @@ export default function Create() {
                 fullWidth
                 required
                 error={codesError}/> 
+
+
+                {/* I want to associate the form label with the radio group therefore I use Form Control Tag */}
+                <FormControl className={myCSSClass.field}>
+                <FormLabel>Category</FormLabel>
+
+                {/* I want the user to be able to choose one therefore I import RadioGroup */}
+                <RadioGroup value={category} onChange={(ev)=>{ setCategory(ev.target.value)}}>
+                    {/* <Radio value="2526 56837 DJ"/>
+                    <Radio value="2526 56837 Bernard" /> 
+                    I need the value prop to be able to select one and have them both selected
+                    */}
+                    <FormControlLabel control={<Radio/>} label="2526 56837 DJ" value="DJ 32"/>
+                    <FormControlLabel control={<Radio/>} label="2526 56837 Bernard" value="Bernard 32"/>
+                    <FormControlLabel control={<Radio/>} label="2526 56837 Chen_7864" value="ChenS 32"/>
+                    <FormControlLabel control={<Radio/>} label="2526 56837 429" value="Comp Arch FB"/>
+                    {/*I need state to select what the user selected as their note category */}
+
+                </RadioGroup>
+                </FormControl>
 
                 {/*Button To Submit a Form and to use OnClick event I pass in an OnClick Prop to my Button tag 
                 Applying the class to my component(button) 
