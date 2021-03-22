@@ -31,6 +31,46 @@
 npm init -y
 ```
 
+#### How Do You Pass Data from One Class Based Component To Another Class-Based Component? You use Props!
+```js
+import React, { Component } from 'react';
+import logo from './logo.svg';
+import "App.css"
+
+//Functional Component
+const Body = () => {
+   <p className="App-Intro">
+          Welcome Here 
+          </p>
+}
+
+
+//Header Component aka class Based Component
+class Header extends Component{
+  render(){
+    return(
+      <header className="App-header">
+        <img src="{logo}" className="App-logo" alt="logo" />
+        <h1 className="App-title"> Welcome Here </h1>
+      </header>
+    );
+  }
+}
+
+//Root Component and I pass the Header Component as props
+class App extends Component{
+  render(){
+    return(
+      <div className="App">
+        <Header />
+          <Body />
+      </div>
+    );
+  } 
+}
+```
+
+
 ### Default Port Which React Runs On:
 - 3000
 
@@ -279,90 +319,7 @@ npx create-react-app
 - App.test.js
 
 
-
-### 4: Paste the required script in the webpack.config.js file for webpack setup
-```js
-const path = require('path');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-
-module.exports = {
-  // the output bundle won't be optimized for production but suitable for development
-  mode: 'development',
-  // the app entry point is /src/index.js
-  entry: path.resolve(__dirname, 'src', 'index.js'),
-  output: {
-  	// the output of the webpack build will be in /dist directory
-    path: path.resolve(__dirname, 'dist'),
-    // the filename of the JS bundle will be bundle.js
-    filename: 'bundle.js'
-  },
-  module: {
-    rules: [
-      {
-      	// for any file with a suffix of js or jsx
-        test: /\.jsx?$/,
-        // ignore transpiling JavaScript from node_modules as it should be that state
-        exclude: /node_modules/,
-        // use the babel-loader for transpiling JavaScript to a suitable format
-        loader: 'babel-loader',
-        options: {
-          // attach the presets to the loader (most projects use .babelrc file instead)
-          presets: ["@babel/preset-env", "@babel/preset-react"]
-        }
-      }
-    ]
-  },
-  // add a custom index.html as the template
-  plugins: [new HtmlWebpackPlugin({ template: path.resolve(__dirname, 'src', 'index.html') })]
-};
-```
-
-### 5: Paste the required script in the index.js file that is in your src directory aka source
-```js
-import React from 'react';
-import ReactDOM from 'react-dom';
-
-ReactDOM.render(<h1>Helloworld React!</h1>, document.getElementById('root'));
-```
-
-
-### 6: Paste the required script in the index.html file that is in your src directory aka source
-```html
-<html>
-  <head>
-    <title>Hello world App</title>
-  </head>
-  <body>
-  <div id="root"></div>
-  <script src="bundle.js"></script>
-  </body>
-</html>
-```
-
-
-### 7: Paste the required script in your package.json file so that you can automate with scripts your projects
-```json
-{
-	"name": "my-react-tutorial-app",
-	"version": "0.1.0",  
-	"private": true,
-	"dependencies": {
-    	"react": "^16.5.2",
-	    "react-dom": "^16.5.2",
-	},
-	"devDependencies": {
-    	"react-scripts": "1.0.7"
-  	},
-  	"scripts": {
-		"start": "react-scripts start",
-		"build": "react-scripts build",
-		"test": "react-scripts test --env=jsdom",
-		"eject": "react-scripts eject"
-	}    
-}
-```
-
-### 7. React Project Layout. If you are build a SPA no need for components dir ignore this step and any subsequent one
+### 4. React Project Layout. If you are build a SPA no need for components dir ignore this step and any subsequent one
 ```
 ├── README.md
 ├── node_modules
@@ -392,7 +349,7 @@ ReactDOM.render(<h1>Helloworld React!</h1>, document.getElementById('root'));
 ```
 ## For Projects
 
-### Create a components folder in your src folder
+### 5. Create a components folder in your src folder
 ```
 ├── README.md
 ├── node_modules
@@ -421,37 +378,22 @@ ReactDOM.render(<h1>Helloworld React!</h1>, document.getElementById('root'));
 
 ```
 
-### 8. If you are a build a MPA run this command to setup routing
+### 6. If you are a build a MPA run this command to setup routing
 ```bash
 npm i react-router-dom
 ```
 
-### 9. If you want bootstrap here is the boiler plate index.html
-```html
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
-    <meta
-      name="description"
-      content="Web site created using create-react-app"
-    />
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-    />
-    <title>React App</title>
-  </head>
-  <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
-  </body>
-</html>
-```
 
-
-### 10. Schema hasn't been registered for model
+### 7. Schema hasn't been registered for model
 - Check your arguments for mongoose.model call
+
+
+### 8. Data Fetching From An API Misconception
+- Wrong: Fetch the Data from An API then you render it to the DOM and no render if you haven't fetched the data
+- True: Fetch the data from A Resource(aka API). When the data comes in, you update the state thanks to the hook and we render the new state to the dom
+
+
+### Some Good Practices
+- Fetch Your Data not in the render function but in the lifecycle method componentDidMount Why?
+- componentDidMount will run only if your component has been mounted to the dom AT LEAST ONCE
+- To know if you have fetched the data or completed the data we use state
