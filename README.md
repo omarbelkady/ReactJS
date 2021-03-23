@@ -20,6 +20,10 @@
 ### Module Not Found: Cannot Resolve ...
 - This means that you are trying to use a file that isn't created or its path is incorrect when you imported it
 
+### Nothing was returned from render. This usually means a return statement is missing. Or, to render nothing, return null.
+- Place a return statement to remove this error
+
+
 ### JSX expressions must have one parent element.ts(2657)
 - You have a closing tag placed in the wrong location (8355 63526 86 5683 227243)
 
@@ -178,7 +182,6 @@ npm install -g create-react-component
 - Props are we pass in between components... Typically between parent comp and child comp
 
 
-
 ### How To Pass Data From One Part Of Your App to annother
 - The end goal of passing data is for it to reach the tree of the child component. Now to move data from the child to the parent component I use props.
 
@@ -311,12 +314,13 @@ npm install --save-dev webpack webpack-dev-server html-webpack-plugin @babel/cor
 ```bash
 npx create-react-app 
 ```
-### 3: Remove the following files that come shipped with the create-react-app command
-- setupTests.js
-- serviceWorker.js
-- logo.svg
-- index.css
+### 3: Remove the following 5 files that come shipped with the create-react-app command
 - App.test.js
+- index.css
+- logo.svg
+- serviceWorker.js
+- setupTests.js
+
 
 
 ### 4. React Project Layout. If you are build a SPA no need for components dir ignore this step and any subsequent one
@@ -324,7 +328,7 @@ npx create-react-app
 ├── README.md
 ├── node_modules
 ├── package.json
-├── .gitignore
+├── .gitignore ------- list the files you do not want git to track here
 ├── public
 │   ├── favicon.ico
 │   ├── index.html
@@ -407,3 +411,35 @@ fetch('https://localhost:3000/pages', {
 - Fetch Your Data not in the render function but in the lifecycle method componentDidMount Why?
 - componentDidMount will run only if your component has been mounted to the dom AT LEAST ONCE
 - To know if you have fetched the data or completed the data we use state
+
+
+### Some Useful Npm Packages to Use In React:
+#### UI Component Libraries
+- @material-ui/core: React MaterialUI components
+- react-bootstrap: Bootstrap4 components built with React
+- semantic-ui-react: React Component Library
+- reactstrap: Stateless React Components for Bootstrap4
+
+#### Individual UI Component Libraries
+- react-spinners: loading spinners for your react app
+- react-loader-spinner: spinner component which can be used in your async.await operation 
+- react-dropdown: Simple Dropdown component 
+- react-slick: Carousel component built with React
+- react-responsive-carousel: A responsive carousel component 
+- react-images: A responsive, mobile-friendly, highly-customizable carousel component for displaying media in React
+- react-tabs: An easy-tab component for your React App
+
+
+#### CSS In JS
+- styled-components: super easy to use library which lets you style your components at ease
+
+#### HTTP stuff
+- axios: Promised based http client for the browser and NodeJS
+
+
+#### Routing:
+- react-router-dom: DOM Bindings in React Router
+
+#### State Management:
+- redux: state container for your JS apps
+- react-redux: official React Binding for Redux
