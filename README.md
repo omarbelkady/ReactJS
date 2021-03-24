@@ -38,6 +38,10 @@
 ### JSX
 - The ReactJS Syntax for writing stuff a mix of XML and VanillaJS
 
+### How to resize images in React
+- Pass in an id prop to your img tag in your js file
+- Head over to your styles.css file and place a # in front of the value of the id you supplied without the quotes
+
 ### How To accept the default package.json
 ```bash
 npm init -y

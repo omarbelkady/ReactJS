@@ -11,7 +11,7 @@ body{
 }
 
 .card-body{
-    padding: 3rem 0 im !important ;
+    padding: 3rem 0 !important ;
 }
 
 .card-text{
@@ -22,4 +22,23 @@ body{
 
 .container-fluid.row{
     padding-top: 14rem;
+}
+
+.overflow{
+    overflow: hidden
+}
+
+.card-img-top{
+    transform: scale(1);
+    transition: transform 0.2s ease-in-out;
+}
+
+.card-img-top:hover{
+    transform: scale(1.6);
+}
+
+
+img.card-img-top {
+    height: 400px;
+    width: 400px;
 }

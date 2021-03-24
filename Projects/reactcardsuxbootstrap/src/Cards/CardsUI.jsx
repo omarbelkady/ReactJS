@@ -6,24 +6,22 @@ import './card-style.css';
 
 const Card = props => {
     return (
-        <div>
-            <div className="card-text-center">
+            <div className="card-text-center" shadow>
                 <div className="overflow">
-                    <img src={comparch} alt="image1" className="card-img-top" />
+                    <img src={props.imgsrc} alt="image1" className="card-img-top" />
                 </div>
-            </div>
             <div className="card-body text-dark">
                 <h4 className="card-title">
-                    Pintos56837
+                    {props.title}
                 </h4>
                 <p className="card-text text-secondary">
                     Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
                     Adipisci accusantium facere officiis suscipit, officia atque sequi! 
                     Similique culpa perspiciatis consequatur.
                 </p>
-                <a href="#" className="btn btn-outline-success">Go Code Visual 22742!</a>            
+                <a href="#" className="btn btn-outline-success">2526: I AM A 26265/35 FB</a>            
             </div>
-        </div>
+            </div>
     );
 };
 
