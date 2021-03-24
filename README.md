@@ -27,6 +27,14 @@
 ### JSX expressions must have one parent element.ts(2657)
 - You have a closing tag placed in the wrong location (8355 63526 86 5683 227243)
 
+
+### Found 2 elements with non-unique id
+- Just make sure your first input type tag has a different id(prop) value than the second input type tag
+
+
+### Unknown DOM property for. Did you mean htmlFor
+- Change the for prop in your form tag to an htmlFor prop and this error will go awayg
+
 ### JSX
 - The ReactJS Syntax for writing stuff a mix of XML and VanillaJS
 
