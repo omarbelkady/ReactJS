@@ -7,15 +7,15 @@
 
 
 ```js
-      <Switch>
-          <Route path="/polancofb">
-            <Polancofb />
-          </Route>
-          <Route path="/djfb">
-            <Djfanboy />
-          </Route>
-          <Route path="/">
-            <Home />
-          </Route>
-        </Switch>
+<Switch>
+    <Route path="/polancofb">
+      <Polancofb />
+    </Route>
+    <Route path="/djfb">
+      <Djfanboy />
+    </Route>
+    <Route path="/">
+      <Home />
+    </Route>
+</Switch>
 ```
