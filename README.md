@@ -147,28 +147,30 @@ class App extends Component{
 ### CodeSnippets
  1. rfc: React Functional Component
  2. race: React Arrow Function Component Export
- 3. rcc: class component skeleton
- 4. rrc: class component skeleton with react-redux connect
- 5. rrdc: class component skeleton with react-redux connect and dispatch
- 6. rccp: class component skeleton with prop types after the class
- 7. rcjc: class component skeleton without import and default export lines
- 8. rcfc: class component skeleton that contains all the lifecycle methods
- 9. rwwd: class component without import statements
- 10. cwm: component will mount method skeleton
- 11. cdm: componentDidMount method skeleton
- 12. cwr: componentWillReceiveProps method
- 13. scu: shouldComponentUpdate method
- 14. cwup: componentWillUpdate method
- 15. cdup: componentDidUpdate method
- 16. cwun: componentWillUnmount method
- 17. ren: render method
- 18. sst: this.setState with object as parameter
- 19. ssf: this.setState with function as parameter
- 20. props: this.props
- 21. state: this.state
- 22. bnd: binds the this of method inside the constructor
- 23. disp: MapDispatchToProps redux function
- 24. html5: Blank html5 document
+ 3. rafce: React Arrow Functional Component Export
+ 4. rcc: class component skeleton
+ 5. rfcp: React Functional Component With Prop Types
+ 6. rrc: class component skeleton with react-redux connect
+ 7. rrdc: class component skeleton with react-redux connect and dispatch
+ 8. rccp: class component skeleton with prop types after the class
+ 9. rcjc: class component skeleton without import and default export lines
+ 10. rcfc: class component skeleton that contains all the lifecycle methods
+ 11. rwwd: class component without import statements
+ 12. cwm: component will mount method skeleton
+ 13. cdm: componentDidMount method skeleton
+ 14. cwr: componentWillReceiveProps method
+ 15. scu: shouldComponentUpdate method
+ 16. cwup: componentWillUpdate method
+ 17. cdup: componentDidUpdate method
+ 18. cwun: componentWillUnmount method
+ 19. ren: render method
+ 20. sst: this.setState with object as parameter
+ 21. ssf: this.setState with function as parameter
+ 22. props: this.props
+ 23. state: this.state
+ 24. bnd: binds the this of method inside the constructor
+ 25. disp: MapDispatchToProps redux function
+ 26. html5: Blank html5 document
 
 
 
