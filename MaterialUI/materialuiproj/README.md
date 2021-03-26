@@ -71,3 +71,58 @@ import AcUnitOutlinedIcon  from "@material-ui/icons/AcUnitOutlined";
 import { makeStyles } from '@material-ui/core';
 //import makeStyles from '@material-ui/core' //this will not work
 ```
+
+### Grid System
+- To Create A Grid In My React
+- I must first have imported the grid component from the materialui core library
+- I create a grid container aka a Wrapper Class in Java
+- Within the grid container I have the grid items
+- To create a Grid Container I pass in a prop called container with The Grid keyword
+- To say the second Grid Fragment is an item I append the keyword item to them
+- The default behavior of a grid is to place items next to each other
+- The grid is a 12 column system
+- The md prop is for medium sized screen and I pass in the number of colums I want it to have
+- The xs prop is for extra small sized screen
+- The sm prop is for small sized screen
+
+```js
+import Grid from '@material-ui/core/Grid';
+import Paper from '@material-ui/core/Paper';
+return( 
+    <div>
+        <Grid container>
+            <Grid item xs={12} sm={6} md={3}>
+                <Paper></Paper>
+            </Grid>
+            <Grid item xs={12} sm={6} md={3}>
+                <Paper></Paper>
+            </Grid>
+            <Grid item xs={12} sm={6} md={3}>
+                <Paper></Paper>
+            </Grid>
+            <Grid item xs={12} sm={6} md={3}>
+                <Paper></Paper>
+            </Grid>
+        </Grid>
+    </div>
+)
+```
+
+### How To Create A Grid Container Around Some Notes Example
+```js
+import Grid from '@material-ui/core/Grid';
+import Paper from '@material-ui/core/Paper';
+import Container from '@material-ui/core/Container';
+//Container auto applies margin and padding to the content
+return( 
+    <Container>
+        <Grid container> 
+        { notes.map(mynotes =>(
+            <Grid item key={mynotes.id} xs={12} md={6} lg={4} >
+                <Paper>{ mynotes.title } </Paper>
+        
+        ))}
+        </Grid>
+    </Container>
+);
+```
