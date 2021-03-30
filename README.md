@@ -396,6 +396,49 @@ npx create-react-app
 
 ```
 
+### 5. React Typescript Project Layout
+```
+.
+├── .gitignore
+├── .editorconfig
+├── .env
+├── README.MD
+├── package.json
+├── package-lock.json
+├── tsconfig.json
+├── tslinst.json
+├── public/
+│   ├── index.html
+│   └── loader.css
+├── srcipts/
+│   └── mjml-compile.js
+└── src/
+    ├── assets/
+    │   └── logo.svg
+    ├── components/
+    │   └── button/
+    │       ├── index.tsx
+    │       └── button.specs.ts
+    ├── middlewares/
+    │   └── auth.tsx
+    ├── pages/
+    │   ├── root.tsx
+    │   ├── home.tsx
+    │   └── login.tsx
+    ├── routes/
+    │   └── index.tsx
+    ├── services/
+    │   └── http.ts
+    ├── styles/
+    │   ├── ant-override.scss
+    │   ├── _variables.scss
+    │   └── index.scss
+    ├── utils/
+    │   └── index.ts
+    ├── app.tsx
+    └── index.tsx
+```
+
 ### 6. If you are a build a MPA run this command to setup routing
 ```bash
 npm i react-router-dom
