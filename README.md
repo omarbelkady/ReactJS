@@ -191,9 +191,54 @@ npm install -g create-react-component
 - logo.svg
 - setupTests.js
 
-#### What is the difference between State And Props in React
+#### What is the difference between State And Props in React? When To Use State? When To Use Props
 - State houses the object vals which belong to a component
 - Props are we pass in between components... Typically between parent comp and child comp
+- Properties in a react component are vars that we pass to it by its parent component
+- State on the other hand is an immutable variable that is directly managed by the component
+- We can initialize state thanks to properties(props) and vice versa
+- When I want to display something in my component I use props
+- When I want to update something in my component or track something in my component I use state
+- When I want to print something use functional component with props
+- When Updating something I use state(more precisely the built in hook react provides me with useState)
+
+### An Example of Parent and Child Component
+```js
+import React, { Component } from 'react';
+
+//Parent
+export default class PropsVsChild extends Component{
+
+  render(){
+    return(
+      <div>
+      <Child color="Blue" />
+      </div>
+    )
+  }
+}
+
+//Child
+class Child extends Component{
+  constructor(props){
+    super(props);
+    //creating a simple state but I do not want to modify the state directly I want to modify it using props(properties)
+    //this.state = {myFavColor: 'Blue'}
+    this.state = { myFavColor: props.color}
+    //now I can specify this color property in the parent component
+    console.log(this.state.myFavColor)
+  }
+
+  render(){
+    return(
+      <div>
+      </div>
+    )
+  }
+}
+
+```
+
 
 
 ### How To Pass Data From One Part Of Your App to annother
@@ -210,6 +255,8 @@ npm install -g create-react-component
 ### Difference between Functional And Class Based Components:
 - We Use a Class Based Ccmponent when you want a specific component to be aware of another component
 - We use a Functional Component aka functions to perform certain tasks indepedent of another. Say Function A is unaware and doesn't know Function B nor of its role
+
+
 
 
 #### Memoization
@@ -457,3 +504,61 @@ fetch('https://localhost:3000/pages', {
 #### State Management:
 - redux: state container for your JS apps
 - react-redux: official React Binding for Redux
+
+### Context API
+- Context provides a way to pass data through the component tree without having to pass props down manually at every level
+- Props drilling is the process by which we pass data from component A to Component B thanks to props and the more components we have the more complex it gets
+- Thanks to ContextAPI I have a central store where my data lives 
+- We can treat ContextAPI similar to Redux which gives me a central store which houses my data
+- The store can be inserted into any component
+- ContextAPI provides a way to pass data through the component tree without having to pass props down manually at every level
+- The consumer is a component which is consuming the value 
+There are three levels of ContextAPI
+1. Level 1: Context
+2. Level 2: Provider
+3. Level 3: Consumer
+
+
+```js
+/*
+createContext Function creates the context or we can see it creates a central data store for me to store my data
+
+*/
+const ThemeContext = React.createContext('light');
+
+class App extends React.Component {
+  render() {
+    // Use a Provider to pass the current theme to the tree below.
+    //A provider is a component which is used to provide the value to all my components
+    // Any component can read it, no matter how deep it is.
+    // In this example, we're passing "dark" as the current value.
+    //I wwrap the parent component in between my provider
+    return (
+      <ThemeContext.Provider value="dark">
+        <Toolbar />
+      </ThemeContext.Provider>
+    );
+  }
+}
+
+// A component in the middle doesn't have to
+// pass the theme down explicitly anymore.
+function Toolbar() {
+  return (
+    <div>
+      <ThemedButton />
+    </div>
+  );
+}
+
+class ThemedButton extends React.Component {
+  // Assign a contextType to read the current theme context.
+  // React will find the closest theme Provider above and use its value.
+  //This is a consumer FYI
+  // In this example, the current theme is "dark".
+  static contextType = ThemeContext;
+  render() {
+    return <Button theme={this.context} />;
+  }
+}
+```
