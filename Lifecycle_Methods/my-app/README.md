@@ -381,7 +381,7 @@ import Unmount from './Api/Unmount';
 ReactDOM.render(
   <React.StrictMode>
     {/*<Mounted myfav="Green"/>*/}
-    <Updating />
+    <Unmount />
   </React.StrictMode>,
   document.getElementById('root')
 );
