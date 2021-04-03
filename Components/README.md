@@ -1,4 +1,4 @@
-## Components
+# Components In ReactJS
 - Strict Rule For Components:
    - All Components must have a render method 
 - StateLess Components aka Called UI Components
@@ -15,8 +15,21 @@
 - It is also possible to nest containers within Containers that is absolutely fine
 
 2 Types of Components:
-- Containers(have state)
-- UI Components(do not have state)
+- Containers(have state)/Class Based Components
+- UI Components(do not have state) aka Functional Components
+
+### Functional Components
+- Do NOT have Lifecycle Methods because they are simply a Pure JS Function
+- Cannot have setState method within a functional Component because it doesn't have State
+- We can however use Hooks:
+1. useEffect: mimic lifecycle behavior
+2. useState: store the functional state
+
+### Class Based Component
+1. Usually you will see it extending the React.component
+2. are stateful because they have logic within them and of course state
+3. MUST have a render method
+4. The type of data we pass into a class based component are props. To access them we use this.props(the local instance)
 
 ### Example of A React Component
 ```js
