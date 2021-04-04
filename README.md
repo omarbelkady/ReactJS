@@ -549,7 +549,7 @@ fetch('https://localhost:3000/pages', {
 - react-redux: official React Binding for Redux
 
 ### Context API
-- Context provides a way to pass data through the component tree without having to pass props down manually at every level
+- Context provides a way to pass data through multiple components tree without having to pass props down manually at every level starting from the parent component
 - Props drilling is the process by which we pass data from component A to Component B thanks to props and the more components we have the more complex it gets
 - Thanks to ContextAPI I have a central store where my data lives 
 - We can treat ContextAPI similar to Redux which gives me a central store which houses my data

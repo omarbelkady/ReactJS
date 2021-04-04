@@ -37,7 +37,7 @@ ReactDom.render(<itemList/>, document.getElementbyId('root'));
 ```
 
 
-### So What Are Props Used For
+### So What Are Props(Short for Properties) Used For
 - Props are used for passing data from one component to another
 - Props are used in ReactJS so that when they are passed from a parent component to a child component the child component cannot mutate it
 - We pass props to the child so that he is able to use the data but he cannot modify it

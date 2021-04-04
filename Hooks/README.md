@@ -5,6 +5,17 @@
 - Every hook starts with the prefix "use"
 
 
+
+### When To Call A Hook
+- You only want to call a hook at the very high level. Do not call a hook
+	- when it is a function within a function aka a nested function
+	- when you are using a conditional
+	- within a loop
+- Call A hook also from a React functional component NOT from a React regular JS function or a class Based Component
+
+
+
+
 ####  The useState Hook
 - This hook is used so that it can enable you to have a certain state within your functional component
 - The way its used is by passing as an argument the initial state to the function(useState) and it outputs the current state
@@ -184,15 +195,6 @@ export default function Ref1(){
 }
 
 ```
-
-
-
-### When To Call A Hook
-- You only want to call a hook at the very high level. Do not call a hook
-	- when it is a function within a function aka a nested function
-	- when you are using a condition
-	- within a loop
-- Call A hook also from a React functional component NOT from a React regular JS function
 
 
 
