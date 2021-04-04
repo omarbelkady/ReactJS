@@ -73,7 +73,7 @@ ReactDOM.render(
       email="djisthebest@gmail.com"
      />
   
-  </div>.
+  </div>,
   document.getElementById("root");
 )
 ```
