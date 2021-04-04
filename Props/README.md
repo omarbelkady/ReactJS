@@ -36,6 +36,47 @@ ReactDom.render(<itemList/>, document.getElementbyId('root'));
 
 ```
 
+### React Card Functional Component Example... Props is what I pass in between my components
+#### This is a layout which will allow me to create multiple cards
+```js
+function Card(myprops){
+return (
+  <div>
+    <h2>{myprops.name}</h2>
+    <img src={myprops.img} alt="avatar_img"/>
+    <p>{myprops.telephone}</p>
+    <p>{myprops.email}</p>
+  </div>
+)
+```
+#### Now This will allow me to create other cards easily thanks to my functional comp
+```js
+ReactDOM.render(
+  <div>
+    <h1>My contacts</h1>
+    <Card
+      name="Nelan Ngo"
+      img="nelantheftn.jpg"
+      tel="+15124293753"
+      email="ilovepol2626@gmail.com"
+     />
+     <Card
+      name="Angela Caoo"
+      img="angelatheengprog.jpg"
+      tel="+15123647763"
+      email="englishprof@gmail.com"
+     />
+     <Card
+      name="Dhenanjay 252632"
+      img="djfbisnelan.jpg"
+      tel="+15123542932"
+      email="djisthebest@gmail.com"
+     />
+  
+  </div>.
+  document.getElementById("root");
+)
+```
 
 ### So What Are Props(Short for Properties) Used For
 - Props are used for passing data from one component to another
