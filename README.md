@@ -558,7 +558,7 @@ fetch('https://localhost:3000/pages', {
 - The consumer is a component which is consuming the value 
 There are three levels of ContextAPI
 1. Level 1: Context
-2. Level 2: Provider
+2. Level 2: Provider --> Used in the parent component
 3. Level 3: Consumer
 
 
@@ -604,4 +604,79 @@ class ThemedButton extends React.Component {
     return <Button theme={this.context} />;
   }
 }
+```
+
+## ContextAPI Stuff
+
+### I goto my index.js
+```js
+import React from "react";
+import ReactDOM from "react-dom";
+
+import "bootstrap/dist/css/bootstrap.min.css";
+
+import {BrowserRouter} from "react-router-dom";
+
+import Theme from "./Context/Theme";
+
+ReactDOM.render(
+    <BrowserRouter>
+        <Theme/>
+    </BrowserRouter>,
+    document.getElementById("root")
+);
+```
+
+### I goto my Theme.js file which will have a parent component(Theme class) and  a Child Component(CurrentTheme )
+```js
+import React, { Component } from "react";
+
+//creating the context and specifying a default value
+const ThemeContext = React.createContext("light");
+/*
+line 643 is where I make a call to the provider and I place my parent component there
+I can change the theme from light to dark by passing a value prop to my prop and supply it with an argument of dark
+Instead of passing props from one compoent to another in the form of layer in context api I do not have to pass props to any component actually
+Just wwrap your component within a provider
+*/
+//parent component
+export default class Theme extends Component{
+  render(){
+    return(
+      <div>
+          <ThemeContext.Provider value="Dark">
+                <CurrentTheme />
+          </ThemeContext.Provider>
+
+      </div>
+    );
+  }
+}
+//child component 1
+function CurrentTheme(){
+  return(
+    <div>
+      <SecondChild />
+    </div>
+  )
+}
+
+class SecondChild extends Component{
+  //way #2 to initialize context
+  static contextType = ThemeContext()
+
+  render(){
+    return(
+      <div>
+        <h1>Using Context API</h1>
+      </div>
+    )
+  }
+}
+
+/*initializing context property outside of class
+Way#1 to initialize context
+
+SecondChild.contextType = ThemeContext
+*/
 ```
