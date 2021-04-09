@@ -17,29 +17,125 @@
 ### What is onChange Event
 - An onChange Event is when the state/value of anything changes
 
-### Module Not Found: Cannot Resolve ...
+
+## Mistakes Commonly Made And How To Fix?
+
+1.  Module Not Found: Cannot Resolve ...
 - This means that you are trying to use a file that isn't created or its path is incorrect when you imported it
 
-### Nothing was returned from render. This usually means a return statement is missing. Or, to render nothing, return null.
+2. Nothing was returned from render. This usually means a return statement is missing. Or, to render nothing, return null.
 - Place a return statement to remove this error
 
-
-### JSX expressions must have one parent element.ts(2657)
+3. JSX expressions must have one parent element.ts(2657)
 - You have a closing tag placed in the wrong location (8355 63526 86 5683 227243)
 
 
-### Found 2 elements with non-unique id
+4.  Found 2 elements with non-unique id
 - Just make sure your first input type tag has a different id(prop) value than the second input type tag
 
-###  Identifier 'App' has already been declared
+5. Identifier 'App' has already been declared
 - Your functional/Root Component is already called App and you are importing another functional component
 - To fix this just give your import a different name and this will make the problem disappear
 
 
-### 
+6. The <blabla > is unrecognized
+- Usually function names and file names in JS are lowercased
+- But in React this is a NONO! If you want to render a react component names of Functional Comp must start with Lowercase
+- To Fix this if you want to keep your functional component lowercased change your imported file name to Upppercase
+- It is better to have your component and File Names as uppercase
+```js
+import './App.css'
+//Change the below statement to the following one
+//import message from './components/message'
+import Message from './components/message';
 
-### Unknown DOM property for. Did you mean htmlFor
-- Change the for prop in your form tag to an htmlFor prop and this error will go awayg
+function App(){
+  return(
+    <div className="App">
+      <Message />
+    </div>
+  )
+}
+
+export default App;
+
+```
+
+
+7. Importing Named Exports As Default Exports: Generates the error: './components/MyNamedExport' is imported as 'MyNamedExport'
+```js
+export const MyNamedExport = () => {
+  return(
+    <div>
+      Named Export
+    </div>
+  )
+}
+```
+
+#### Root Component: App.js ... To Solve this wrap my MyNamedExport in Curly Braces
+```js
+//import MyNamedExport from './components/MyNamedExport';
+import { MyNamedExport } from './components/MyNamedExport';
+
+
+function App(){
+  return(
+    <div className="App">
+      <MyNamedExport />
+    </div>
+  )
+}
+
+export default App;
+```
+
+8. Unknown DOM property for. Did you mean htmlFor
+- Change the for prop in your form tag to an htmlFor prop and this error will go away
+
+9. Too Many Rerenders
+- I goto my Setter Function of UseState Hook Take My file Count.js
+```js
+import { useState } from 'react';
+export const MyNamedExport = () => {
+  const [count, setTheCount] = useState(0);
+  return(
+    <div>
+      <button onClick={setTheCount(count+1)}>Count - {count} </button>
+    </div>
+  )
+}
+```
+
+- I goto the Root component to include it and it generates the error Too Many Rerenders
+```js
+import './App.css';
+import { MyNamedExport } from './components/MyNamedExport';
+
+function App(){
+  return(
+    <div className="App">
+      <MyNamedExport />
+    </div>
+  )
+}
+
+export default App;
+```
+
+- Instead of passing the function by value I pass an arrow function to the event handler
+```js
+import { useState } from 'react';
+export const MyNamedExport = () => {
+  const [count, setTheCount] = useState(0);
+  return(
+    <div>
+      <button onClick={()=>setTheCount(count+1)}>Count - {count} </button>
+    </div>
+  )
+}
+```
+
 
 ### JSX
 - The ReactJS Syntax for writing stuff a mix of XML and VanillaJS
