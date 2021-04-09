@@ -31,6 +31,12 @@
 ### Found 2 elements with non-unique id
 - Just make sure your first input type tag has a different id(prop) value than the second input type tag
 
+###  Identifier 'App' has already been declared
+- Your functional/Root Component is already called App and you are importing another functional component
+- To fix this just give your import a different name and this will make the problem disappear
+
+
+### 
 
 ### Unknown DOM property for. Did you mean htmlFor
 - Change the for prop in your form tag to an htmlFor prop and this error will go awayg
