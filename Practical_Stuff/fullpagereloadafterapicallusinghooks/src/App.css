@@ -36,3 +36,86 @@
     transform: rotate(360deg);
   }
 }
+
+.card-hover {
+  opacity: 0.95;
+}
+.card-hover:hover {
+  opacity: 1;
+}
+.card-hover:hover .card-body {
+  background-color: #dddcdc;
+}
+.card-hover:hover .card {
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+}
+.otp-field {
+  width: 38px;
+  margin-right: 10px;
+  padding-left: 12px;
+  height: 40px;
+}
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.scroll-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 5px;
+}
+.scroll-container .indicator {
+  height: 100%;
+  background: #8b0000;
+}
+
+.scroll-to-top {
+  position: fixed;
+  bottom: 12px;
+  left: 50%;
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  background: #8b0000;
+  color: #fff;
+  z-index: 1;
+}
+.scroll-to-top .icon {
+  margin-top: 10px;
+  animation: scrollTop 0.5s alternate ease infinite;
+}
+@keyframes scrollTop {
+  from {
+      transform: translateY(2px);
+  }
+  to {
+      transform: translateY(-1px);
+  }
+}
+
+.custom-youtube-player {
+  position: fixed;
+  width: 450px;
+  height: 300px;
+  bottom: 40px;
+  right: 40px;
+  background: #000;
+}
+
+.fp-container{
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background: #f8f8f8ad;
+}
+
+.fp-container .fp-loader{
+  top: 30%;
+  left: 40%;
+  z-index: 1000;
+  position: absolute;
+}
