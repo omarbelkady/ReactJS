@@ -1,6 +1,7 @@
 
 
 
+
 # React Repo Which 63526 843 2-56837 263 27736259 56837 HELPED ME Make
 
 ### Fragments In React:
@@ -231,10 +232,10 @@ class App extends Component{
 	
 	b. Common Hooks:			
 	- [ ] useCallback
-	- [ ] useRef
-	- [ ] useMemo
+	- [x] useRef
+	- [x] useMemo
 	- [ ] useReducer
-	- [ ] useContext
+	- [x] useContext
 
 
 2. Context
