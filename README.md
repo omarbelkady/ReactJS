@@ -220,6 +220,7 @@ class App extends Component{
 9. The Basic Hooks
 	
 	i. useState
+	
 	ii. useEffect
 
 ### ReactJS Advanced Topics
@@ -227,12 +228,15 @@ class App extends Component{
 	
 	
 	a. Custom Hooks
+	
 	b. Common Hooks:			
 	- [ ] useCallback
 	- [ ] useRef
 	- [ ] useMemo
 	- [ ] useReducer
 	- [ ] useContext
+
+
 2. Context
 3. Refs
 4. Render Props
