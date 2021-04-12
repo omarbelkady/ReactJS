@@ -18,6 +18,10 @@
 ### What is onChange Event
 - An onChange Event is when the state/value of anything changes
 
+### How Is Data Passed in ReactJS
+- Primitive(by, ch, short, int, long, fl, dou) data types in ReactJS are passed by value as in any other programming language
+- Variables which aren't primitives are passed by reference aka Arrays, Objects and Functions
+
 
 ## Mistakes Commonly Made And How To Fix?
 
