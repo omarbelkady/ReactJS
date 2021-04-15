@@ -3,7 +3,8 @@
 - Unlike the useState Hook the UseEffect can determine things everytime the page rerenders
 - As it is known I use property and state to calculate the output. 
 - If the functional component makes a calculation that doesn't target the output value then these calculations are called side effects
-- Side Effects can fetch requests or manipulate DOM elements directly
+- This hook enables be perform side effects
+- Side Effects can fetch requests or manipulate DOM elements directly aka reach out to the outside world/data fetching from an API
 - I use the useEffect Hook to make API Calls in My APP
 - When React wants to render a component there is nothing you can do to stop it
 - However, I can tell React to add code after rendering the component using the useEffect Hook

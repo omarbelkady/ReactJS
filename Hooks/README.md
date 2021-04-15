@@ -135,6 +135,8 @@ ReactDOM.render(
 
 #### The useRef Hook
 
+- This hook enables me create references to an element/component
+
 ##### File1 index.js
 ```js
 import React from 'react';
