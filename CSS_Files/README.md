@@ -72,11 +72,11 @@ a:link {
 
 ### Lengths
 
-I. PX
-II. REM
-III. %
-IV. vh/vw
-V. auto&inherit
+a. PX
+b. REM
+c. %
+d. vh/vw
+e. auto&inherit
 
 ### Appearance Properties
 1. Fonts
