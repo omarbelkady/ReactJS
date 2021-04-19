@@ -4,18 +4,34 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { IntlProvider } from "react-intl";
-import Arabic from './languages/ar-MR.json';
-import English from './languages/en-US.json';
+//import Arabic from './languages/ar-MR.json';
+//import English from './languages/en-US.json';
+import Wrapper from './components/Wrapper'
+
 
 /*
 intl provider accepts many props
 
 first one is: locale
-second on is: messages
+second one is: messages
+*/
+
+//const local= navigator.language;
+/*
+let lang;
+
+if(local === "en-US"){
+  let lang = English;
+}
+
+else{
+  lang = Arabic;
+}
 */
 
 ReactDOM.render(
-    <IntlProvider locale messages=""><App/></IntlProvider>,
+    //<IntlProvider locale="ar-MR" messages={Arabic}><App date={Date.now()}/></IntlProvider>,
+    <Wrapper><App date={Date.now()}/></Wrapper>,
   document.getElementById('root')
 );
 
