@@ -55,6 +55,7 @@ a:link {
 
 - Which selectors are prioritized?[1: highest-priority...4: least priority]?:
 
+
 1. Inline styles
 2. IDs
 3. Classes, attributes and pseudo-classes 
@@ -73,12 +74,17 @@ a:link {
 ### Lengths
 
 a. PX
+
 b. REM
+
 c. %
+
 d. vh/vw
+
 e. auto&inherit
 
 ### Appearance Properties
+
 1. Fonts
 2. Sizing
 3. Spacing
