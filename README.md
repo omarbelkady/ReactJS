@@ -505,12 +505,12 @@ npx create-react-app
 ├── .gitignore ------- list the files you do not want git to track here
 ├── public
 │   ├── favicon.ico
-│   ├── index.html
+│   ├── index.html ------ to bootstrap your react app import it here
 │   └── manifest.json
 └── src
-    ├── App.css
-    ├── App.js
-    ├── App.test.js
+    ├── App.css ---------------- styling
+    ├── App.js ----------------- root component
+    ├── App.test.js ------------ unit tests
     ├── components
         ├── Home.jsx
 	├── NameOfYourSecondPage.jsx
