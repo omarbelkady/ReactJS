@@ -83,3 +83,44 @@ ReactDOM.render(
 - Props are used in ReactJS so that when they are passed from a parent component to a child component the child component cannot mutate it
 - We pass props to the child so that he is able to use the data but he cannot modify it
 - If a component cannot find a prop it will not generate an error in ReactJS instead it will just output undefined.
+
+
+### PropTypes: Type checking package if you do not want to use Typescript
+
+#### How To Install
+
+```bash
+npm install --save prop-types
+```
+
+#### How It's used example
+
+```js
+import React from 'react';
+import { PropTypes } from 'prop-types';
+class Student extends React.Component {
+  
+  render() {
+    return (
+      <div>
+        <p>Student Name: {this.props.name}</p>
+        <p>Is A 429 FB: {this.props.isaftnfb}</p>
+      </div>
+    );
+  }
+}
+Student.propTypes = {
+  name: PropTypes.string,
+  isaftnfb: PropTypes.bool 
+};
+export default Student;
+```
+
+### Different Prop Types Checkers
+
+- propArray: PropTypes.array => Ensures I input an Array for the input type
+- propBool: PropTypes.bool => Ensures I passs in a Boolean Value for the input type
+- propFunc: PropTypes.func => Ensures I pass in a Function for the input type
+- propNumber: PropTypes.number  => Ensures I pass in a number for the type
+- propObject: PropTypes.object  => Ensures I pass in an Object for the type
+- propString: PropTypes.string =>  Ensures I pass in a String for the type

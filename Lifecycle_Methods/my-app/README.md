@@ -74,11 +74,20 @@ ReactDOM.render(
   document.getElementById('root')
 );
 ```
+### componentWillMount Lifecycle Hook
 
-### ComponentDidMount Lifecycle Hook
+- A PreProcess Lifecycle hook meaning it executes before the render method
+- aka fires before the initial render
+
+### componentDidMount Lifecycle Hook
+
 - A PostProcess Lifecycle Hook meaning it executes after the render method
 - ComponentDidMount Lifecycle Hook is fired immediately after the component is mounted in the UI
 - ComponentDidMount only executes after the first render only on the Client Side
+
+### componentWillReceiveProps Lifecycle Hook
+
+- fires when the component received new props
 
 
 ### I goto my Mounted.js File
@@ -129,11 +138,14 @@ export default class Mounted extends Component{
     - getDerivedStateFromProps()
 2. The second hook React calls is shouldComponentUpdate
     - shouldComponentUpdate()
-3. The third method called in this process is:
+    - this hook is fired before rendering the new state or props
+3. The third hook React calls is componentWillUpdate
+    - this hook fires immediately before rendering new props or state
+4. The fourth method called in this process is:
     - render()
-4. The fourth hook called:
+5. The fifth hook called:
     - getSnapshotBeforeUpdate()
-5. The fifth hook React calls:
+6. The sixth hook React calls:
     - componentDidUpdate()
 
 - The render is always called no matter what however the other methods remain optional
