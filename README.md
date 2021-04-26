@@ -25,6 +25,21 @@
 - Variables which aren't primitives are passed by reference aka Arrays, Objects and Functions
 
 
+### BEM Concept for CSS in React
+
+Block:
+
+- top level component aka a block is considered the parent
+
+Element:
+
+- Regarded as the child elements and are named by tacking two undersquares after the name
+
+Modifiers:
+
+- Manipulators of the block for theme or style of that particular component...naming: add two hyphens to the name of the block 
+
+
 ## Mistakes Commonly Made And How To Fix?
 
 1.  Module Not Found: Cannot Resolve ...
