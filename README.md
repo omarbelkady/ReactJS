@@ -434,8 +434,221 @@ export default Whatever extends Component {
 }
 ```
 
-#### How To Get the FE communicate with the BE:
-- axios
+### How To Get the FE communicate with the BE: FOLLOW THESE STEPS EXACTLY
+
+0. Configure the BE first[NodeJS]--- have Nodemon and NodeJS installed
+
+1. Create a folder inside your project and call it backend
+2. within the folder run npm init to create a package.json
+3. Install express, cors, body-parser, morgan
+4. Create an index.js file and throw this stuff in it
+5. I create a db to have data in it so that my FE can consume it call it db.js
+```js
+let games = [
+  { _id: 1, name: "San Andreas", runs: "PC" },
+  { _id: 2, name: "Valorant", runs: "PC" },
+  { _id: 3, name: "GTA 5", runs: "PC" }
+];
+module.exports = games;
+```
+
+#### Creating Routes
+
+6. I want a route for games so I define routing for it I create it inside a folder called routes
+
+```js
+//the games.js file
+const express = require("express");
+const app = express();
+const cors = require("cors");
+const bodyParser = require("body-parser");
+const logger = require("morgan");
+const myGameRouter = require("./routes/games");
+
+const port = process.env.PORT || 3001;
+
+
+app.use(logger('dev'));
+app.use(cors());
+
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
+
+
+app.use("/games", myGameRouter);
+
+//I listen to the port I defined
+
+app.listen(port, function() {
+  console.log("Runnning on Port: " + port);
+});
+
+
+//creating a route to get the list of games
+router.get("/list", async (req, res) => {
+  try {
+    res.status(200).json({
+      data: games
+    });
+  } catch (err) {
+    res.status(400).json({
+      message: "Some error occured",
+      err
+    });
+  }
+});
+
+//creating a route to get a single game
+router.get("/list/:id", async (req, res) => {
+  let { id } = req.params;
+  id = Number(id);
+  try {
+    let game = games.find(game => game._id === id);
+    res.status(200).json({
+      data: game
+    });
+  } catch (err) {
+    res.status(400).json({
+      message: "Some error occured",
+      err
+    });
+  }
+});
+
+module.exports = router;
+```
+
+### Backend
+
+7. I goto my index.js file
+
+```js
+const express = require("express");
+const app = express();
+const cors = require("cors");
+const bodyParser = require("body-parser");
+const logger = require("morgan");
+const port = process.env.PORT || 3001;
+const myGameRouter = require("./routes/games");
+
+
+
+app.use(logger('dev'));
+app.use(cors());
+
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
+
+
+app.use("/games", myGameRouter);
+
+//I listen to the port I defined
+
+app.listen(port, function() {
+  console.log("Runnning on Port: " + port);
+});
+
+
+module.exports = app;
+```
+
+8. I run my backend 
+
+```bash
+nodemon index.js
+```
+
+### Frontend
+
+9. I create A react application
+
+```bash
+npx create-react-app react-fe
+```
+
+10. Add Bootstrap to the index.html file in the react-fe folder
+
+11. goto your root component and make App.js a class based component and export it
+
+12. have some state in your constructor
+
+```js
+import React, { Component } from "react";
+
+export default class App extends Component {
+
+
+      constructor(someprops) {
+          super();
+          this.state = {
+            list: true, //list of games will show if true
+            card: false, //single game will be displayed if true
+            games: [], //has the list of games stored in the be here
+            game: {} //has 1 single game stored in the be here
+          };
+      }
+
+      /*
+      I need to get the list of games from the API
+      using the lifecycle hook componentDidMount to have list of 
+      games stored inside the state before I mount the component
+      */
+      componentDidMount() {
+        fetch("http://localhost:3001/games/list")
+        .then(response => response.json())
+        .then( responseJson=> {
+          this.setState({ games:responseJson.data });
+        },
+      )}
+
+      // Be able to view a single game
+      showGame= id => {
+          fetch(`http://localhost:3001/games/${id}`)
+          .then(response => response.json())
+          .then(
+              responseJson=> {this.setState({ game:responseJson.data })},
+          );
+
+        this.setState({
+            list:false,
+            game:true
+        });
+      };
+
+      render(){
+          return(
+              <div className ="container">
+                  {this.state.list ? (
+                      <div className="list-group">
+                        {this.state.games.map(game => (
+                            <li onClick={() => this.showGame(game._id)}
+                                className="list-group-item list-group-item-action"
+                              >
+                            {game.name}
+                            </li>
+                        ))}
+                      </div>
+                  ) : null}
+              </div>
+
+              {this.state.card ? (
+                    <div class="card" style={{ width: "18rem" }}>
+                        <div class="card-body">
+                            <h5 class="card-title">{this.state.player.name}</h5>
+                            <p class="card-text">{this.state.player.runs}</p>
+                            <div onClick={() => this.showGame()} class="btn btn-primary">Back</div>
+                        </div>
+                    </div>
+              ) : null}
+        )
+      }
+
+```
+
+14. I run my frontend
+```bash
+npm start
+```
 
 #### prevents the form from acting in the default way
 ```js
@@ -444,6 +657,7 @@ ev.preventDefault()
 ```
 
 ### How to Render Sth In React 
+
 #### I can put 27375 in place of this.state.pascal and it will render
 ```js
 import React, { Component } from "react";
