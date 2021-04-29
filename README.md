@@ -129,7 +129,26 @@ export const MyNamedExport = () => {
 }
 ```
 
+
+10. A Component is ....
+```
+A component is changing an uncontrolled input to be controlled. This is likely caused by the value changing from undefined to a defined value, 
+which should not happen. Decide between using a controlled or uncontrolled input element for the lifetime of the component.
+```
+
+- This is due to not passing anything to the UseState Hook. When you pass undefined or null to a value within a React component along with an onChange that means this is an uncontrolled component
+- You are essentially going from uncontrolled to controlled input and this is a big NONO
+- To Fix this just pass in an empty string to the useState hook
+
+11. React Hook useEffect has a missing dependency: 'userOne'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+- This is saying we are using a variable in my useEffect hook but I am not including it in my dependency array
+- To fix this just include the variable in the dependency array
+
+
+
 - I goto the Root component to include it and it generates the error Too Many Rerenders
+
 ```js
 import './App.css';
 import { MyNamedExport } from './components/MyNamedExport';
