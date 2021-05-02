@@ -233,6 +233,15 @@ class App extends Component{
 ### Default Port Which React Runs On:
 - 3000
 
+### Webpack
+- module that bundles our JS code for it to be understood by multiple browsers
+- AKA it is resource loader 
+- Any foreign module dependency is published for it to be understood by the browser
+
+#### Webpack Bundler
+- npm module that bundles our JS code. It is in charge of collecting the app's dependencies and merging them
+- ... for it to be consumed by the web browser 
+
 
 ### Truthy or False Vals
 ```js
