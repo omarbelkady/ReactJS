@@ -7,6 +7,9 @@
   - UI Components do not have state of their own
   - We use functions to create these UI Components as opposed to classes
 
+- Use Functional Components in Your React App and not Class Components
+- Functional Components enables me to use Hooks which means shorter code than Class Components
+
 ## Root Component aka App.js
 - The Root Components is always at the top of the hierarchy which in our case in App.js and is the container
 - The Root Components go fetch its data from a DB via a lifecycle hook and then stores it in the State
@@ -37,6 +40,19 @@ const MyComponent = (props) => {
 }
 ```
 
+#### Example 2 of A Functional Comp
+```js
+import React from 'react';
+ 
+function App() {
+  const sayHI = 'Hello 7652626 Functional Component!';
+ 
+  return <h1>{sayHI}</h1>;
+}
+ 
+export default App;
+```
+
 
 
 ### Class Based Component
@@ -47,11 +63,17 @@ const MyComponent = (props) => {
 
 ### Example of A Class Based Component
 ```js
-class App extends React.Component{
-	render(){
-		return <h1>Hello There 2526 56837 26265</h1>
-	}
+import React, { Component } from 'react';
+
+class MyComponent extends Component {
+  render() {
+    return (
+      <div>Hello There 2526 56837 26265</div>
+    );
+  }
 }
+
+export default MyComponent;
 ```
 
 ### 2nd Example of A Class-Based Comp
