@@ -45,9 +45,9 @@ const MyComponent = (props) => {
 import React from 'react';
  
 function App() {
-  const sayHi = 'Hello 7652626 Functional Component!';
+  const sayHI = 'Hello 7652626 Functional Component!';
  
-  return <h1>{sayHi}</h1>;
+  return <h1>{sayHI}</h1>;
 }
  
 export default App;
