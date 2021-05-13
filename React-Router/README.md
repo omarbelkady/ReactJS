@@ -210,3 +210,13 @@ function App() {
 
 export default App;
 ```
+
+### Switch Tag Benefits
+- The First Child it finds to the matched search criteria you supplied it with it will render that component to the DOM
+```js
+	<Switch>
+		<Route path="/red" exact component={Red}/>
+		<Route path="/blue" exact component={Blue}/>
+		<Route path="/yellow" exact component={Yellow}/>
+	</Switch>
+```
