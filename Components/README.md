@@ -63,11 +63,17 @@ export default App;
 
 ### Example of A Class Based Component
 ```js
-class App extends React.Component{
-	render(){
-		return <h1>Hello There 2526 56837 26265</h1>
-	}
+import React, { Component } from 'react';
+
+class MyComponent extends Component {
+  render() {
+    return (
+      <div>Hello There 2526 56837 26265</div>
+    );
+  }
 }
+
+export default MyComponent;
 ```
 
 ### 2nd Example of A Class-Based Comp
