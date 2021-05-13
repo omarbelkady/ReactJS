@@ -3,6 +3,8 @@
 - To Do This I must use the Fetch API but sometimes the built-in fetch API in JS has limitations this is why I use Axios
 - Axios can take care of the heavy duty for me because it was created to handle http reqs and resps
 - Axios has the power to perform multiple http requests
+- i.e. It enables me to make HTTP requests to external resources
+- Promise based ∴ uses the format async await
 
 
 #### Axios making a GET Request to A resource

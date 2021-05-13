@@ -178,6 +178,27 @@ export const MyNamedExport = () => {
 ```
 
 
+11. Attempted import error: 'x' is not exported from './components/x'.
+If your remove the curly brace of your in your import statement this error goes away
+
+
+12. Class constructor X cannot be invoked without 'new'
+Make sure you tell react that you are trying to create a component by extending React.component
+
+12a. Instead of doing: 
+
+```js
+class Book extends React.Component 
+```
+
+- Change it to a default class component
+
+```js
+export default class Book extends Component
+```
+
+12aII. Import Component from React this also solves the problem
+
 ### JSX
 - The ReactJS Syntax for writing stuff a mix of XML and VanillaJS
 
@@ -406,6 +427,8 @@ class Child extends Component{
 ### What is a Component?
 - Your application is made up of thousands of pieces. Every piece is what we call a "component"
 	- Example: navigation bar, sidebar
+- Every React Component has a built-in state object. State object is where you store property vals which belong to the component
+- When the state changes the component rerenders
 
 
 ### Difference between Functional And Class Based Components:
