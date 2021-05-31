@@ -16,6 +16,13 @@
   5. This reducer renders the new state.
 - Redux is used to be the big boss of State in a large Scale Application
 
+### Important People in Redux To Remember
+1. Store: person who houses the state of the reducers 
+2. Action: person aka function who returns an object.. Object must contain the name of action aka type
+3. Reducer: person aka function that updates the state depending on the action
+4. Dispatcher
+
+
 ```js
 //I cannot do this. This is unacceptable because I directly modifying the state
 store.currentUser = { name: "cstsffbandcobollover"}
