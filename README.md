@@ -4,10 +4,19 @@
 
 # React Repo Which 63526 843 2-56837 263 27736259 56837 HELPED ME Make
 
+### Datatypes:
+1. Numbers
+2. Text
+3. Boolean
+4. Consts
+5. Objects
+
+
 ### Fragments In React:
 ```
 <> </>
 ```
+
 
 ### ReactJs VS. NodeJS
 - ReactJS: Client Side/Front End ====> API Consumer/Customer
