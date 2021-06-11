@@ -8,6 +8,38 @@
 3. % is used for responsive design
 4. vh means viewport height and vw means viewport width... used for specific portions of the screen
 
+#### Absolute Units
+-  Fixed and length expressed is what is displayed
+- Not Recommended
+
+| Abbreviation | Meaning |  
+| ----------- | ----------- |  
+| cm | Centimeters |  
+| mm | Meters |
+| in | Inches i.e. 1 in. = 2.54cm or 0.0254 m |  
+| px | Pixels i.e. 1px = 1/96 in. |
+| pt | Points i.e. 1pt = 1/72 in. |  
+| pc | Picas i.e. 1pc = 12pt |
+
+
+#### Relative Units
+
+- In relation to another length property
+-  Used when dealing with various rendering mediums
+
+| Abbreviation | Meaning |  
+| ----------- | ----------- |  
+| em | relative to font sz of element |  
+| ex | relative to the x height of the curr font |
+| ch | relative to the width of "0" |  
+| rem | relative to the ft sz of the root elem |
+| vw | relative to the 1% of the width of the viewport |  
+| vh | relative to the 1% of the height of the viewport |
+| vmin | relative to the 1% of the viewport smaller dimension |  
+| vmax | relative to the 1% of the viewport larger dimension |
+| * | relative to the parent element |  
+
+
 ### Selectors
 
 1. Universal Selector: *
