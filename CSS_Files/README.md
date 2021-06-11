@@ -8,6 +8,38 @@
 3. % is used for responsive design
 4. vh means viewport height and vw means viewport width... used for specific portions of the screen
 
+#### Absolute Units
+-  Fixed and length expressed is what is displayed
+- Not Recommended
+
+| Abbreviation | Meaning |  
+| ----------- | ----------- |  
+| cm | Centimeters |  
+| mm | Meters |
+| in | Inches i.e. 1 in. = 2.54cm or 0.0254 m |  
+| px | Pixels i.e. 1px = 1/96 in. |
+| pt | Points i.e. 1pt = 1/72 in. |  
+| pc | Picas i.e. 1pc = 12pt |
+
+
+#### Relative Units
+
+- In relation to another length property
+-  Used when dealing with various rendering mediums
+
+| Abbreviation | Meaning |  
+| ----------- | ----------- |  
+| em | relative to font sz of element |  
+| ex | relative to the x height of the curr font |
+| ch | relative to the width of "0" |  
+| rem | relative to the ft sz of the root elem |
+| vw | relative to the 1% of the width of the viewport |  
+| vh | relative to the 1% of the height of the viewport |
+| vmin | relative to the 1% of the viewport smaller dimension |  
+| vmax | relative to the 1% of the viewport larger dimension |
+| * | relative to the parent element |  
+
+
 ### Selectors
 
 1. Universal Selector: *
@@ -119,6 +151,57 @@ p{
 }
 ```
 
+### Use an image/emoji as a cursor
+```css
+.my-cool-cursor{
+    cursor: url('./mycoolcursor.jpg'), auto;
+}
+```
+
+### Flexbox Container Important Tips to layout stuff in a row or column
+```css
+display: flex; /*enable flex layout on a container*/
+flex-direction: column; /*hhow to align your elements in a row or column fashioned way*/
+justify-content: center; /*align items along the main axis*/
+align-items: center; /*align items along the cross axis*/
+flex-wrap: wrap; /*allow wrapping*/
+align-content: center; /*align flex lines along the cross axis*/
+
+```
+
+### Flexbox Item Important Tips to layout stuff in a row or column
+```css
+align-self: center; /*overwrite the alignment*/
+flex-grow: 1; /*growth factor*/
+flex-shrink: 0; /*shrink actor*/
+flex-wrap: wrap; /*allow wrapping*/
+flex-basis: 10rem; /*initial size of an item*/
+flex: 0 1 15rem; /*Shorthand for: GROW SHRINK BASIS*/
+```
+
+### Tell CSS How many lines you want your text to take
+```css
+.line-clamp{
+    display:webkit-box; 
+    -webkit-line-clamp: 3; 
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+```
+
+- If you want a shape around some text
+```css
+.element{
+    float: left;
+    shape-outside: circle(50%); 
+}
+
+```
+
+### Tell CSS You want a clip under your text
+```css
+background-clip: border-box; /*other vals: padding-box, content-box, text*/
+```
 
 
 ### Precedence
@@ -269,3 +352,39 @@ text-overflow: ellipsis;/*other vals: clip, string, initial, inherit*/
 text-decoration: none;/*other vals: h-shadow, v-shadow, blur-radius color, initial, inherit*/
 ```
 
+17. Smooth Scrolling Super Awesome effect
+
+```css
+window.scrollTop({
+    top: 0,
+    behavior: 'smooth'
+})
+```
+
+
+### Pseudo Elements
+
+- keyword added to a css selector that lets you style a specific part of the selected
+- html element. notation is two colons
+1. after => ::after
+    - last child of the selected html element
+2. before => ::before 
+    - first child of the selected html element
+3. first letter => ::first-letter
+    - first letter of the first line of the block element. DNA if there is an img or table coming after
+4. first line => ::first-line
+    - first line of the block element
+5. marker => ::marker
+    - selects the marker box of a list item(li) usually it involves your bullet point or number
+6. placeholder => ::placeholder
+    - points to the placeholder of the input elements in your presentation mostly it is your form
+7. selection => ::selection
+    - in relation to the highlighted elements of the DOM
+
+```css
+/*syntax*/
+selector::pseudo-element{
+    prop: val;
+}
+
+```
