@@ -77,7 +77,7 @@
 
 - < meta /> Meta Data
 
-- < title> Title
+- < title> Title for clickable headlines on the Search Engine
 
 - < link /> Relevant Resource
 
@@ -117,6 +117,69 @@
 - < th > Your Table's header for that cell
 
 - < td > The data you will place in your table cell
+
+### Description Tag
+
+- It is used to set up descriptions within search result snippets
+
+```html
+<head>
+    <meta name="description" content="call to action and 2526 56837 7652626">
+</head>
+```
+
+### Robots tag
+
+```html
+<head>
+    <meta name="robots" content="nopolan32, nodj32">
+    <meta name="googlebot" content="nochen78ng, nofollow">
+    <!-- Various other follow bots: googlebot, bingbot, duckduckbot, etc.-->
+</head>
+```
+
+
+### Canonical Tag
+
+```html
+<head>
+    <meta name="canonical" href="https://www.yourwebsite.com" />
+</head>
+```
+
+### Charset Tag
+
+```html
+<head>
+    <meta charset="UTF-8">
+</head>
+```
+
+### Viewport Tag For Responsiveness
+
+```html
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+```
+
+### Keywords Tag
+
+```html
+<head>
+    <meta name="keywords" content="all the keywords you wish to put separated by comma">
+</head>
+```
+
+### Author Tag
+
+```html
+<head>
+    <meta name="author" content="Polandev Community">
+</head>
+```
+
+
 
 ### HTML5 Page Layout
 

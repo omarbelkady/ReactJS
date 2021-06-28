@@ -17,6 +17,26 @@
 <> </>
 ```
 
+### Cool APIs to work with in React
+
+- Google Maps
+  - https://developers.google.com/maps/
+
+- Unsplash
+  - https://unsplash.com/developers/
+
+- Spotify
+  - https://developer.spotify.com/discover/
+
+- Facebook
+  - https://developers.facebook.com/
+
+- Mail Chimp
+  - https://mailchimp.com/developer/
+
+- Instant Mojo
+  - https://instantmojo.com/developer/
+
 
 ### ReactJs VS. NodeJS
 - ReactJS: Client Side/Front End ====> API Consumer/Customer
