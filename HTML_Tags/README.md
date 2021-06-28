@@ -113,3 +113,118 @@
 
 - <td> The data you will place in your table cell
 
+### HTML5 Page Layout
+
+- ![HTML5 Page Layout](https://user-images.githubusercontent.com/31806568/123695400-69454f80-d852-11eb-941a-c5f93f80d4db.jpg)
+
+
+### Emmet
+
+1. Child operator i.e. >
+div > ul > li
+```html
+<div>
+    <ul>
+        <li></li>
+    </ul>
+</div>
+```
+
+2. ! Operator gives you html5 boiler plate code
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+```
+
+3. Child Operator > i.e. div > ul > li Means to nest elem inside each other
+
+```html
+<div>
+    <ul>
+        <li></li>
+    </ul>
+</div>
+```
+
+
+4. Sibling Operator + meaning place things near each other: div+p+a
+```html
+<div></div>
+<p></p>
+<a></a>
+```
+
+5. Multiplication operator: * can define how many times elem should be outp
+
+- ul>li*5
+```html
+<ul>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+</ul>
+```
+
+6. Grouping Operator: ()
+
+- div > (header>ul>li*2>a)
+```html
+<div>
+    <header>
+        <ul>
+            <li><a href=""></a></li>
+            <li><a href=""></a></li>
+        </ul>
+    </header>
+</div>
+```
+
+7. Item Numbering Operator: $ 
+
+- ul>li.item$*5
+```html
+<ul>
+    <li class="item1"></li>
+    <li class="item2"></li>
+    <li class="item3"></li>
+    <li class="item4"></li>
+    <li class="item5"></li>
+</ul>
+
+```
+
+8. Curly Brace means Text: {}
+
+- a {Click Me}
+```html
+<a href="">Click Me</a>
+```
+
+
+9. Id Vs Class
+
+- .container ===> class
+```html
+<div class="container">
+
+</div>
+```
+
+- #wrapper ===> id
+```html
+<div id="wrapper">
+
+</div>
+```
