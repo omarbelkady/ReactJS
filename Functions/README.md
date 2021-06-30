@@ -35,6 +35,51 @@ function functionName(param1, param2, etc..){
 }
 ```
 
+## Arrow Functions
+
+### Function without Arrow Function
+
+```js
+coolfunc = function(){
+	return "This is a cool function!";
+}
+```
+
+### Arrow Function
+
+```js
+coolfunc = () => {
+	return "This is a cool Arrow Function!";
+}
+
+```
+
+- If the function has one statement I can omit:
+	
+	- the return statement
+	- the curly braces
+
+```js
+coolfunc = () => "This is a cool Arrow Function!";
+```
+
+
+### Arrow Function With Parameters
+
+```js
+coolfunc = (myval) => {
+	return "Hi there " + myval;
+}
+```
+
+- IF the Arrow function has only one parameter I can omit:
+	- the parentheses
+	- the return statement
+```js
+coolfunc = myval => "Hi there " + myval;
+```
+
+
 ### Important Functions
 
 1. alert() function: outputs data in an alert box in a window

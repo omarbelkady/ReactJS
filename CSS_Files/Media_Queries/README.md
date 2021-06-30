@@ -8,7 +8,20 @@
 	}
 }
 ```
+### Orientation Query
+```css
+@media (orientation: landscape){
+	body{
+		flex-direction: row;
+	}
+}
 
+@media (orientation: portrain){
+	body{
+		flex-direction: column;
+	}
+}
+```
 
 ###  Range Based Media Query
 ```css

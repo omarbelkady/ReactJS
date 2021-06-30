@@ -10,12 +10,21 @@
 
 ### Doc Structure
 
--  < h1 > Through < h6 > Heading
-- < div > Section Of your Page
-- < span  > Inline Section of your page
-- < p> Paragraph
+- < aside > Actions/Content related to a section
 - < br /> Line Break
+- < div > Section Of your Page
+- < figcaption > Define caption for your Images
+- < figure > Define Image and Caption Combos
+- < header > Headers with multiple Element
 - < hr > Horizontal Rule
+-  < h1 > Through < h6 > Heading
+- < main > Main Routable Element
+- < nav > Navigation Elements
+- < p> Paragraph
+- < section > Section Within A Document
+- < span  > Inline Section of your page
+- < time > Date or Time Vals
+
 
 ### Forms
 
@@ -24,51 +33,103 @@
 - < legend> Your Form's legend
 - < label /> Your Form's Input Label
 - < input /> Form Input Box
-- < select> Drop Down Menu Box
-- < optgroup> A Group of Options
-- < option> Options From The Drop Down Menu
-- < textarea> Large Text input
-- < button> A simple Button
+- < select > Drop Down Menu Box
+- < optgroup > A Group of Options
+- < option > Options From The Drop Down Menu
+- < textarea > Large Text input
+- < button > A simple Button
 
 
 ### Input Type Fields
 
-- < input type="url"> To enter a URL
-- < input type="range"> A slider to let you choose which number you wish
-- < input type="tel"> An input field to let you enter your phone number
-- < input type="datetime-local"> An input field which lets you select the day from a calendar
-- < input type="month"> An input field which lets you select the month from a calendar
-- < input type="week"> An input field which lets you select the week from a calendar
-- < input type="color"> An input field which lets you choose the color you want from a palette
-- < input type="text"/> 
-	 < datalist id="profs">
-		 < option val="dj">
-		 < option val="pol2626"> 
-	 < /datalist> 
+- < input type="url" > To enter a URL
+- < input type="range" > A slider to let you choose which number you wish
+- < input type="tel" > An input field to let you enter your phone number
+- < input type="datetime-local" > An input field which lets you select the day from a calendar
+- < input type="month" > An input field which lets you select the month from a calendar
+- < input type="week" > An input field which lets you select the week from a calendar
+- < input type="color" > An input field which lets you choose the color you want from a palette
+- < input type="text" /> 
+	 < datalist id="profs" >
+		 < option val="dj" >
+		 < option val="pol2626" > 
+	 < /datalist > 
 	- An input suggestion field
 
 
+
+### Lazy Loading:
+
+- prevents the loading of images until you scroll to the image
+
+```html
+<img src="image.jpg" loading="lazy" width="300">
+```
+
+
+### Multiple Images
+
+- Add Multiple Images depending on the Size of Screen
+```html
+<picture>
+    <source media="min-width: 650px)" srcset="img_pol_32.jpg">
+    <source media="min-width: 465px)" srcset="img_dj_32.jpg">
+    <img src="2272ie.jpg" alt="35FB" style="width:auto;">
+</picture>
+```
+
+
+### Base URL
+
+- Use relative paths in images or urls in images or a tag
+```html
+<head>
+    <base hrf="https://www.somecoolstuff.com/" target="_blank">
+</head>
+<body>
+    <img src="images/myImg1.png">
+    <a href="tags/colors.html">HTML Base Tag</a>
+</body>
+```
+
+
+### Input Suggestions
+
+```js
+<label for="browser">Choose your browser from the list </label>
+<input list="browsers" name="browser" id="browser">
+
+<datalist id="browsers">
+    <option value="Edge">
+    <option value="Firefox">
+    <option value="Chrome">
+    <option value="Opera">
+    <option value="Safari">
+    <option value="IE">
+</datalist>
+```
+
 ### Links
 
-- < a href=""> A Page Hyperlink you want to be redirected to
-- < a href="mailto: x"> This sends an email to the x recipient
-- < a name="name"> Anchor Tag
-- < a href="#name"> Link to another page on the website or some other route
+- < a href="" > A Page Hyperlink you want to be redirected to
+- < a href="mailto: x" > This sends an email to the x recipient
+- < a name="name" > Anchor Tag
+- < a href="#name" > Link to another page on the website or some other route
 
 
 ### Lists
 
-- < ul> Unordered List
+- < ul > Unordered List
 
-- < ol> Ordered List
+- < ol > Ordered List
 
-- < li> List Item
+- < li > List Item
 
-- < dl> Definition List
+- < dl > Definition List
 
-- < dt> Defintion Term
+- < dt > Defintion Term
 
-- < dd> Term Description
+- < dd > Term Description
 
 
 ### Page Info
@@ -77,7 +138,7 @@
 
 - < meta /> Meta Data
 
-- < title> Title for clickable headlines on the Search Engine
+- < title > Title for clickable headlines on the Search Engine
 
 - < link /> Relevant Resource
 
@@ -127,6 +188,56 @@
     <meta name="description" content="call to action and 2526 56837 7652626">
 </head>
 ```
+
+### Search Field
+
+```html
+<input type="search" id="search" name="search">
+```
+
+### Email Address  Field
+
+```html
+<input type="email" id="email" name="email">
+```
+
+### URL Address Field
+
+```html
+<input type="url" id="url" name="url">
+<input type="reset">
+```
+
+
+### Slider Controls Field
+
+```html
+<input type="range" name="price" min="1000" max="10000" value="8500">
+<output for="price">8500</output>
+```
+
+### Phone Number Field
+
+```html
+<input type="tel" id="tel" name="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}">
+```
+
+### Date Time Field
+
+```html
+<input type="datetime-local" name="datetime">
+<input type="month" name="month">
+<input type="week" name="week">
+```
+
+### Time And Color Field
+
+```html
+<input type="time" name="time">
+<input type="color" name="color" id="color">
+```
+
+
 
 ### Robots tag
 
@@ -296,3 +407,5 @@ div > ul > li
 
 </div>
 ```
+
+
