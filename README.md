@@ -17,6 +17,58 @@
 <> </>
 ```
 
+### Useful Resources for the FE
+
+1. Mozilla Developer
+  - https://developer.mozilla.org
+
+2. W3 School
+  - https://www.w3schools.com/
+
+3. CSS Reference For Visual CSS Guides 
+  - https://cssreference.io/
+
+4. JS Learning
+  - https://javascript.info/
+
+5. CSS Tricks ... To learn the ins and outs of CSS with some cool tricks
+  - https://css-tricks.com
+
+6. Code Pen .... Super Useful Resource
+  - https://codepen.io
+
+7. Useful Snippets for the Front End
+  - https://30secondsofcode.org
+
+
+### Cool Animation Libraries to Use 
+
+- AniJS
+- ScrollReveal JS
+- Popmotion Pure
+- Lottie JS
+- MOJS
+
+
+
+### Free Hosting Providers
+    
+    - Most Common
+      - Heroku
+      - Netlify
+      - Vercel
+      - Firebase
+
+    - Others
+      - Begin
+      - Fleek
+      - Fly
+      - Glitch
+      - Hostman
+      - Render
+      - Stormkit
+      - Surge
+
 ### Cool APIs to work with in React
 
 - Google Maps
@@ -39,7 +91,7 @@
 
 
 ### ReactJs VS. NodeJS
-- ReactJS: Client Side/Front End ====> API Consumer/Customer
+- ReactJS: UI Library
 - NodeJS: Server Side/Back End ====> API Exposer/Kitchen
 - API: Communicator/Waiter
 

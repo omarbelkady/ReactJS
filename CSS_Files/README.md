@@ -72,6 +72,22 @@
 ```
 
 
+### Master Reset
+
+```css
+*{
+    border: 0;
+    outline: 0;
+    padding: 0;
+    margin: 0;
+    vertical-align: baseline;
+    font-weight: inherit;
+    font-family: inherit;
+    font-style: inherit;
+    font-size: 100%;
+}
+```
+
 ### How To Target and style HTML thanks to Selectors
 
 #### A. Class selector
@@ -197,6 +213,83 @@ flex: 0 1 15rem; /*Shorthand for: GROW SHRINK BASIS*/
 }
 
 ```
+
+## Background
+
+### Tells CSS you want a solid color as your background
+```css
+.header{
+    background-color: #0f717d;
+}
+```
+
+
+### Tells CSS you want picture as a background
+```css
+.header{
+    background-image: url(background.png);
+}
+```
+
+
+
+### Tells CSS what size you want your background to be
+```css
+.header{
+    background-size: 500px;
+}
+```
+
+
+### Tells CSS to move your background within its container
+```css
+.header{
+    background-position: 50% 25%;
+}
+```
+
+### Tells CSS whether or not to repeat the background and HOW
+```css
+.header{
+    background-repeat: no-repeat;
+}
+```
+
+
+
+### Tells CSS how to move your background relative to the viewport
+```css
+.header{
+    background-attachment: scroll;
+}
+```
+
+
+
+### Tells CSS how your background img should blend with the background color
+```css
+.header{
+    background-blend-mode: soft-light;
+}
+```
+
+
+### Tells CSS how far you want your background img or color to extend
+```css
+.header{
+    background-clip: #0f717d;
+}
+```
+
+
+### Tell CSS where to paint your background
+```css
+.header{
+    background-origin: border-box;
+}
+```
+
+
 
 ### Tell CSS You want a clip under your text
 ```css

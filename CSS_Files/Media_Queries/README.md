@@ -70,3 +70,15 @@ is less than or equal to 500*/
 7. 1280px: Desktop
 
 8. 1440px or greater: Wide screen Desktop
+
+
+
+### When targeting Small Screens and big Screens
+	
+- Make A Plan For Both
+- Use meta tags
+- Use grid
+- Use Media Queries and FlexBox
+- Use REM, EM, VW instead of PX
+- Try to stay away from negative spacing
+- Try to find responsive images 

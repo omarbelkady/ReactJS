@@ -1,4 +1,4 @@
-
+map
 ## HTML Tags
 
 ### Doc Outline
@@ -24,6 +24,16 @@
 - < section > Section Within A Document
 - < span  > Inline Section of your page
 - < time > Date or Time Vals
+
+### Location
+
+- MAP tag to display location of some place
+```html
+<map name="frame">
+    <area shape="rect" coords="34,44,270,350" href="">
+    <area shape="rect" coords="291,170,330,250" href="">
+</map>
+```
 
 
 ### Forms
@@ -235,6 +245,17 @@
 ```html
 <input type="time" name="time">
 <input type="color" name="color" id="color">
+```
+
+### Subscript e.g. x-sub1
+```html
+<p>x<sub>1</sub></p>
+```
+
+
+### Superscript e.g. x^2
+```html
+<p>x<sup>2</sup></p>
 ```
 
 
