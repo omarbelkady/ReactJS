@@ -51,6 +51,21 @@
 7. General Sibling Selector: h1 ~ p
 8. Descendent Selector: p a {}
 
+### Pseudo-classes in CSS
+
+
+| Class Selector | Meaning |  
+| ----------- | ----------- |  
+| :active | On An Active Element |  
+| :visited | On A Visited Link |
+| :focus | On An Element while this element is focus |  
+| :disabled | On An Element While this element is disabled |
+| :hover | On An Element while this element has your mouse hovered over it |  
+| :enabled | On An Element while the element is enabled |
+| :link | On An Unvisited Link |  
+| :checked | On An Element that is checked |
+
+
 
 ### Best way to manage your css vars
 ```css
@@ -480,4 +495,22 @@ selector::pseudo-element{
     prop: val;
 }
 
+```
+
+### Top CSS Designs
+
+1. https://www.contra.com/
+2. https://www.distillocaffe.com/
+3. https://www.theoceanagency.org/
+4. https://www.proxy.com/
+5. https://www.miew.pt/
+6. https://www.mayerr.com/
+
+
+### Simple CSS Animation
+
+```html
+<svg width="100vw" height="100vh">
+    <text x="45%" y="45%">Hi There</text>
+</svg>
 ```

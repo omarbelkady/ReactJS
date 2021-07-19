@@ -41,14 +41,45 @@
   - https://30secondsofcode.org
 
 
-### Cool Animation Libraries to Use 
+### Tutorials
+
+1. HTML5 Rocks
+
+2. Smashing Magazine
+
+3. Tuts+
+
+4. Geeksforgeeks
+
+5. W3Schools
+
+
+### Cool Libraries to Use 
+
 
 - AniJS
-- ScrollReveal JS
-- Popmotion Pure
+- AutoComplete.js : simple pure vanilla js lib for autocompletion
+- Base Web: Ready to use Components
+- Darkmode.js: uses CSS mix-blend mode in order to bring dark mode to your WS
+- FrenchKiss.js: For simple and fast soln to handling internationalization
+- Freezeframe.js: Library that pauses animated gifs and animated them on mouse hover/click/touch
+- HotKeys.js: For capturing keyboard input
+- Indigo Player: xtensible js lib for playing videos
+- Lax.js: for Parallax Effect
 - Lottie JS
 - MOJS
-
+- Moveable: Draggable, Resizable, Scallable, Rotatable, Wrapable, Pinchable Elements
+- Optimole: Manage and Resize Images depending on how much resources you have
+- Popmotion Pure
+- Rallax.js: VanillaJS plugin to implement parallax scrolling effect
+- React Image Magnifiers: Responsive, image magnifying react component on mouse and touch
+- React Redux Loading Bar: component providing loading bar for long running tasks
+- React Simple Img: React lazy loading images iwth IntersectionObserver API
+- SceneJS: JS Animation for creating animated Web Sites
+- ScrollReveal JS
+- Simple Keyboard: simple, fast, customizable virtual keyboard
+- Zdog: Walkthrough on how to design, display and animate a design
+- fslightbox: for display various types of sources in a box
 
 
 ### Free Hosting Providers
@@ -68,6 +99,14 @@
       - Render
       - Stormkit
       - Surge
+
+### Free Website Templates
+
+- https://www.startbootstrap.com/
+- https://www.onepagelove.com/
+- https://www.bootstrapmade.com/
+- https://free-css.com/
+- https://freewebsitetemplates.com/
 
 ### Cool APIs to work with in React
 
