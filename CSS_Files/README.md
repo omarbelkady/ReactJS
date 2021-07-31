@@ -8,6 +8,47 @@
 3. % is used for responsive design
 4. vh means viewport height and vw means viewport width... used for specific portions of the screen
 
+#### CSS Units Broken Down
+
+- px
+    - absolute
+    - avoid using for font-sizes
+    - use for minor details(e.g. border and shadow)
+    - size is fixed
+    - NOT Responsive
+    - overrides the user's browser preferences
+
+- %
+    - relative
+    - use when wanting to deal with layouts and width and height
+    - e.g. links on a navigation bar, images within a div, etc.
+
+- em
+    - relative
+    - use when wanting to deal with the size of your font
+    - && margin/padding
+    - use when you want to make adjustments to margin/padding
+    - ...based element font-size
+    - parent font size
+
+- rem
+    - relative
+    - use when wanting to deal with font-size and margin/padding
+    - more consistent than em
+    - relative to the root html
+
+- vw/vh
+    - relative
+    - 100vw means full width of the screen
+    - use when dealing with bigger layouts i.e. backgrounds
+    - use when wanting to make your website responsive
+
+- ch 
+    - relative
+    - rel to the width of a paragraph
+    - general good ux: 45-70 chars per column
+
+
 #### Absolute Units
 -  Fixed and length expressed is what is displayed
 - Not Recommended
@@ -380,6 +421,37 @@ e. auto&inherit
 3. Polished
 4. Globals
 5. Theming
+
+### Inline Elements
+
+- < a >
+- < b >
+- < br >
+- < img >
+- < input >
+- < label >
+- < script >
+- < span >
+
+
+### Block Elements
+
+- < div >
+- < footer >
+- < h1 >
+- < h2 >
+- < h3 >
+- < h4 >
+- < h5 >
+- < h6 >
+- < header >
+- < hr >
+- < li >
+- < ol >
+- < p >
+- < section >
+- < ul >
+
 
 
 
