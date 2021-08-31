@@ -1,7 +1,3 @@
-
-
-
-
 # React Repo Which 63526 843 2-56837 263 27736259 56837 HELPED ME Make
 
 ### Datatypes:
@@ -16,6 +12,146 @@
 ```
 <> </>
 ```
+
+
+### 1 How to install prereqs for react and all other dependencies necessary to your project
+```bash
+mkdir my-react-app
+cd my-react-app
+npm init --y
+npm install react react-dom 
+npm install --save-dev webpack webpack-dev-server html-webpack-plugin @babel/core babel-loader @babel/preset-env @babel/preset-react 
+```
+
+### 2: Create React Application using the create-react-app command
+```bash
+npx create-react-app 
+```
+### 3: Remove the following 5 files that come shipped with the create-react-app command
+- App.test.js
+- index.css
+- logo.svg
+- serviceWorker.js
+- setupTests.js
+
+
+
+### 4. React Project Layout. If you are build a SPA no need for components dir ignore this step and any subsequent one
+```
+├── README.md
+├── node_modules
+├── package.json
+├── .gitignore ------- list the files you do not want git to track here
+├── public
+│   ├── favicon.ico
+│   ├── index.html ------ to bootstrap your react app import it here
+│   └── manifest.json
+└── src
+    ├── App.css ---------------- styling
+    ├── App.js ----------------- root component
+    ├── App.test.js ------------ unit tests
+    ├── components
+        ├── Home.jsx
+	├── NameOfYourSecondPage.jsx
+	├── NameOfYourThirdPage.jsx
+	├── NameOfYourFourthPage.jsx
+	├── NameOfYourNthPage.jsx
+	├── Navigation.jsx
+	├── Footer.jsx
+    ├── index.css
+    ├── index.js
+    ├── logo.svg
+    └── serviceWorker.js
+
+```
+## For Projects
+
+### 5. Create a components folder in your src folder
+```
+├── README.md
+├── node_modules
+├── package.json
+├── .gitignore
+├── public
+│   ├── favicon.ico
+│   ├── index.html
+│   └── manifest.json
+└── src
+    ├── App.css
+    ├── App.js
+    ├── App.test.js
+    └── components
+      └── Footer
+      └── Navbar
+         ├──index.js
+         ├──
+    └── images
+    └── pages
+    └── videos
+    ├── index.css
+    ├── index.js
+    ├── logo.svg
+    └── serviceWorker.js
+
+```
+
+### 5. React Typescript Project Layout
+```
+.
+├── .gitignore
+├── .editorconfig
+├── .env
+├── README.MD
+├── package.json
+├── package-lock.json
+├── tsconfig.json
+├── tslinst.json
+├── public/
+│   ├── index.html
+│   └── loader.css
+├── srcipts/
+│   └── mjml-compile.js
+└── src/
+    ├── assets/
+    │   └── logo.svg
+    ├── components/
+    │   └── button/
+    │       ├── index.tsx
+    │       └── button.specs.ts
+    ├── middlewares/
+    │   └── auth.tsx
+    ├── pages/
+    │   ├── root.tsx
+    │   ├── home.tsx
+    │   └── login.tsx
+    ├── routes/
+    │   └── index.tsx
+    ├── services/
+    │   └── http.ts
+    ├── styles/
+    │   ├── ant-override.scss
+    │   ├── _variables.scss
+    │   └── index.scss
+    ├── utils/
+    │   └── index.ts
+    ├── app.tsx
+    └── index.tsx
+```
+
+### 6. If you are a build a MPA run this command to setup routing
+```bash
+npm i react-router-dom
+```
+
+
+### 7. Schema hasn't been registered for model
+- Check your arguments for mongoose.model call
+
+
+### 8. Data Fetching From An API Misconception
+- Wrong: Fetch the Data from An API then you render it to the DOM and no render if you haven't fetched the data
+- True: Fetch the data from A Resource(aka API). When the data comes in, you update the state thanks to the hook and we render the new state to the dom
+
 
 ### Useful Resources for the FE
 
@@ -145,19 +281,6 @@
 - Variables which aren't primitives are passed by reference aka Arrays, Objects and Functions
 
 
-### BEM Concept for CSS in React
-
-Block:
-
-- top level component aka a block is considered the parent
-
-Element:
-
-- Regarded as the child elements and are named by tacking two undersquares after the name
-
-Modifiers:
-
-- Manipulators of the block for theme or style of that particular component...naming: add two hyphens to the name of the block 
 
 
 ## Mistakes Commonly Made And How To Fix?
@@ -874,144 +997,6 @@ const setNumber = hookForNumbers[1];
 const [number, setNumber] = useState(2);
 ```
 
-
-### 1 How to install prereqs for react and all other dependencies necessary to your project
-```bash
-mkdir my-react-app
-cd my-react-app
-npm init --y
-npm install react react-dom 
-npm install --save-dev webpack webpack-dev-server html-webpack-plugin @babel/core babel-loader @babel/preset-env @babel/preset-react 
-```
-
-### 2: Create React Application using the create-react-app command
-```bash
-npx create-react-app 
-```
-### 3: Remove the following 5 files that come shipped with the create-react-app command
-- App.test.js
-- index.css
-- logo.svg
-- serviceWorker.js
-- setupTests.js
-
-
-
-### 4. React Project Layout. If you are build a SPA no need for components dir ignore this step and any subsequent one
-```
-├── README.md
-├── node_modules
-├── package.json
-├── .gitignore ------- list the files you do not want git to track here
-├── public
-│   ├── favicon.ico
-│   ├── index.html ------ to bootstrap your react app import it here
-│   └── manifest.json
-└── src
-    ├── App.css ---------------- styling
-    ├── App.js ----------------- root component
-    ├── App.test.js ------------ unit tests
-    ├── components
-        ├── Home.jsx
-	├── NameOfYourSecondPage.jsx
-	├── NameOfYourThirdPage.jsx
-	├── NameOfYourFourthPage.jsx
-	├── NameOfYourNthPage.jsx
-	├── Navigation.jsx
-	├── Footer.jsx
-    ├── index.css
-    ├── index.js
-    ├── logo.svg
-    └── serviceWorker.js
-
-```
-## For Projects
-
-### 5. Create a components folder in your src folder
-```
-├── README.md
-├── node_modules
-├── package.json
-├── .gitignore
-├── public
-│   ├── favicon.ico
-│   ├── index.html
-│   └── manifest.json
-└── src
-    ├── App.css
-    ├── App.js
-    ├── App.test.js
-    └── components
-      └── Footer
-      └── Navbar
-         ├──index.js
-         ├──
-    └── images
-    └── pages
-    └── videos
-    ├── index.css
-    ├── index.js
-    ├── logo.svg
-    └── serviceWorker.js
-
-```
-
-### 5. React Typescript Project Layout
-```
-.
-├── .gitignore
-├── .editorconfig
-├── .env
-├── README.MD
-├── package.json
-├── package-lock.json
-├── tsconfig.json
-├── tslinst.json
-├── public/
-│   ├── index.html
-│   └── loader.css
-├── srcipts/
-│   └── mjml-compile.js
-└── src/
-    ├── assets/
-    │   └── logo.svg
-    ├── components/
-    │   └── button/
-    │       ├── index.tsx
-    │       └── button.specs.ts
-    ├── middlewares/
-    │   └── auth.tsx
-    ├── pages/
-    │   ├── root.tsx
-    │   ├── home.tsx
-    │   └── login.tsx
-    ├── routes/
-    │   └── index.tsx
-    ├── services/
-    │   └── http.ts
-    ├── styles/
-    │   ├── ant-override.scss
-    │   ├── _variables.scss
-    │   └── index.scss
-    ├── utils/
-    │   └── index.ts
-    ├── app.tsx
-    └── index.tsx
-```
-
-### 6. If you are a build a MPA run this command to setup routing
-```bash
-npm i react-router-dom
-```
-
-
-### 7. Schema hasn't been registered for model
-- Check your arguments for mongoose.model call
-
-
-### 8. Data Fetching From An API Misconception
-- Wrong: Fetch the Data from An API then you render it to the DOM and no render if you haven't fetched the data
-- True: Fetch the data from A Resource(aka API). When the data comes in, you update the state thanks to the hook and we render the new state to the dom
 
 ### How To Fetch Data Using the Fetch Function From An API using the desired HTTP Method
 ```js

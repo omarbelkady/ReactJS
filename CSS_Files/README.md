@@ -582,6 +582,21 @@ e. auto&inherit
 - < ul >
 
 
+### BEM Concept for CSS in React
+
+Block:
+
+- top level component aka a block is considered the parent
+
+Element:
+
+- Regarded as the child elements and are named by tacking two undersquares after the name
+
+Modifiers:
+
+- Manipulators of the block for theme or style of that particular component...naming: add two hyphens to the name of the block 
+
+
 
 
 ### Text-styling
