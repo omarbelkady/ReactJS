@@ -35,6 +35,27 @@ function functionName(param1, param2, etc..){
 }
 ```
 
+### CallBack Function 
+
+- A function that is a parameter of another function 
+- The inner function is called as soon I invoke the outer function
+
+```js
+const successfullyListeningTo = (nameOfSinger) => {
+	console.log(`You are successfully listening to {nameOfSinger}!`);
+}
+
+const listenToSinger = (callbackfunc) => {
+	const singer = 'Sting'
+	callbackfunc(singer);
+}
+
+
+successfullyListeningTo(listenToSinger);
+
+//You are successfully listening to Sting
+```
+
 ## Arrow Functions
 
 ### Function without Arrow Function
