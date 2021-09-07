@@ -692,6 +692,14 @@ class Child extends Component{
 
 ### IF YOU DO NOT KNOW WHAT THE DOM IS:
 - process by which we take all the nasty html elements and put them in a object that has tree structure
+- IOW it takes all the nasty HTML elements and gives it a nice structure
+- e.g.:
+  - < document > is the parent:
+  - < html > is the child of < document >
+  - < head > and < body > are the children of < html >
+  - < title > is the child of < head >
+  - < h1-h6 > and < a > are the children of < body >
+- HTML DOM is a standard way of GETTING, CHANGING, ADDING, REMOVING html elements
 
 #### How To Create A Component
 ```bash
