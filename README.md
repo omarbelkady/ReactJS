@@ -53,6 +53,12 @@
 
 5. W3Schools
 
+### Quickly Generate An Express App
+
+```bash
+npx express-generator --no-view api
+```
+
 
 ### Cool Libraries to Use 
 
