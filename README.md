@@ -1,7 +1,3 @@
-
-
-
-
 # React Repo Which 63526 843 2-56837 263 27736259 56837 HELPED ME Make
 
 ### Datatypes:
@@ -16,6 +12,146 @@
 ```
 <> </>
 ```
+
+
+### 1 How to install prereqs for react and all other dependencies necessary to your project
+```bash
+mkdir my-react-app
+cd my-react-app
+npm init --y
+npm install react react-dom 
+npm install --save-dev webpack webpack-dev-server html-webpack-plugin @babel/core babel-loader @babel/preset-env @babel/preset-react 
+```
+
+### 2: Create React Application using the create-react-app command
+```bash
+npx create-react-app 
+```
+### 3: Remove the following 5 files that come shipped with the create-react-app command
+- App.test.js
+- index.css
+- logo.svg
+- serviceWorker.js
+- setupTests.js
+
+
+
+### 4. React Project Layout. If you are build a SPA no need for components dir ignore this step and any subsequent one
+```
+├── README.md
+├── node_modules
+├── package.json
+├── .gitignore ------- list the files you do not want git to track here
+├── public
+│   ├── favicon.ico
+│   ├── index.html ------ to bootstrap your react app import it here
+│   └── manifest.json
+└── src
+    ├── App.css ---------------- styling
+    ├── App.js ----------------- root component
+    ├── App.test.js ------------ unit tests
+    ├── components
+        ├── Home.jsx
+	├── NameOfYourSecondPage.jsx
+	├── NameOfYourThirdPage.jsx
+	├── NameOfYourFourthPage.jsx
+	├── NameOfYourNthPage.jsx
+	├── Navigation.jsx
+	├── Footer.jsx
+    ├── index.css
+    ├── index.js
+    ├── logo.svg
+    └── serviceWorker.js
+
+```
+## For Projects
+
+### 5. Create a components folder in your src folder
+```
+├── README.md
+├── node_modules
+├── package.json
+├── .gitignore
+├── public
+│   ├── favicon.ico
+│   ├── index.html
+│   └── manifest.json
+└── src
+    ├── App.css
+    ├── App.js
+    ├── App.test.js
+    └── components
+      └── Footer
+      └── Navbar
+         ├──index.js
+         ├──
+    └── images
+    └── pages
+    └── videos
+    ├── index.css
+    ├── index.js
+    ├── logo.svg
+    └── serviceWorker.js
+
+```
+
+### 5. React Typescript Project Layout
+```
+.
+├── .gitignore
+├── .editorconfig
+├── .env
+├── README.MD
+├── package.json
+├── package-lock.json
+├── tsconfig.json
+├── tslinst.json
+├── public/
+│   ├── index.html
+│   └── loader.css
+├── srcipts/
+│   └── mjml-compile.js
+└── src/
+    ├── assets/
+    │   └── logo.svg
+    ├── components/
+    │   └── button/
+    │       ├── index.tsx
+    │       └── button.specs.ts
+    ├── middlewares/
+    │   └── auth.tsx
+    ├── pages/
+    │   ├── root.tsx
+    │   ├── home.tsx
+    │   └── login.tsx
+    ├── routes/
+    │   └── index.tsx
+    ├── services/
+    │   └── http.ts
+    ├── styles/
+    │   ├── ant-override.scss
+    │   ├── _variables.scss
+    │   └── index.scss
+    ├── utils/
+    │   └── index.ts
+    ├── app.tsx
+    └── index.tsx
+```
+
+### 6. If you are a build a MPA run this command to setup routing
+```bash
+npm i react-router-dom
+```
+
+
+### 7. Schema hasn't been registered for model
+- Check your arguments for mongoose.model call
+
+
+### 8. Data Fetching From An API Misconception
+- Wrong: Fetch the Data from An API then you render it to the DOM and no render if you haven't fetched the data
+- True: Fetch the data from A Resource(aka API). When the data comes in, you update the state thanks to the hook and we render the new state to the dom
+
 
 ### Useful Resources for the FE
 
@@ -151,42 +287,34 @@ npx express-generator --no-view api
 - Variables which aren't primitives are passed by reference aka Arrays, Objects and Functions
 
 
-### BEM Concept for CSS in React
-
-Block:
-
-- top level component aka a block is considered the parent
-
-Element:
-
-- Regarded as the child elements and are named by tacking two undersquares after the name
-
-Modifiers:
-
-- Manipulators of the block for theme or style of that particular component...naming: add two hyphens to the name of the block 
 
 
 ## Mistakes Commonly Made And How To Fix?
 
 1.  Module Not Found: Cannot Resolve ...
 - This means that you are trying to use a file that isn't created or its path is incorrect when you imported it
+<br />
 
 2. Nothing was returned from render. This usually means a return statement is missing. Or, to render nothing, return null.
 - Place a return statement to remove this error
+<br />
 
 3. JSX expressions must have one parent element.ts(2657)
 - You have a closing tag placed in the wrong location (8355 63526 86 5683 227243)
 
+<br />
 
 4.  Found 2 elements with non-unique id
 - Just make sure your first input type tag has a different id(prop) value than the second input type tag
+<br />
 
 5. Identifier 'App' has already been declared
 - Your functional/Root Component is already called App and you are importing another functional component
 - To fix this just give your import a different name and this will make the problem disappear
 
+<br />
 
-6. The <blabla > is unrecognized
+6. The < blabla> is unrecognized
 - Usually function names and file names in JS are lowercased
 - But in React this is a NONO! If you want to render a react component names of Functional Comp must start with Lowercase
 - To Fix this if you want to keep your functional component lowercased change your imported file name to Upppercase
@@ -206,9 +334,8 @@ function App(){
 }
 
 export default App;
-
 ```
-
+<br />
 
 7. Importing Named Exports As Default Exports: Generates the error: './components/MyNamedExport' is imported as 'MyNamedExport'
 ```js
@@ -237,9 +364,11 @@ function App(){
 
 export default App;
 ```
+<br />
 
 8. Unknown DOM property for. Did you mean htmlFor
 - Change the for prop in your form tag to an htmlFor prop and this error will go away
+<br />
 
 9. Too Many Rerenders
 - I goto my Setter Function of UseState Hook Take My file Count.js
@@ -254,18 +383,18 @@ export const MyNamedExport = () => {
   )
 }
 ```
+<br />
 
+10. A Component is changing an uncontrolled input to be controlled. This is likely caused by the value changing from undefined to a defined value, which should not happen. Decide between using a controlled or uncontrolled input element for the lifetime of the component.
 
-10. A Component is ....
-```
-A component is changing an uncontrolled input to be controlled. This is likely caused by the value changing from undefined to a defined value, 
-which should not happen. Decide between using a controlled or uncontrolled input element for the lifetime of the component.
-```
 
 - This is due to not passing anything to the UseState Hook. When you pass undefined or null to a value within a React component along with an onChange that means this is an uncontrolled component
+<br />
 - You are essentially going from uncontrolled to controlled input and this is a big NONO
+<br />
 - To Fix this just pass in an empty string to the useState hook
 
+<br />
 11. React Hook useEffect has a missing dependency: 'userOne'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
 
 - This is saying we are using a variable in my useEffect hook but I am not including it in my dependency array
@@ -304,29 +433,29 @@ export const MyNamedExport = () => {
 ```
 
 
-11. Attempted import error: 'x' is not exported from './components/x'.
+12. Attempted import error: 'x' is not exported from './components/x'.
 If your remove the curly brace of your in your import statement this error goes away
 
 
-12. Class constructor X cannot be invoked without 'new'
+13. Class constructor X cannot be invoked without 'new'
 Make sure you tell react that you are trying to create a component by extending React.component
 
-12a. Instead of doing: 
+<br />
+Instead of doing this: 
 
 ```js
 class Book extends React.Component 
 ```
+<br />
 
-- Change it to a default class component
-
+ Change it to a default class component
 ```js
 export default class Book extends Component
 ```
 
-12aII. Import Component from React this also solves the problem
 
 ### JSX
-- The ReactJS Syntax for writing stuff a mix of XML and VanillaJS
+- React's Syntax for writing stuff a mix of XML and VanillaJS
 
 ### How to resize images in React
 - Pass in an id prop to your img tag in your js file
@@ -415,10 +544,10 @@ class App extends Component{
 7. Lists And Keys
 8. The Difference Between Composition And Inheritance
 9. The Basic Hooks
-	
-	i. useState
-	
-	ii. useEffect
+	- useState	
+	- useEffect
+
+<br />
 
 ### ReactJS Advanced Topics
 1. Hooks
@@ -478,9 +607,10 @@ class App extends Component{
 
 
 ### Other Ports To Run React On:
-- 37532
-- 42932
 - Range Of Ports: [0,65535]  .... I am using Interval Notation FYI
+
+<br />
+
 
 #### How To Install Components Features Through NPM
 ```bash
@@ -494,7 +624,7 @@ npm install -g create-react-component
 - logo.svg
 - setupTests.js
 
-#### What is the difference between State And Props in React? When To Use State? When To Use Props
+### What is the difference between State And Props in React? When To Use State? When To Use Props
 - State houses the object vals which belong to a component
 - Props are we pass in between components... Typically between parent comp and child comp
 - Properties in a react component are vars that we pass to it by its parent component
@@ -505,64 +635,19 @@ npm install -g create-react-component
 - When I want to print something use functional component with props
 - When Updating something I use state(more precisely the built in hook react provides me with useState)
 
-### An Example of Parent and Child Component
-```js
-import React, { Component } from 'react';
 
-//Parent
-export default class PropsVsChild extends Component{
-
-  render(){
-    return(
-      <div>
-      <Child color="Blue" />
-      </div>
-    )
-  }
-}
-
-//Child
-class Child extends Component{
-  constructor(props){
-    super(props);
-    //creating a simple state but I do not want to modify the state directly I want to modify it using props(properties)
-    //this.state = {myFavColor: 'Blue'}
-    this.state = { myFavColor: props.color}
-    //now I can specify this color property in the parent component
-    console.log(this.state.myFavColor)
-  }
-
-  render(){
-    return(
-      <div>
-      </div>
-    )
-  }
-}
-
-```
-
-
+<br />
 
 ### How To Pass Data From One Part Of Your App to annother
+
 - The end goal of passing data is for it to reach the tree of the child component. Now to move data from the child to the parent component I use props.
 
 ### What Is State? You will always here this keyword when dealing with ReactJS
+
 - State is just an object. State is used in the class component, and we must remember that state stores the component data and determines the component behavior
 
-### What is a Component?
-- Your application is made up of thousands of pieces. Every piece is what we call a "component"
-	- Example: navigation bar, sidebar
-- Every React Component has a built-in state object. State object is where you store property vals which belong to the component
-- When the state changes the component rerenders
 
-
-### Difference between Functional And Class Based Components:
-- We Use a Class Based Ccmponent when you want a specific component to be aware of another component
-- We use a Functional Component aka functions to perform certain tasks indepedent of another. Say Function A is unaware and doesn't know Function B nor of its role
-
-
-
+<br />
 
 #### Memoization
 - The process by which we store a super heavy functional component in memory 
@@ -575,10 +660,18 @@ class Child extends Component{
 
 ### IF YOU DO NOT KNOW WHAT THE DOM IS:
 - process by which we take all the nasty html elements and put them in a object that has tree structure
+- IOW it takes all the nasty HTML elements and gives it a nice structure
+- e.g.:
+  - < document > is the parent:
+  - < html > is the child of < document >
+  - < head > and < body > are the children of < html >
+  - < title > is the child of < head >
+  - < h1-h6 > and < a > are the children of < body >
+- HTML DOM is a standard way of GETTING, CHANGING, ADDING, REMOVING html elements
 
 #### How To Create A Component
 ```bash
-create-react-component thepasccomponentisthebestcompfor27375fb
+create-react-component nameofyourcomponent
 ```
 #### Smart Components Vs Dumb Components
 - Smart Components are components which are at the application level that have the ability to execute functions and manage data
@@ -630,7 +723,7 @@ module.exports = games;
 ```
 
 #### Creating Routes
-
+<br />
 6. I want a route for games so I define routing for it I create it inside a folder called routes
 
 ```js
@@ -694,9 +787,10 @@ router.get("/list/:id", async (req, res) => {
 
 module.exports = router;
 ```
+<br />
 
 ### Backend
-
+<br />
 7. I goto my index.js file
 
 ```js
@@ -728,7 +822,7 @@ app.listen(port, function() {
 
 module.exports = app;
 ```
-
+<br />
 8. I run my backend 
 
 ```bash
@@ -744,8 +838,10 @@ npx create-react-app react-fe
 ```
 
 10. Add Bootstrap to the index.html file in the react-fe folder
+<br />
 
 11. goto your root component and make App.js a class based component and export it
+<br />
 
 12. have some state in your constructor
 
@@ -827,15 +923,16 @@ export default class App extends Component {
 npm start
 ```
 
-#### prevents the form from acting in the default way
+### Prevents the form from submiting
 ```js
 ev.preventDefault()
 //when you submit an application the whole page refreshes in the case of forms
 ```
 
 ### How to Render Sth In React 
+<br />
+ I can put 27375 in place of this.state.pascal and it will render
 
-#### I can put 27375 in place of this.state.pascal and it will render
 ```js
 import React, { Component } from "react";
 
@@ -856,6 +953,8 @@ export default Pasc;
 
 ### Destructuring Explained in React
 
+<br />
+
 #### Without Destructuring
 ```js
 //Without destructuring I would have the following
@@ -863,11 +962,15 @@ var example = useState('yourStateGoesHereAndAskNelanToLearnLLP');
 var firstElement = example [0];
 var secondElement = example[1];
 ```
+<br />
+
 
 #### Using Destructuring
 ```js
 const [firstElement, secondElement] = useState('yourStateGoesHereAndAskNelanToLearnLLP');
 ```
+<br />
+
 
 ### Example 2
 ```js
@@ -880,155 +983,28 @@ const setNumber = hookForNumbers[1];
 const [number, setNumber] = useState(2);
 ```
 
-
-### 1 How to install prereqs for react and all other dependencies necessary to your project
-```bash
-mkdir my-react-app
-cd my-react-app
-npm init --y
-npm install react react-dom 
-npm install --save-dev webpack webpack-dev-server html-webpack-plugin @babel/core babel-loader @babel/preset-env @babel/preset-react 
-```
-
-### 2: Create React Application using the create-react-app command
-```bash
-npx create-react-app 
-```
-### 3: Remove the following 5 files that come shipped with the create-react-app command
-- App.test.js
-- index.css
-- logo.svg
-- serviceWorker.js
-- setupTests.js
+<br />
 
 
 
-### 4. React Project Layout. If you are build a SPA no need for components dir ignore this step and any subsequent one
-```
-├── README.md
-├── node_modules
-├── package.json
-├── .gitignore ------- list the files you do not want git to track here
-├── public
-│   ├── favicon.ico
-│   ├── index.html ------ to bootstrap your react app import it here
-│   └── manifest.json
-└── src
-    ├── App.css ---------------- styling
-    ├── App.js ----------------- root component
-    ├── App.test.js ------------ unit tests
-    ├── components
-        ├── Home.jsx
-	├── NameOfYourSecondPage.jsx
-	├── NameOfYourThirdPage.jsx
-	├── NameOfYourFourthPage.jsx
-	├── NameOfYourNthPage.jsx
-	├── Navigation.jsx
-	├── Footer.jsx
-    ├── index.css
-    ├── index.js
-    ├── logo.svg
-    └── serviceWorker.js
+### Some Good Practices
+- Fetch Your Data not in the render function but in the lifecycle method componentDidMount Why?
+- componentDidMount will run only if your component has been mounted to the dom AT LEAST ONCE
+- To know if you have fetched the data or completed the data we use state
 
-```
-## For Projects
+<br />
 
-### 5. Create a components folder in your src folder
-```
-├── README.md
-├── node_modules
-├── package.json
-├── .gitignore
-├── public
-│   ├── favicon.ico
-│   ├── index.html
-│   └── manifest.json
-└── src
-    ├── App.css
-    ├── App.js
-    ├── App.test.js
-    └── components
-      └── Footer
-      └── Navbar
-         ├──index.js
-         ├──
-    └── images
-    └── pages
-    └── videos
-    ├── index.css
-    ├── index.js
-    ├── logo.svg
-    └── serviceWorker.js
 
-```
-
-### 5. React Typescript Project Layout
-```
-.
-├── .gitignore
-├── .editorconfig
-├── .env
-├── README.MD
-├── package.json
-├── package-lock.json
-├── tsconfig.json
-├── tslinst.json
-├── public/
-│   ├── index.html
-│   └── loader.css
-├── srcipts/
-│   └── mjml-compile.js
-└── src/
-    ├── assets/
-    │   └── logo.svg
-    ├── components/
-    │   └── button/
-    │       ├── index.tsx
-    │       └── button.specs.ts
-    ├── middlewares/
-    │   └── auth.tsx
-    ├── pages/
-    │   ├── root.tsx
-    │   ├── home.tsx
-    │   └── login.tsx
-    ├── routes/
-    │   └── index.tsx
-    ├── services/
-    │   └── http.ts
-    ├── styles/
-    │   ├── ant-override.scss
-    │   ├── _variables.scss
-    │   └── index.scss
-    ├── utils/
-    │   └── index.ts
-    ├── app.tsx
-    └── index.tsx
-```
-
-### 6. If you are a build a MPA run this command to setup routing
-
-```bash
-npm i react-router-dom
-```
-
-### 7. Schema hasn't been registered for model
-
-- Check your arguments for mongoose.model call
-
-### 8. Data Fetching From An API Misconception
+#### 8. Data Fetching From An API Misconception
 
 - Wrong: Fetch the Data from An API then you render it to the DOM and no render if you haven't fetched the data
 - True: Fetch the data from A Resource(aka API). When the data comes in, you update the state thanks to the hook and we render the new state to the dom
 
-### 9. Unable to enter data in a form?
-
-- Make sure you take a look at the value prop you passed to the form element
-- Passing a value prop X means the value will always be X
-- Removing the value prop altogether transforms your input field from controlled to uncontrolled
+<br />
 
 
+#### How To Fetch Data Using the Fetch Function From An API using the desired HTTP Method
 
-### How To Fetch Data Using the Fetch Function From An API using the desired HTTP Method
 ```js
 fetch('https://localhost:3000/pages', { 
   method: 'POST', 
@@ -1037,12 +1013,8 @@ fetch('https://localhost:3000/pages', {
 })
 ```
 
+<br /><br />
 
-
-### Some Good Practices
-- Fetch Your Data not in the render function but in the lifecycle method componentDidMount Why?
-- componentDidMount will run only if your component has been mounted to the dom AT LEAST ONCE
-- To know if you have fetched the data or completed the data we use state
 
 
 ### Some Useful Npm Packages to Use In React:
@@ -1208,3 +1180,146 @@ Way#1 to initialize context
 SecondChild.contextType = ThemeContext
 */
 ```
+
+### 1 How to install prereqs for react and all other dependencies necessary to your project
+```bash
+mkdir my-react-app
+cd my-react-app
+npm init --y
+npm install react react-dom 
+npm install --save-dev webpack webpack-dev-server html-webpack-plugin @babel/core babel-loader @babel/preset-env @babel/preset-react 
+```
+
+### 2: Create React Application using the create-react-app command
+```bash
+npx create-react-app 
+```
+### 3: Remove the following 5 files that come shipped with the create-react-app command
+- App.test.js
+- index.css
+- logo.svg
+- serviceWorker.js
+- setupTests.js
+
+
+
+### 4. React Project Layout. If you are build a SPA no need for components dir ignore this step and any subsequent one
+```
+├── README.md
+├── node_modules
+├── package.json
+├── .gitignore ------- list the files you do not want git to track here
+├── public
+│   ├── favicon.ico
+│   ├── index.html ------ to bootstrap your react app import it here
+│   └── manifest.json
+└── src
+    ├── App.css ---------------- styling
+    ├── App.js ----------------- root component
+    ├── App.test.js ------------ unit tests
+    ├── components
+        ├── Home.jsx
+	├── NameOfYourSecondPage.jsx
+	├── NameOfYourThirdPage.jsx
+	├── NameOfYourFourthPage.jsx
+	├── NameOfYourNthPage.jsx
+	├── Navigation.jsx
+	├── Footer.jsx
+    ├── index.css
+    ├── index.js
+    ├── logo.svg
+    └── serviceWorker.js
+
+```
+## For Projects
+
+### 5. Create a components folder in your src folder
+```
+├── README.md
+├── node_modules
+├── package.json
+├── .gitignore
+├── public
+│   ├── favicon.ico
+│   ├── index.html
+│   └── manifest.json
+└── src
+    ├── App.css
+    ├── App.js
+    ├── App.test.js
+    └── components
+      └── Footer
+      └── Navbar
+         ├──index.js
+         ├──
+    └── images
+    └── pages
+    └── videos
+    ├── index.css
+    ├── index.js
+    ├── logo.svg
+    └── serviceWorker.js
+
+```
+
+### 5. React Typescript Project Layout
+```
+.
+├── .gitignore
+├── .editorconfig
+├── .env
+├── README.MD
+├── package.json
+├── package-lock.json
+├── tsconfig.json
+├── tslinst.json
+├── public/
+│   ├── index.html
+│   └── loader.css
+├── srcipts/
+│   └── mjml-compile.js
+└── src/
+    ├── assets/
+    │   └── logo.svg
+    ├── components/
+    │   └── button/
+    │       ├── index.tsx
+    │       └── button.specs.ts
+    ├── middlewares/
+    │   └── auth.tsx
+    ├── pages/
+    │   ├── root.tsx
+    │   ├── home.tsx
+    │   └── login.tsx
+    ├── routes/
+    │   └── index.tsx
+    ├── services/
+    │   └── http.ts
+    ├── styles/
+    │   ├── ant-override.scss
+    │   ├── _variables.scss
+    │   └── index.scss
+    ├── utils/
+    │   └── index.ts
+    ├── app.tsx
+    └── index.tsx
+```
+
+### 6. If you are a build a MPA run this command to setup routing
+
+```bash
+npm i react-router-dom
+```
+
+### 7. Schema hasn't been registered for model
+
+- Check your arguments for mongoose.model call
+
+
+
+
+### 8. Unable to enter data in a form?
+
+- Make sure you take a look at the value prop you passed to the form element
+- Passing a value prop X means the value will always be X
+- Removing the value prop altogether transforms your input field from controlled to uncontrolled

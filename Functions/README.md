@@ -42,7 +42,7 @@ function functionName(param1, param2, etc..){
 
 ```js
 const successfullyListeningTo = (nameOfSinger) => {
-	console.log(`You are successfully listening to {nameOfSinger}!`);
+	console.log(`You are successfully listening to ${nameOfSinger}!`);
 }
 
 const listenToSinger = (callbackfunc) => {

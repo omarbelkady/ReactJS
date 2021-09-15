@@ -11,19 +11,28 @@ map
 ### Doc Structure
 
 - < aside > Actions/Content related to a section
-- < br /> Line Break
+- < br /> Single Line Break
 - < div > Section Of your Page
+- < em > Emphasized text
 - < figcaption > Define caption for your Images
 - < figure > Define Image and Caption Combos
+- < font > Font, Color and Size Of Text
 - < header > Headers with multiple Element
 - < hr > Horizontal Rule
 -  < h1 > Through < h6 > Heading
+- < i > Italicized Text
+- < img > Image
 - < main > Main Routable Element
 - < nav > Navigation Elements
-- < p> Paragraph
+- < p > Paragraph
 - < section > Section Within A Document
+- < small > Smaller Text
 - < span  > Inline Section of your page
+- < strikethrough > Strikethrough Text
+- < strong > Bold Text
 - < time > Date or Time Vals
+- < u > Underline
+
 
 ### Location
 
@@ -169,25 +178,27 @@ map
 
 ### Tables
 
-- < table > To Create A New Table
-
 - < caption > To create a caption for your table
-
-- < thread > Thread
-
-- < tbody > Your table's body
-
-- < tfoot > Your Table Footer
-
-- < colgroup > A Column Group
 
 - < col > Your Table Column
 
-- < tr > Table Row
+- < colgroup > A Column Group
+
+- < table > To Create A New Table
+
+- < tbody > Your table's body
+
+- < td > The data within table cell
+
+- < tfoot > Your Table Footer Content
 
 - < th > Your Table's header for that cell
 
-- < td > The data you will place in your table cell
+- < thead > Table Header content
+
+- < thread > Thread
+
+- < tr > Table Row
 
 ### Description Tag
 
