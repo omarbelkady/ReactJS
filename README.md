@@ -1006,18 +1006,27 @@ npx create-react-app
 ```
 
 ### 6. If you are a build a MPA run this command to setup routing
+
 ```bash
 npm i react-router-dom
 ```
 
-
 ### 7. Schema hasn't been registered for model
+
 - Check your arguments for mongoose.model call
 
-
 ### 8. Data Fetching From An API Misconception
+
 - Wrong: Fetch the Data from An API then you render it to the DOM and no render if you haven't fetched the data
 - True: Fetch the data from A Resource(aka API). When the data comes in, you update the state thanks to the hook and we render the new state to the dom
+
+### 9. Unable to enter data in a form?
+
+- Make sure you take a look at the value prop you passed to the form element
+- Passing a value prop X means the value will always be X
+- Removing the value prop altogether transforms your input field from controlled to uncontrolled
+
+
 
 ### How To Fetch Data Using the Fetch Function From An API using the desired HTTP Method
 ```js

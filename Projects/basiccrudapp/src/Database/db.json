@@ -1,0 +1,34 @@
+{
+    "vehicules":
+    [
+        {
+            "id": 1,
+            "annee": "2021",
+            "marque": "Cadillac",
+            "modèle": "Escalade",
+            "numdetelephone": "0675713432"
+        },
+        {
+            "id": 2,
+            "annee": "2020",
+            "marque": "Dodge",
+            "modèle": "Viper",
+            "numdetelephone": "0688131313"
+        },
+        {
+            "id": 3,
+            "annee": "2020",
+            "marque": "Toyota",
+            "modèle": "Camry",
+            "numdetelephone": "0673419413"
+        },
+        {
+            "id": 4,
+            "annee": "2020",
+            "marque": "Honda",
+            "modèle": "Accord",
+            "numdetelephone": "0663363513"
+        }
+
+    ]
+}
