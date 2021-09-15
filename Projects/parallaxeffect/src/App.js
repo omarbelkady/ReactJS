@@ -13,7 +13,7 @@ const image4 =
 const image5 = 
 "https://www.wallpapertip.com/wmimgs/196-1963020_website-backgrounds-website-login-page-background.jpg";
 
-const ftNInlineStyle = {
+const inlineStyle = {
   background: '#fff',
   //to bring it to the center
   left: '50%',
@@ -31,19 +31,19 @@ function App() {
       {/* The bigger the number the heavier transition you will have */}
       <Parallax bgImage={ image5 } strength={ 500 }>
         <div style= {{height: 900 }}>
-            <div style = {ftNInlineStyle}>Hey There</div>
+            <div style = {inlineStyle}>Hey There</div>
         </div>
       </Parallax>
       <h1>| | |</h1>
       <Parallax bgImage={ image3 } blur={{ min: -1, max: 5 }}>
         <div style= {{height: 900 }}>
-            <div style = {ftNInlineStyle}>Dynamic Blur </div>
+            <div style = {inlineStyle}>Dynamic Blur </div>
         </div>
       </Parallax>
       <h1>| | |</h1>
       <Parallax bgImage={ image3 } strength={-200}>
         <div style= {{height: 900 }}>
-            <div style = {ftNInlineStyle}>Reversed </div>
+            <div style = {inlineStyle}>Reversed </div>
         </div>
       </Parallax>
       <Parallax 

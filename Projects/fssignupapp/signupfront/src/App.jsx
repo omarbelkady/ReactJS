@@ -16,7 +16,7 @@ class App extends Component {
         this.changeTheEmail = this.changeTheEmail.bind(this)
         this.changeTheUserName = this.changeTheUserName.bind(this)
         this.changePassword = this.changePassword.bind(this)
-        this.onSubmit = this.onSubmit.bind(this)
+        //this.onSubmit = this.onSubmit.bind(this)
     }
     changeTheFullName(ev){
         this.setState({
@@ -87,6 +87,9 @@ class App extends Component {
     render() {
         return (
             <div>
+            <br/>
+            <br/>
+            <br/>
                 <div className="container">
                     <div className="form-div">
                         <form onSubmit={this.Submit}>
@@ -120,8 +123,15 @@ class App extends Component {
                              className='form-control form-group'
                             />
 
-                            {/* Field5: Loves Polanco */}
-                            <input type="checkbox" checked={this.state.lovesPolanco.value} label="loves Polanco"/>
+                           
+
+                           
+                            <div align="center">
+                            <input type="checkbox" checked={this.state.lovesPolanco.value}/>
+                             {/* Field5: Loves Polanco */}
+                             &nbsp; 2526 loves Polanco
+                             </div>
+                            <br/>
                             <input type="submit" className="btn btn-danger btn-block" value="Submit"/>
                         </form>
                     </div>

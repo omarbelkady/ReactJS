@@ -1,68 +1,42 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Higher Order Components
 
-## Available Scripts
+- Incorporates the DRY principle
+- Takes a component as an argument and returns a new supercharged one
+- Useful for when wanting to create a supercharged component A which takes component B as an argument
+- Not related to the State and Props Principle whereby Component Z gets passed props D
+- Preserves the component Identity
 
-In the project directory, you can run:
+### Rules
 
-### `npm start`
+- Useful for code reuse
+- Pure i.e. no side effects
+- Never use a HOC within the render method or else you will destroy its pure identity
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### Structure:
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+- Component
+- Takes in another component as an argument
+- Has the ability to render to the DOM the component you passed to it
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Higher Order Functions
 
-### `npm run build`
+- Functions that take other functions as arguments
+-
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1. forEach()
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+- visit each element in the array and run some logic to every element.
+- Keeps the array intact
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+2. .map()
 
-### `npm run eject`
+- transforms your array into a new array by executing a chunk of code
+- it executes the chunk of element on each element in the array
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+3. .filter()
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+- Run a certain block of code logic if any item passes that condition ....
+- Place in the new array
+- Throw out any elements that do not pass the condition
+- Return the new array which holds the elements that passed the condition
