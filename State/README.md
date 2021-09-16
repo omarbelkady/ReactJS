@@ -20,3 +20,11 @@ this.setState(oldSt => ({ x: oldSt.x + 1 }));
 ```js
 this.setState(({ x }) => ({ x: x + 1 }));
 ```
+
+- To modify the state in a class based component
+
+    - I use setState method
+
+- To give my functional(stateless) component some state:
+
+    - I use the useState hook
