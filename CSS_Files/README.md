@@ -106,137 +106,6 @@
 | :link | On An Unvisited Link |  
 | :checked | On An Element that is checked |
 
-
-
-
-
-### Shorthand Notation
-
-#### Shorthand for Border
-```css
-/*Change This*/
-/*
-.style{
-    border-style: solid;
-    border-width: 1px;
-    border-color: black;
-}
-*/
-/*To This: */
-.style{
-    border: solid 1px black;
-}
-```
-
-#### Shorthand for List Style
-```css
-/*Change This*/
-/*
-.style{
-    list-style-type: circle;
-    list-style-position: inside;
-    list-style-image: url(image.jpeg);
-}
-*/
-/*To This: */
-.style{
-    list-style: circle inside url(image.jpeg);
-}
-```
-
-#### Shorthand for Background
-```css
-/*Change This*/
-/*
-.style{
-    background-color: black;
-    background-image: url(URL);
-    background-repeat: no-repeat;
-    background-position: top; 
-    background-attachment: fixed
-}
-*/
-/*To This: */
-.style{
-    background: black url(URL) no-repeat top fixed;
-}
-```
-
-
-#### Shorthand for Margin
-```css
-/*Change This*/
-/*
-.style{
-    margin-top: auto;
-    margin-right: auto;
-    margin-left: auto;
-    margin-bottom: auto;
-}
-*/
-/*To This: */
-.style{
-    margin: auto auto auto auto;
-}
-```
-
-#### Shorthand for Margin II
-```css
-/*Change This*/
-/*
-.style{
-    margin-top: 20px;
-    margin-right: 5px;
-    margin-left: 5px;
-    margin-bottom: 20px;
-}
-*/
-/*To This: */
-.style{
-    margin: 20px 5px;
-}
-```
-
-
-#### Shorthand for Font
-```css
-/*Change This*/
-/*
-.style{
-    font-style: normal;
-    font-variant: normal;
-    font-weight: normal;
-    font-size: 16px;
-    line-height: normal;
-    font-family: sans-serif;
-}
-*/
-/*To This: */
-.style{
-    font: normal normal normal 16px normal inherit;
-}
-```
-
-
-#### Shorthand for Padding
-```css
-/*Change This*/
-/*
-.style{
-    padding-right: auto;
-    padding-left: auto;
-    padding-top: auto;
-    padding-bottom: auto;
-}
-*/
-/*To This: */
-.style{
-    padding: auto;
-}
-```
-
-
-
 ### Best way to manage your css vars
 ```css
 :root{
@@ -255,7 +124,6 @@
     height: 100px;
 }
 ```
-
 
 ### Master Reset
 
@@ -298,6 +166,7 @@
 #### C. tags
 
 - for styling html
+
 ```css
 p{
     color: blue;
@@ -314,7 +183,6 @@ a:link {
 }
 ```
 
-
 #### E. Combinators class syntax
 
 1. descendent combinator [insert a space]
@@ -323,6 +191,7 @@ a:link {
 4. general sibling selector: [tilde sign: ~]
 
 ### Smooth scroll in one line
+
 ```css
 html{
     scroll-behavior: smooth;
@@ -330,6 +199,7 @@ html{
 ```
 
 ### Truncate Text to a specific number of line
+
 ```css
 p{
     -webkit-line-clamp: 3;
@@ -337,6 +207,7 @@ p{
 ```
 
 ### Add a shaddow to an image
+
 ```css
 .drop-shadow{
     filter: drop-shadow(2px 4px 8px #585858);
@@ -344,6 +215,7 @@ p{
 ```
 
 ### Center Everything thanks to flexbox, align items and justify content
+
 ```css
 .center{
     display: flex;
@@ -353,6 +225,7 @@ p{
 ```
 
 ### Use an image/emoji as a cursor
+
 ```css
 .my-cool-cursor{
     cursor: url('./mycoolcursor.jpg'), auto;
@@ -360,6 +233,7 @@ p{
 ```
 
 ### Flexbox Container Important Tips to layout stuff in a row or column
+
 ```css
 display: flex; /*enable flex layout on a container*/
 flex-direction: column; /*hhow to align your elements in a row or column fashioned way*/
@@ -371,16 +245,17 @@ align-content: center; /*align flex lines along the cross axis*/
 ```
 
 ### Flexbox Item Important Tips to layout stuff in a row or column
+
 ```css
 align-self: center; /*overwrite the alignment*/
 flex-grow: 1; /*growth factor*/
 flex-shrink: 0; /*shrink actor*/
 flex-wrap: wrap; /*allow wrapping*/
 flex-basis: 10rem; /*initial size of an item*/
-flex: 0 1 15rem; /*Shorthand for: GROW SHRINK BASIS*/
 ```
 
 ### Tell CSS How many lines you want your text to take
+
 ```css
 .line-clamp{
     display:webkit-box; 
@@ -391,6 +266,7 @@ flex: 0 1 15rem; /*Shorthand for: GROW SHRINK BASIS*/
 ```
 
 - If you want a shape around some text
+
 ```css
 .element{
     float: left;
@@ -402,6 +278,7 @@ flex: 0 1 15rem; /*Shorthand for: GROW SHRINK BASIS*/
 ## Background
 
 ### Tells CSS you want a solid color as your background
+
 ```css
 .header{
     background-color: #0f717d;
@@ -410,6 +287,7 @@ flex: 0 1 15rem; /*Shorthand for: GROW SHRINK BASIS*/
 
 
 ### Tells CSS you want picture as a background
+
 ```css
 .header{
     background-image: url(background.png);
@@ -419,6 +297,7 @@ flex: 0 1 15rem; /*Shorthand for: GROW SHRINK BASIS*/
 
 
 ### Tells CSS what size you want your background to be
+
 ```css
 .header{
     background-size: 500px;
@@ -427,6 +306,7 @@ flex: 0 1 15rem; /*Shorthand for: GROW SHRINK BASIS*/
 
 
 ### Tells CSS to move your background within its container
+
 ```css
 .header{
     background-position: 50% 25%;
@@ -434,6 +314,7 @@ flex: 0 1 15rem; /*Shorthand for: GROW SHRINK BASIS*/
 ```
 
 ### Tells CSS whether or not to repeat the background and HOW
+
 ```css
 .header{
     background-repeat: no-repeat;
@@ -443,6 +324,7 @@ flex: 0 1 15rem; /*Shorthand for: GROW SHRINK BASIS*/
 
 
 ### Tells CSS how to move your background relative to the viewport
+
 ```css
 .header{
     background-attachment: scroll;
@@ -452,6 +334,7 @@ flex: 0 1 15rem; /*Shorthand for: GROW SHRINK BASIS*/
 
 
 ### Tells CSS how your background img should blend with the background color
+
 ```css
 .header{
     background-blend-mode: soft-light;
@@ -460,6 +343,7 @@ flex: 0 1 15rem; /*Shorthand for: GROW SHRINK BASIS*/
 
 
 ### Tells CSS how far you want your background img or color to extend
+
 ```css
 .header{
     background-clip: #0f717d;
@@ -468,6 +352,7 @@ flex: 0 1 15rem; /*Shorthand for: GROW SHRINK BASIS*/
 
 
 ### Tell CSS where to paint your background
+
 ```css
 .header{
     background-origin: border-box;
@@ -477,30 +362,27 @@ flex: 0 1 15rem; /*Shorthand for: GROW SHRINK BASIS*/
 
 
 ### Tell CSS You want a clip under your text
+
 ```css
 background-clip: border-box; /*other vals: padding-box, content-box, text*/
 ```
-
 
 ### Precedence
 
 - Which selectors are prioritized?[1: highest-priority...4: least priority]?:
 
-
 1. Inline styles
 2. IDs
-3. Classes, attributes and pseudo-classes 
+3. Classes, attributes and pseudo-classes
 4. Elements Elements and pseudo-elements
 
-
-### Specificity:
+### Specificity
 
 1. Cascade
 2. Universal
 3. Chaining
 4. Inherit
 5. !important
-
 
 ### Lengths
 
@@ -523,6 +405,7 @@ e. auto&inherit
 
 
 ### Properties
+
 1. Flexbox
 2. Grid
 3. Position
@@ -530,12 +413,9 @@ e. auto&inherit
 5. Transform
 6. Transition
 
-
 #### Flow Layout
 
-
 #### Media Queries
-
 
 #### Animations & Keyframes
 
@@ -545,6 +425,7 @@ e. auto&inherit
 
 
 ### CSS in JS
+
 1. Template Literals
 2. Composition
 3. Polished
@@ -581,7 +462,6 @@ e. auto&inherit
 - < section >
 - < ul >
 
-
 ### BEM Concept for CSS in React
 
 Block:
@@ -594,14 +474,14 @@ Element:
 
 Modifiers:
 
-- Manipulators of the block for theme or style of that particular component...naming: add two hyphens to the name of the block 
+- Manipulators of the block for theme or style of that particular component...naming: add two hyphens to the name of the block
 
-
-
+<br />
 
 ### Text-styling
 
 1. Font Style
+
 ```css
 font-style: italic;/*other vals: normal, oblique*/
 ```
@@ -613,6 +493,7 @@ font-variant: small-caps;/*other vals: normal*/
 ```
 
 3. Font Weight
+
 ```css
 font-weight: bold;/*other vals: normal, bolder, lighter, [100, 900]*/
 ```
@@ -630,48 +511,57 @@ letter-spacing: normal;/*other vals: 4px*/
 ```
 
 6. Text Decoration
+
 ```css
 text-decoration: none;/*other vals: underline, overline, line-through*/
 ```
 
 7. Line Height
+
 ```css
 line-height: normal;/*other vals: 3em[3 times the size of the normal font], 34%*/
 ```
 
 8. Text Transform
+
 ```css
 text-transform: uppercase;/*other vals: capitalise, lowercase*/
 ```
 
 10. Text Align last
+
 ```css
 text-align: last;/*other vals: auto, left, right, center, justify, start, end, initial, inherit*/
 ```
 
 12. First Line indent
+
 ```css
 text-indent: 30px;
 ``` 
 
 
 13. Font-Family
+
 ```css
 font-family: 'Open Sans' sans-serif;
 ```
 
 
 14. Text Justify
+
 ```css
 text-justify: auto;/* vals: inter-word, inter-character, none, initial, inherit*/
 ```
 
 15. Text Overflow
+
 ```css
 text-overflow: ellipsis;/*other vals: clip, string, initial, inherit*/
 ```
 
 16. Text Shadow
+
 ```css
 text-decoration: none;/*other vals: h-shadow, v-shadow, blur-radius color, initial, inherit*/
 ```
@@ -690,6 +580,7 @@ window.scrollTop({
 
 - keyword added to a css selector that lets you style a specific part of the selected
 - html element. notation is two colons
+
 1. after => ::after
     - last child of the selected html element
 2. before => ::before 
@@ -715,13 +606,12 @@ selector::pseudo-element{
 
 ### Top CSS Designs
 
-1. https://www.contra.com/
-2. https://www.distillocaffe.com/
-3. https://www.theoceanagency.org/
-4. https://www.proxy.com/
-5. https://www.miew.pt/
-6. https://www.mayerr.com/
-
+1. <https://www.contra.com/>
+2. <https://www.distillocaffe.com/>
+3. <https://www.theoceanagency.org/>
+4. <https://www.proxy.com/>
+5. <https://www.miew.pt/>
+6. <https://www.mayerr.com/>
 
 ### Simple CSS Animation
 
