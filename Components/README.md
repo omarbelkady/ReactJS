@@ -54,6 +54,33 @@ export default App;
 ```
 
 
+### Must Know UI Components
+
+- Accordions
+- Breadcrumbs
+- Button
+- Card
+- Charts
+- Checkbox
+- Dividers
+- Footer
+- Form
+- Header
+- Lists
+- Loaders
+- Menu
+- Modal
+- Notifications
+- Pickers
+- Radio Buttons
+- Sliders
+- Table
+- Tags
+- Text Input
+- Toggle Switch
+- Tooltips
+
+
 
 ### Class Based Component
 1. Usually you will see it extending the React.component
@@ -129,3 +156,6 @@ ReactDOM.render(<App />, mount);
 ```
 
 - I must create an external script called app.js to tell it to the render
+
+
+
