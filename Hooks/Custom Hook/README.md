@@ -2,10 +2,10 @@
 
 - Just a util Javascript Function that can be re-used in the React app
 
-Steps:
-    - Define it
-    - Fill It
-    - Access It
+Steps: <br />
+    - Define it <br />
+    - Fill It <br />
+    - Access It <br />
 
 
 ```js
