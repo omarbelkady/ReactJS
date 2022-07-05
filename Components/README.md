@@ -21,6 +21,13 @@
 - Containers(have state)/Class Based Components
 - UI Components(do not have state) aka Functional Components
 
+
+### Controlled Components VS. Uncontrolled Components
+
+- Controlled Components: value of the input is controlled by React i.e. event-based callbacks
+- Uncontrolled Components: value of the input is controlled by the DOM itself i.e. HTML
+
+
 ### Functional Components
 - Do NOT have Lifecycle Methods because they are simply a Pure JS Function
 - Cannot have setState method within a functional Component because it doesn't have State
@@ -156,6 +163,3 @@ ReactDOM.render(<App />, mount);
 ```
 
 - I must create an external script called app.js to tell it to the render
-
-
-
