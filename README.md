@@ -561,6 +561,8 @@ npx express-generator --no-view api
 
 - React Simple Img: React lazy loading images iwth IntersectionObserver API
 
+- React Toastify: Add Notifications to your React App
+
 - SceneJS: JS Animation for creating animated Web Sites
 
 - ScrollReveal JS
