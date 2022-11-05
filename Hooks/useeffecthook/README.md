@@ -1,9 +1,6 @@
 ### The UseEffect Hook In React
-<<<<<<< HEAD
-- determine a set of events that are going to happen everytime that the page rerender
-=======
+
 - Determine a set of events that are going to happen everytime that the page rerender
->>>>>>> bc84d610dc086efe7ccb317bfb7d8a5abf03a5ff
 - UseEffect can determine things everytime the page rerenders
 - Use property and state to calculate the output. 
 - When functional component make a calculation that don't target the output then these calculations are called side effects
@@ -21,15 +18,12 @@
 1. callback function which contains the side effect logic
 2. Dependency where you can supply an array of dependencies of your choice
 
-<<<<<<< HEAD
 - Hook is a combination of:
   - componentDidMount Lifecyle Method
   - componentDidUpdate Lifecycle Method
   - componentWillUnmount Lifecycle Method
 React Class Lifecycle Methods
 
-=======
->>>>>>> bc84d610dc086efe7ccb317bfb7d8a5abf03a5ff
 
 ### Do something when my dependencies change
 ```js
@@ -58,7 +52,6 @@ useEffect(()=>
 
 ### Data fetching from An API
 
-```js
 ```js
 useEffect(()=>
 {
