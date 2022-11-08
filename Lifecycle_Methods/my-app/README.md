@@ -6,33 +6,33 @@
 
 - There are three phases in a Component Lifecycle
 
-1. Mounting
+	1. Mounting
 
-2. Updating
+	2. Updating
 
-3. Unmounting
+	3. Unmounting
 
 1. In the Mounting phase react will call
 
-- constructor(): setting the initial state of the component
+	- constructor(): setting the initial state of the component
 
-- getDerivedStateFromProps():
+	- getDerivedStateFromProps():
 
-- called before rendering elements within the DOM
+	- called before rendering elements within the DOM
 
-- set the state of your component depending on the props received here
+	- set the state of your component depending on the props received here
 
-- render() [MANDATORY]
+	- render() [MANDATORY]
 
-- componentDidMount()
+	- componentDidMount()
 
-- called right after the component is rendered within the DOM
+	- called right after the component is rendered within the DOM
 
-- fired immediately after the component is mounted in the UI
+	- fired immediately after the component is mounted in the UI
 
-- PostProcess Lifecycle Hook only executes after the first render only on the Client Side
+	- PostProcess Lifecycle Hook only executes after the first render only on the Client Side
 
-- useful to make API requests, update state, trigger some animations, etc.
+	- useful to make API requests, update state, trigger some animations, etc.
 
   
 
@@ -41,7 +41,6 @@
 ```js
 
   
-
 import  React, { Component } from  'react';
 
   
@@ -189,73 +188,73 @@ if it is not defined
 
 ### The Updating Phase in a React Component Lifecycle
 
-- We say we have updated a component whenever you modify the component's state or property
+	- We say we have updated a component whenever you modify the component's state or property
 
-- There are five built-in methods that ReactJS calls when a component is updated
+	- There are five built-in methods that ReactJS calls when a component is updated
 
-- Data of the component(State & props) changes in response to user events e.g. clicking, typing, etc.
+	- Data of the component(State & props) changes in response to user events e.g. clicking, typing, etc.
 
 1. The first hook React calls when updating the component is:
 
-- getDerivedStateFromProps()
+	- getDerivedStateFromProps()
 
-- method is called again when a component is being re-rendered
+	- method is called again when a component is being re-rendered
 
 2. The second hook React calls is shouldComponentUpdate
 
-- shouldComponentUpdate()
+	- shouldComponentUpdate()
 
-- this method determines whether or not the component should be updated or not
+	- this method determines whether or not the component should be updated or not
 
-- ...due to the fact I received new props
+	- ...due to the fact I received new props
 
-- this hook is fired before rendering the new state or props
+	- this hook is fired before rendering the new state or props
 
-- this is like saying my component is aging/growing
+	- this is like saying my component is aging/growing
 
-- The shouldComponentUpdate react lifecycle hook return type is a boolean.
+	- The shouldComponentUpdate react lifecycle hook return type is a boolean.
 
-- We can return a boolean val which specifies whether or not React should continue or not continue with the rendering
+	- We can return a boolean val which specifies whether or not React should continue or not continue with the rendering
 
 3. The third method called in this process is:
 
-- render(): re-render the HTML within the DOM
+	- render(): re-render the HTML within the DOM
 
 4. The fourth hook React calls is componentWillUpdate
 
-- this hook fires immediately before rendering new props or state
+	- this hook fires immediately before rendering new props or state
 
-- use this to perform some calculation before re-rendering a component and after updating any state or props
+	- use this to perform some calculation before re-rendering a component and after updating any state or props
 
 5. The fifth hook called:
 
-- getSnapshotBeforeUpdate()
+	- getSnapshotBeforeUpdate()
 
-- stores the previous state of the component so that React knows which parts of the DOM need to be updated
+	- stores the previous state of the component so that React knows which parts of the DOM need to be updated
 
-- VERY SPECIAL HOOK because it gives me access to the props and state before the component is updated
+	- VERY SPECIAL HOOK because it gives me access to the props and state before the component is updated
 
-- Check the values of the component before the update HERE
+	- Check the values of the component before the update HERE
 
-- holds two params:
+	- holds two params:
 
-- first: Previous Property
+	- first: Previous Property
 
-- second: Previous State
+	- second: Previous State
 
   
 
 6. The sixth hook React calls:
 
-- componentDidUpdate()
+	- componentDidUpdate()
 
-- called just after re-rendering of the component and receives previous Props and previous State as arguments
+	- called just after re-rendering of the component and receives previous Props and previous State as arguments
 
-- useful when comparing the props and state in the previous render
+	- useful when comparing the props and state in the previous render
 
-- ...with the props and state in the new render
+	- ...with the props and state in the new render
 
-  
+
 
 - The render is always called no matter what however the other methods remain optional
 
