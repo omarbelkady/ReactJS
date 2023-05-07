@@ -180,12 +180,14 @@ npm install --save-dev webpack webpack-dev-server html-webpack-plugin @babel/cor
 
   
 
-### 2: Create React Application using the create-react-app command
+### 2: Create React Application using Vite 2023 method
 
 ```bash
-
-npx create-react-app
-
+npm create vite@4.1.0
+#Enter (y)
+#Give your project a name e.g. 2525lo837765anco
+#Select A Frameworks(Van, Vue, R, Preact, Lit, Svelte, etc.)
+#Select a variant(JS, TSC, JS+SWC, TSC+SWC)
 ```
 
 ### 3: Remove the following 5 files that come shipped with the create-react-app command
