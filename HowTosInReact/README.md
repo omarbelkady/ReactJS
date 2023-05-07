@@ -248,6 +248,8 @@ function  App() {
 
   
 
+↥ back to top
+
   
   
 
@@ -331,8 +333,15 @@ const  App = () => {
 };
 
 ```
+
   
   
+
+↥ back to top
+
+  
+  
+
 Q. Create a ToDo list app using React?
 
 Answer
@@ -394,40 +403,40 @@ class  App  extends  Component {
 
   
 
-	render() {
-		return (
-			<>
-			<h1>TODO LIST</h1>
-			<div>
-				<input
-				type="text"
-				placeholder="add item . . . "
-				value={this.state.userInput}
-				onChange={(item) =>  this.updateInput(item.target.value)}
-				/>
+render() {
+	return (
+	<>
+	<h1>TODO LIST</h1>
+	<div>
+		<input
+		type="text"
+		placeholder="add item . . . "
+		value={this.state.userInput}
+		onChange={(item) =>  this.updateInput(item.target.value)}
+		/>
 
-				<input 
-				type="button" 
-				onClick={() =>  this.addItem()}  value="ADD"
-				/>
-			</div>
-			<div>
-				<ul>
-					{/* map over and print items */}
-					{this.state.list.map((item) => {
-						return (
-						<li  key={item.id}  onClick={() =>  this.deleteItem(item.id)}>
-					{item.value}
+		<input 
+		type="button" 
+		onClick={() =>  this.addItem()}  value="ADD"
+		/>
+	</div>
+	<div>
+		<ul>
+			{/* map over and print items */}
+			{this.state.list.map((item) => {
+				return (
+				<li  key={item.id}  onClick={() =>  this.deleteItem(item.id)}>
+			{item.value}
 
-						</li>
-					);
-					})}
-				</ul>
-			</div>
+				</li>
+			);
+			})}
+		</ul>
+	</div>
 
-			</>
-		);
-	}
+	</>
+);
+}
 }
 
 ```
@@ -642,6 +651,7 @@ class  Parent  extends  Component {
 			</div>
 		);
 	}
+}
 
 ```
 
@@ -682,6 +692,11 @@ export  default  function  App() {
 	);
 }
 ```
+
+  
+  
+
+↥ back to top
 
   
 
@@ -739,6 +754,8 @@ class  Child  extends  Component {
 
   
 
+  
+
 Q. How do I reference a local image in React?
 
 Answer
@@ -764,6 +781,9 @@ export  default  class  Header  extends  Component {
 }
 ```
 
+  
+  
+  
 
 Q. How to access a child state in React?
 
@@ -799,7 +819,7 @@ export  default  class  App  extends  Component {
 		);
 	}
 }
-//stopped here
+
 ```
 
   
@@ -845,28 +865,22 @@ export  default  class  Header  extends  Component {
 
 Q. How to update state on props change in React?
 
-  
-  
+
 
 // Counter.js
 
   
-
 ```js
 
 const  Counter = (props) => {
-return (
+    return (
 
-<div>
+        <div>
+            <button  onClick={props.handleClick}>CLICK ME</button>
 
-<button  onClick={props.handleClick}>CLICK ME</button>
-
-<h1>{props.text}</h1>
-
-</div>
-
-);
-
+            <h1>{props.text}</h1>
+        </div>
+    );
 };
 
 ```
@@ -879,51 +893,49 @@ return (
 
 class  App  extends  Component {
 
-constructor() {
+    constructor() {
 
-super();
+        super();
 
-this.state = {
+        this.state = {
 
-count: 1
+            count: 1
 
-};
+        };
 
-this.handleClick = this.handleClick.bind(this);
+        this.handleClick = this.handleClick.bind(this);
 
-}
+    }
 
   
 
-handleClick() {
+    handleClick() {
 
-this.setState({
+        this.setState({
 
-count: this.state.count + 1
+            count: this.state.count + 1
 
-});
+        });
 
+    }
+
+    render() {
+
+        return (
+            <div>
+                <Counter  handleClick={this.handleClick}  text={this.state.count} />
+            </div>
+        );
+    }
 }
-
-render() {
-
-return (
-
-<div>
-
-<Counter  handleClick={this.handleClick}  text={this.state.count} />
-
-</div>
-
-);
-
-}
-
-}
-
 ```
 
   
+  
+  
+  
+
+↥ back to top
 
 Q. Write a program to delete an item from array in React?
 
@@ -935,89 +947,62 @@ Answer
 
 const  userData = [
 
-{ id: "101", name: "Ken Jackson" },
+    { id: "101", name: "Ken Jackson" },
 
-{ id: "102", name: "Richard Smith" },
+    { id: "102", name: "Richard Smith" },
 
-{ id: "103", name: "Samantha McCarthy" },
+    { id: "103", name: "Samantha McCarthy" },
 
-{ id: "104", name: "Jason Lee" },
+    { id: "104", name: "Jason Lee" },
 
-{ id: "105", name: "Amanda Tang" }
+    { id: "105", name: "Amanda Tang" }
 
 ];
 
   
 
-export  default  class  ListComponent  extends  Component {
+export  default  class  ListComponent  extends  Component 
+{
 
-constructor(props) {
-
-super(props);
-
-this.state = {
-
-users: userData
-
-};
-
-}
+    constructor(props) {
+        super(props);
+            this.state = {
+                users: userData
+            };
+    }
 
   
 
-onDeleteByIndex(index) {
+        onDeleteByIndex(index) {
+            this.setState({
+                    users: this.state.users.filter((item, i) =>  i !== index)
+            });
+        }
 
-this.setState({
+    render() {
+        return (
+            <div>
+                <h2> Delete an item from state array </h2>
+                <ul>
+                    {this.state.users.map((item, index) => (
+                    <li  key={item.id}>
+                    <input
+                    type="button"
+                    value="Delete"
+                    onClick={() =>  this.onDeleteByIndex(index)}
+                />
 
-users: this.state.users.filter((item, i) =>  i !== index)
-
-});
-
+                <span>{item.name}</span>
+                    </li>
+                    ))}
+                </ul>
+            </div>
+        );
+    }
 }
-
-  
-
-render() {
-
-return (
-
-<div>
-
-<h2> Delete an item from state array </h2>
-
-<ul>
-
-{this.state.users.map((item, index) => (
-
-<li  key={item.id}>
-
-<input
-
-type="button"
-
-value="Delete"
-
-onClick={() =>  this.onDeleteByIndex(index)}
-
-/>
-
-<span>{item.name}</span>
-
-</li>
-
-))}
-
-</ul>
-
-</div>
-
-);
-
-}
-
-}
-
 ```
+
+
 
   
 
@@ -1030,26 +1015,18 @@ Autherization token in axios:
 ```js
 
 const  api = 'your api';
-
 const  user = JSON.parse(sessionStorage.getItem('data'));
-
 const  token = user.data.id; /*take only token and save in token variable*/
 
   
 
 axios.get(api , { headers: {"Authorization" : `Bearer ${token}`} })
-
-.then(res  => {
-
-console.log(res.data);
-
-.catch((error) => {
-
-console.log(error)
-
-});
-
-  
+        .then(res  => {
+            console.log(res.data);
+        .catch((error) => 
+        { 
+            console.log(error)
+        });
 
 ```
 
@@ -1066,78 +1043,47 @@ render props:
 
 import { Link, BrowserRouter  as  Router, Route, Switch } from  "react-router-dom";
 
-  
-
 const  IndexPage = () => {
-
-return <h2>Home Page</h2>;
-
+    return <h2>Home Page</h2>;
 };
 
-  
-
 const  PropsPage = ({ title }) => {
-
-return <h2>{title}</h2>;
-
+    return <h2>{title}</h2>;
 };
 
   
 
 const  App = () => {
 
-return (
-
-<section  className="App">
-
-<Router>
-
-<Link  to="/">Home</Link> |
-
-<Link  to="/props-through-component">Props through component</Link> |
-
-<Link  to="/props-through-render">Props through render</Link> |
-
-<Switch>
-
-<Route  exact  path="/"  component={IndexPage} />
-
-<Route
-
-exact
-
-path="/props-through-component"
-
-component={() => <PropsPage  title={`Props through component`} />}
-
-/>
-
-<Route
-
-exact
-
-path="/props-through-render"
-
-render={(props) => (
-
-<PropsPage  {...props}  title={`Props through render`} />
-
-)}
-
-/>
-
-</Switch>
-
-</Router>
-
-</section>
-
-);
-
+    return (
+        <section  className="App">
+            <Router>
+                <Link  to="/">Home</Link> |
+                <Link  to="/props-through-component">Props through component</Link> |
+                <Link  to="/props-through-render">Props through render</Link> |
+                <Switch>
+                    <Route  exact  path="/"  component={IndexPage} />
+                    <Route 
+                        exact
+                        path="/props-through-component"
+                        component={() => <PropsPage  title={`Props through component`} />}
+                    />
+                    <Route 
+                        exact
+                        path="/props-through-render" 
+                        render={(props) => (
+                            <PropsPage  {...props}  title={`Props through render`} />
+                        )}
+                    />
+                </Switch>
+            </Router>
+        </section>
+    );
 }
 
 ```
 
+  
 
   
 
@@ -1146,55 +1092,35 @@ Q. How to disable a button when an input is empty?
   
 
 ```js
-
 class  App  extends  Component {
+    state = {
+        email: ""
+    };
 
-state = {
-
-email: ""
-
-};
-
-  
-
-handleChange = (e) => {
-
-this.setState({
-
-email: e.target.value
-
-});
-
-};
+    handleChange = (e) => {
+        this.setState({
+            email: e.target.value
+        });
+    };
 
   
 
-render() {
+    render() {
+        return (
+            <div>
+                <input 
+                    placeholder="Email"
+                    value={this.state.email}
+                    onChange={this.handleChange}
+                />
 
-return (
+                <button  disabled={this.state.email.length < 1}>Submit</button>
 
-<div>
+            </div>
 
-<input
-
-placeholder="Email"
-
-value={this.state.email}
-
-onChange={this.handleChange}
-
-/>
-
-<button  disabled={this.state.email.length < 1}>Submit</button>
-
-</div>
-
-);
-
+        );
+    }
 }
-
-}
-
 ```
 
   
@@ -1207,60 +1133,33 @@ Q. Update style of a component onScroll in React.js
 
 import  React, { useState, useRef } from  "react";
 
-  
-
 export  default  function  App() {
 
-  
+    const  prevScrollY = useRef(0);
+    const [goingUp, setGoingUp] = useState(false);
+    const  onScroll = (e) => {
+        const  currentScrollY = e.target.scrollTop;
+        if (prevScrollY.current < currentScrollY && goingUp) {
+            setGoingUp(false);
+        }
 
-const  prevScrollY = useRef(0);
+        if (prevScrollY.current > currentScrollY && !goingUp) {
+            setGoingUp(true);
+        }
+        prevScrollY.current = currentScrollY;
+        console.log(goingUp, currentScrollY);
+    };
 
-const [goingUp, setGoingUp] = useState(false);
+    return (
+        <div  onScroll={onScroll}  style={{ height: 300, overflowY: "scroll" }}>
+            {Array(50)
+                .fill("Get the scroll position on scroll in react.")
+                .map((f, i) => {
+                    return <p  key={i}>{f}</p>;
+                })}
+        </div>
 
-  
-
-const  onScroll = (e) => {
-
-const  currentScrollY = e.target.scrollTop;
-
-if (prevScrollY.current < currentScrollY && goingUp) {
-
-setGoingUp(false);
-
-}
-
-if (prevScrollY.current > currentScrollY && !goingUp) {
-
-setGoingUp(true);
-
-}
-
-prevScrollY.current = currentScrollY;
-
-console.log(goingUp, currentScrollY);
-
-};
-
-  
-
-return (
-
-<div  onScroll={onScroll}  style={{ height: 300, overflowY: "scroll" }}>
-
-{Array(50)
-
-.fill("Get the scroll position on scroll in react.")
-
-.map((f, i) => {
-
-return <p  key={i}>{f}</p>;
-
-})}
-
-</div>
-
-);
-
+    );
 }
 
 ```
@@ -1276,34 +1175,24 @@ Functional Components through Hooks:
 ```js
 
 import  React, { useState } from  "react";
-
 import  _uniqueId  from  "lodash/uniqueId";
 
   
 
 export  default  function  App() {
-
 // id will be set once when the component initially renders, but never again
-
 // (unless you assigned and called the second argument of the tuple)
 
-const [id] = useState(_uniqueId("prefix-"));
+    const [id] = useState(_uniqueId("prefix-"));
 
-return (
+    return (
+        <div>
+            <input  id={id}  type="checkbox" />
+            <label  htmlFor={id}>label</label>
+        </div>
 
-<div>
-
-<input  id={id}  type="checkbox" />
-
-<label  htmlFor={id}>label</label>
-
-</div>
-
-);
-
+    );
 }
-
-  
 
 ```
 
@@ -1315,46 +1204,30 @@ Class Components:
 ```js
 
 import  React, Component  from  "react";
-
 import  _uniqueId  from  "lodash/uniqueId";
-
-  
 
 export  default  class  App  extends  Component {
 
-constructor(props) {
-
-super(props);
-
-this.id = _uniqueId("prefix-");
-
-}
+    constructor(props) {
+        super(props);
+        this.id = _uniqueId("prefix-");
+    }
 
   
 
-render() {
-
-const  id = this.id;
-
-return (
-
-<div>
-
-<input  id={id}  type="checkbox" />
-
-<label  htmlFor={id}>label</label>
-
-</div>
-
-);
-
+    render() {
+        const  id = this.id;
+        return (
+            <div>   
+                <input  id={id}  type="checkbox" />
+                <label  htmlFor={id}>label</label>
+            </div>
+        );
+    }
 }
-
-}
-
 ```
 
- 
+  
 
 Q. How can one tell the version of React running at runtime in the browser?
 
@@ -1363,29 +1236,18 @@ React.version:
   
 
 ```js
-
 import  React  from  "react";
-
   
-
 const  REACT_VERSION = React.version;
 
-  
-
 export  default  function  App() {
+    return (
+        <div  className="App">
+            <h1>React version: {REACT_VERSION}</h1>
+        </div>
 
-return (
-
-<div  className="App">
-
-<h1>React version: {REACT_VERSION}</h1>
-
-</div>
-
-);
-
+    );
 }
-
 ```
 
   
@@ -1395,43 +1257,29 @@ Q. Update React component every second
   
 
 ```js
-
 class  TimeComponent  extends  Component {
+    constructor(props) {                                                                
+        super(props);
+        this.state = { time: Date() };
+    }
 
-constructor(props) {
+    componentDidMount() {
 
-super(props);
+        this.interval = setInterval(() =>  this.setState({ time: Date() }), 1000);
+    }
 
-this.state = { time: Date() };
+    componentWillUnmount() {
+        clearInterval(this.interval);
+    }
 
+
+    render() {
+        return <h3>Current Time: {this.state.time} </h3>;
+    }
 }
-
-componentDidMount() {
-
-this.interval = setInterval(() =>  this.setState({ time: Date() }), 1000);
-
-}
-
-componentWillUnmount() {
-
-clearInterval(this.interval);
-
-}
-
-  
-
-render() {
-
-return <h3>Current Time: {this.state.time} </h3>;
-
-}
-
-}
-
 ```
 
 
-  
 
 Q. How to declare a global variable in React?
 
@@ -1440,95 +1288,51 @@ Window Object:
   
 
 ```js
-
 window.$name = "Hello React"; // global variable
-
   
-
 export  default  function  App() {
-
-// access global variable
-
-const  name = window.$name;
-
-  
-
-return (
-
-<div  className="App">
-
-<h2>Global variable using window object</h2>
-
-<h3>{name}</h3>
-
-</div>
-
-);
-
+    // access global variable
+    const  name = window.$name;
+    return (
+        <div  className="App">
+            <h2>Global variable using window object</h2>
+            <h3>{name}</h3>
+        </div>
+    );
 }
-
 ```
 
   
 
-
 Q. Instance vs state variables in React
-
   
   
-
 ```js
 
 /**
-
 * If you use class variable, React will be unaware
-
 * of it and won't re-render your component.
-
 *
-
 **/
 
-  
-  
 
 export  default  class  Test  extends  Component {
+    constructor() {
+        super();
+        this.value = 10; // class variable
+        this.state = { value: 20 }; // state variable
+    }
 
-  
-
-constructor() {
-
-super();
-
-this.value = 10; // class variable
-
-this.state = { value: 20 }; // state variable
-
+    render() {
+        return (
+            <>
+                <h3>Class Variable: {this.value}</h3>
+                <h3>State Variable: {this.state.value}</h3>
+            </>
+        );
+    }
 }
-
-  
-
-render() {
-
-return (
-
-<>
-
-<h3>Class Variable: {this.value}</h3>
-
-<h3>State Variable: {this.state.value}</h3>
-
-</>
-
-);
-
-}
-
-}
-
 ```
-
-
   
 
 Q. How to create dynamic href in react render function?
@@ -1536,144 +1340,89 @@ Q. How to create dynamic href in react render function?
   
 
 ```js
-
 const  posts = [
-
-{ id: 10, title: "Link One" },
-
-{ id: 20, title: "Link Two" },
-
-{ id: 30, title: "Link Three" }
-
+    { id: 10, title: "Link One" },
+    { id: 20, title: "Link Two" },
+    { id: 30, title: "Link Three" }
 ];
+
+export  default  function  App() {
+    return (
+        <ul>
+            {posts.map(function (post) {
+                return (
+                    <li  key={post.id}>
+                        <a  href={"/posts/" + post.id}>{post.title}</a>
+                    </li>
+                );
+            })}
+            </ul>
+    );
+}
+```
 
   
 
-export  default  function  App() {
-
-return (
-
-<ul>
-
-{posts.map(function (post) {
-
-return (
-
-<li  key={post.id}>
-
-<a  href={"/posts/" + post.id}>{post.title}</a>
-
-</li>
-
-);
-
-})}
-
-</ul>
-
-);
-
-}
-
-```
-
+↥ back to top
 
   
 
 Q. How to toggle boolean state of react component?
-
-  
   
 
 ```js
 
 function  App() {
+    const [state, setState] = useState(true);
 
-const [state, setState] = useState(true);
-
-  
-
-function  toggle() {
-
-setState(!state);
-
-}
-
-  
-
-return (
-
-<div  className="App">
-
-<h2  onClick={toggle}>
-
-<p>Do you feel good today?</p>
-
-<div  className="toggle">
-
-{state ? (
-
-<span  role="img"  aria-label="Thums Up">
-
-Yes! 👍
-
-</span>
-
-) : (
-
-<span  role="img"  aria-label="Thums Down">
-
-No! 👎
-
-</span>
-
-)}
-
-</div>
-
-</h2>
-
-</div>
-
-);
+    function  toggle() {
+        setState(!state);
+    }
+    return (    
+        <div  className="App">
+            <h2  onClick={toggle}>
+                <p>Do you feel good today?</p>
+                <div  className="toggle">
+                    {state ? (
+                        <span  role="img"  aria-label="Thums Up">
+                            Yes! 👍
+                        </span>
+                    ) : (
+                        <span  role="img"  aria-label="Thums Down">
+                            No! 👎
+                        </span>
+                    )}
+                </div>
+            </h2>
+        </div>
+    );
 
 }
-
 ```
 
   
+
+↥ back to top
 
   
 
 Q. Dynamically add child components in React
 
 ```js
-
 // Parent.js
 
-  
-  
-
 export  default  class  Parent  extends  Component {
+    render() {
+        return (
+            <>
+                <h1> Parent Component! </h1>
+                {this.props.children}
+            </>
 
-render() {
+        );
 
-return (
-
-<>
-
-<h1> Parent Component! </h1>
-
-{this.props.children}
-
-</>
-
-);
-
+    }
 }
-
-}
-
 ```
 
   
@@ -1682,172 +1431,102 @@ return (
 
 // Child.js
 
-  
-
 export  default  class  Child  extends  Component {
+    render() {
+        return (
+            <>
+                <h2> Child Component! </h2>
+            </>
 
-render() {
-
-return (
-
-<>
-
-<h2> Child Component! </h2>
-
-</>
-
-);
-
+        );
+    }
 }
-
-}
-
 ```
 
   
 
 ```js
-
 // index.js
 
-  
-
 import  Parent  from  "./Parent";
-
 import  Child  from  "./Child";
 
   
 
 const  rootElement = document.getElementById("root");
-
 ReactDOM.render(
+    <StrictMode>
+        <Parent>
+            <Child  name="Child Component Props" />
+        </Parent>
+    </StrictMode>,
 
-<StrictMode>
-
-<Parent>
-
-<Child  name="Child Component Props" />
-
-</Parent>
-
-</StrictMode>,
-
-rootElement
-
+    rootElement
 );
-
 ```
+
+↥ back to top
 
   
 
 Q. Disable back button in react navigation
 
-  
-
 ```js
-
 // App.js
 
-  
-
 import  React, {Component} from  "react";
-
 import { Redirect, Switch, Route, withRouter } from  "react-router";
 
-  
-
 import  Page1  from  "./Page1";
-
 import  Page2  from  "./Page2";
-
 import  Page3  from  "./Page3";
 
   
 
 class  App  extends  Component {
 
-constructor(props) {
+    constructor(props) {
+        super(props);
+        // Store the previous pathname
+        this.currentPathname = null;
+    }
 
-super(props);
-
-  
-
-// Store the previous pathname
-
-this.currentPathname = null;
-
-}
-
-  
-
-componentDidMount() {
-
-const { history } = this.props;
-
-  
-
-history.listen((newLocation, action) => {
-
-if (action === "PUSH") {
-
-if (newLocation.pathname !== this.currentPathname) {
-
-// Save new location
-
-this.currentPathname = newLocation.pathname;
+    componentDidMount() {
+        const { history } = this.props;
+        history.listen((newLocation, action) => {
+            if (action === "PUSH") {
+                if (newLocation.pathname !== this.currentPathname) {
+                    // Save new location
+                    this.currentPathname = newLocation.pathname;
+                    // Clone location object and push it to history
+                    history.push({
+                        pathname: newLocation.pathname
+                    });
+                }
+            }
+            else {
+                // Send user back if they try to navigate back
+                history.go(1);
+            }
+        });
+    }
 
   
 
-// Clone location object and push it to history
+    render() {
+        return (
+            <Switch>
+                <Route  exact  path="/"  render={() => <Redirect  to="/page1" />} />
+                <Route  path="/page1"  component={Page1} />
+                <Route  path="/page2"  component={Page2} />
+                <Route  path="/page3"  component={Page3} />
+            </Switch>
 
-history.push({
-
-pathname: newLocation.pathname
-
-});
-
+        );
+    }
 }
-
-} else {
-
-// Send user back if they try to navigate back
-
-history.go(1);
-
-}
-
-});
-
-}
-
-  
-
-render() {
-
-return (
-
-<Switch>
-
-<Route  exact  path="/"  render={() => <Redirect  to="/page1" />} />
-
-<Route  path="/page1"  component={Page1} />
-
-<Route  path="/page2"  component={Page2} />
-
-<Route  path="/page3"  component={Page3} />
-
-</Switch>
-
-);
-
-}
-
-}
-
-  
 
 export  default  withRouter(App);
-
 ```
 
   
@@ -1857,54 +1536,33 @@ export  default  withRouter(App);
 
 ```js
 
-import  React  from  "react";
-
+import  React, { Component } from  "react";
 import { withRouter } from  "react-router";
 
-  
-
 class  Page1  extends  Component {
+    render() {
+        const { history } = this.props;
 
-render() {
+        return (
+            <div>
+                <h2>This is the first page.</h2>
+                <br />
+                <button
+                    onClick={() => {
+                        history.push("/page2");
+                    }}
+                >
+                    Go to Page 2 &#x2192;
+                </button>
+            </div>
 
-const { history } = this.props;
-
-  
-
-return (
-
-<div>
-
-<h2>This is the first page.</h2>
-
-<br />
-
-<button
-
-onClick={() => {
-
-history.push("/page2");
-
-}}
-
->
-
-Go to Page 2 &#x2192;
-
-</button>
-
-</div>
-
-);
-
-}
-
+        );
+    }
 }
 
   
 
 export  default  withRouter(Page1);
-
 ```
 
   
@@ -1912,8 +1570,6 @@ export  default  withRouter(Page1);
 ```js
 
 // Page2.js
-
-  
 
 import  React, {Component} from  "react";
 
@@ -1923,46 +1579,30 @@ import { withRouter } from  "react-router";
 
 class  Page2  extends  Component {
 
-render() {
+    render() {
+        const { history } = this.props;
+        
+        return (
+            <div>
+                <h2>This is the second page.</h2>
+                <br />
+                <button
+                    onClick={() => {
+                        history.push("/page3");
 
-const { history } = this.props;
+                    }}
+                >
 
-  
+                    Go to Page 3 &#x2192;
+                </button>
 
-return (
+            </div>
 
-<div>
-
-<h2>This is the second page.</h2>
-
-<br />
-
-<button
-
-onClick={() => {
-
-history.push("/page3");
-
-}}
-
->
-
-Go to Page 3 &#x2192;
-
-</button>
-
-</div>
-
-);
-
+        );
+    }
 }
-
-}
-
-  
 
 export  default  withRouter(Page2);
-
 ```
 
   
@@ -1974,33 +1614,20 @@ export  default  withRouter(Page2);
   
 
 import  React, {Component} from  "react";
-
 import { withRouter } from  "react-router";
 
-  
 
 class  Page3  extends  Component {
-
-render() {
-
-return (
-
-<div>
-
-<h2>This is the last page.</h2>
-
-</div>
-
-);
-
+    render() {
+        return (
+            <div>
+                <h2>This is the last page.</h2>
+            </div>
+        );
+    }
 }
-
-}
-
-  
 
 export  default  withRouter(Page3);
-
 ```
 
   
@@ -2009,42 +1636,25 @@ export  default  withRouter(Page3);
 
 // index.js
 
-  
-
 import  React  from  "react";
-
 import  ReactDOM  from  "react-dom";
-
 import { BrowserRouter, Route } from  "react-router-dom";
 
-  
-
 import  App  from  "./components/App";
-
 import  "./styles.css";
 
   
 
 const  rootElement = document.getElementById("root");
-
 ReactDOM.render(
-
-<BrowserRouter>
-
-<Route  path="/"  component={App} />
-
-</BrowserRouter>,
-
-rootElement
-
+    <BrowserRouter>
+        <Route  path="/"  component={App} />
+    </BrowserRouter>,
+        rootElement
 );
-
 ```
 
-  
-  
-  
-  
+↥ back to top
 
 Q. How do I set multipart in axios with react?
 
@@ -2053,234 +1663,149 @@ Q. How do I set multipart in axios with react?
 ```js
 
 class  App  extends  Component {
+    state = {
+       file: null
+    };
 
-state = {
+    handleFile(e) {
+        let  file = e.target.files[0];
+            this.setState({ file });
+        }
 
-file: null
+    async  handleUpload(e) {
+        console.log(this.state.file);
 
-};
+    await  uploadImage(this.state.file);
 
-  
+    }
 
-handleFile(e) {
-
-let  file = e.target.files[0];
-
-this.setState({ file });
-
-}
-
-async  handleUpload(e) {
-
-console.log(this.state.file);
-
-await  uploadImage(this.state.file);
-
-}
-
-  
-
-render() {
-
-return (
-
-<div  className="App">
-
-<h1> File Upload in React </h1>
-
-<input  type="file"  name="file"  onChange={(e) =>  this.handleFile(e)} />
-
-<button  onClick={(e) =>  this.handleUpload(e)}>Upload</button>
-
-</div>
-
-);
-
-}
-
+    render() {
+        return (
+            <div  className="App">
+                <h1> File Upload in React </h1>
+                <input  type="file"  name="file"  onChange={(e) =>  this.handleFile(e)} />
+                <button  onClick={(e) =>  this.handleUpload(e)}>Upload</button>
+            </div>
+        );
+    }
 }
 
   
 
 const  uploadImage = async (file) => {
 
-try {
+    try {
+        console.log("Upload Image", file);
+        const  formData = new FormData();
+        formData.append("filename", file);
+        formData.append("destination", "images");
+        formData.append("create_thumbnail", true);
+        const  config = {
+            headers: {
+                "content-type": "multipart/form-data"
+            }
+        };
 
-console.log("Upload Image", file);
-
-const  formData = new FormData();
-
-formData.append("filename", file);
-
-formData.append("destination", "images");
-
-formData.append("create_thumbnail", true);
-
-const  config = {
-
-headers: {
-
-"content-type": "multipart/form-data"
-
-}
-
-};
-
-  
-
-const  url = "FILE_DIRECTORY";
-
-  
-
-const  result = await  axios.post(url, formData, config);
-
-console.log("REsult: ", result);
-
-} catch (error) {
-
-console.error(error);
-
-}
+    const  url = "FILE_DIRECTORY";
+    const  result = await  axios.post(url, formData, config);
+    console.log("Result: ", result);
+    }
+    
+    catch (error) {
+        console.error(error);
+    }
 
 };
-
-  
 
 const  rootElement = document.getElementById("root");
 
 ReactDOM.render(<App />, rootElement);
-
 ```
 
   
   
 
 Q. How to start search only when user stops typing?
-
   
 
 ```js
 
 import { useState, useEffect } from  "react";
 
-  
-
 function  App() {
 
-  
+    const [value, setValue] = useState("");
 
-const [value, setValue] = useState("");
-
-  
-
-const  handleOnChange = (event) => {
-
-setValue(event.target.value);
-
-};
+    const  handleOnChange = (event) => {
+        setValue(event.target.value);
+    };
 
   
 
-useEffect(() => {
+    useEffect(() => {
+        const  timeoutId = setTimeout(
+            () =>  console.log(`Search function called: "${value}"`),
+            300
+        );
+        return () =>  clearTimeout(timeoutId);
 
-const  timeoutId = setTimeout(
-
-() =>  console.log(`Search function called: "${value}"`),
-
-300
-
-);
-
-return () =>  clearTimeout(timeoutId);
-
-}, [value]);
+    }, [value]);
 
   
 
-return (
-
-<>
-
-<input  onChange={handleOnChange}  value={value}  placeholder="Search" />
-
-<h1>{value}</h1>
-
-</>
-
-);
+    return (
+        <>
+            <input  onChange={handleOnChange}  value={value}  placeholder="Search" />
+            <h1>{value}</h1>
+        </>
+    );
 
 }
-
 ```
 
-  
- 
-  
+
 
 Q. How to implement default or NotFound page?
 
   
 
 ```js
-
 import { Link, BrowserRouter  as  Router, Route, Switch } from  "react-router-dom";
 
-  
 
 const  IndexPage = () => {
-
-return <h3>Home Page</h3>;
-
+    return <h3>Home Page</h3>;
 };
 
   
-
 const  AboutPage = () => {
-
-return <h3>About Page</h3>;
-
+    return <h3>About Page</h3>;
 };
 
   
 
 const  NoMatchPage = () => {
-
-return <h3>Page Not Found</h3>;
-
+    return <h3>Page Not Found</h3>;
 };
 
   
-
 const  App = () => {
+    return (
+        <section  className="App">
+            <Router>
+                <Link  to="/"> Home | </Link>
+                <Link  to="/about"> About | </Link>
+                <Link  to="/page-not-found"> 404 </Link>
 
-return (
+                <Switch>
+                    <Route  exact  path="/"  component={IndexPage} />
+                    <Route  exact  path="/about"  component={AboutPage} />
+                    <Route  component={NoMatchPage} />
+                </Switch>
+            </Router>
 
-<section  className="App">
-
-<Router>
-
-<Link  to="/"> Home | </Link>
-
-<Link  to="/about"> About | </Link>
-
-<Link  to="/page-not-found"> 404 </Link>
-
-<Switch>
-
-<Route  exact  path="/"  component={IndexPage} />
-
-<Route  exact  path="/about"  component={AboutPage} />
-
-<Route  component={NoMatchPage} />
-
-</Switch>
-
-</Router>
-
-</section>
-
-);
-
+        </section>
+    );
 };
 
 ```
@@ -2296,27 +1821,17 @@ autoFocus:
   
 
 ```js
-
 class  App  extends  Component {
 
-render() {
-
-return (
-
-<div>
-
-<input  placeholder="It Won't focus" />
-
-<input  autoFocus  placeholder="It will focus" />
-
-</div>
-
-);
-
+    render() {
+        return (
+            <div>
+                <input  placeholder="It Won't focus" />
+                <input  autoFocus  placeholder="It will focus" />
+            </div>
+        );
+    }
 }
-
-}
-
 ```
 
   
@@ -2330,38 +1845,24 @@ Q. Give a simple example of Jest test case?
 
 // App.js
 
-  
-
 function  App() {
 
-let [count, setCount] = useState(0);
+    let [count, setCount] = useState(0);
 
-  
+    const  decrement = () =>  setCount((count -= 1));
+    const  increment = () =>  setCount((count += 1));
 
-const  decrement = () =>  setCount((count -= 1));
+    return (
+        <div  className="App">
+            <h1>Testing React Hooks</h1>
+            <p>{count}</p>
+            <button  onClick={decrement}>-</button>
 
-const  increment = () =>  setCount((count += 1));
+            <button  onClick={increment}>+</button>
 
-  
+        </div>
 
-return (
-
-<div  className="App">
-
-<h1>Testing React Hooks</h1>
-
-<p>{count}</p>
-
-<button  onClick={decrement}>-</button>
-
-  
-
-<button  onClick={increment}>+</button>
-
-</div>
-
-);
-
+    );
 }
 
 ```
@@ -2374,43 +1875,29 @@ return (
 ```js
 
 import  React  from  "react";
-
 import  ReactDOM  from  "react-dom";
-
 import  App  from  "../index";
 
-  
 
 import  Enzyme, { shallow } from  "enzyme";
-
 import  Adapter  from  "enzyme-adapter-react-16";
 
-  
 
 Enzyme.configure({ adapter: new Adapter() });
 
   
-
 it("renders without crashing", () => {
-
-const  div = document.createElement("div");
-
-ReactDOM.render(<App />, div);
-
-ReactDOM.unmountComponentAtNode(div);
-
+    const  div = document.createElement("div");
+    ReactDOM.render(<App />, div);
+    ReactDOM.unmountComponentAtNode(div);
 });
 
   
 
 it("App loads with initial state of 0", () => {
-
-const  wrapper = shallow(<App />);
-
-const  text = wrapper.find("p").text();
-
-expect(text).toEqual("0");
-
+    const  wrapper = shallow(<App />);
+    const  text = wrapper.find("p").text();
+    expect(text).toEqual("0");
 });
 
 ```
@@ -2425,37 +1912,25 @@ Q. How to use font-awesome icons in React?
 ```js
 
 import { FontAwesomeIcon } from  "@fortawesome/react-fontawesome";
-
 import { faAddressBook, faHome } from  "@fortawesome/free-solid-svg-icons";
 
   
 
 function  App() {
+    return (
 
-return (
+        <div  className="App">
+            <h2> React Font Awesome Icons </h2>
+            <nav>
+                <ul>
+                    <li><FontAwesomeIcon  icon={faHome} /> Home </li>
+                    <li><FontAwesomeIcon  icon={faAddressBook} /> Contact Us </li>
+                </ul>
 
-<div  className="App">
-
-<h2> React Font Awesome Icons </h2>
-
-<nav>
-
-<ul>
-
-<li><FontAwesomeIcon  icon={faHome} /> Home </li>
-
-<li><FontAwesomeIcon  icon={faAddressBook} /> Contact Us </li>
-
-</ul>
-
-</nav>
-
-</div>
-
-);
-
+            </nav>  
+        </div>
+    );
 }
-
 ```
 
   
@@ -2471,35 +1946,22 @@ Q. How to use SVGs in React?
 
 function  App() {
 
-return (
+    return (
+        <div  className="App">
+            <h1> SVG in React </h1>
+            <div>
+                <img
+                    src={"http://s.cdpn.io/3/kiwi.svg"}
+                    alt="Kiwi Bird"
+                    width="200px"
+                />
 
-<div  className="App">
-
-<h1> SVG in React </h1>
-
-<div>
-
-<img
-
-src={"http://s.cdpn.io/3/kiwi.svg"}
-
-alt="Kiwi Bird"
-
-width="200px"
-
-/>
-
-</div>
-
-</div>
-
-);
-
+            </div>
+        </div>
+    );
 }
-
 ```
 
-  
   
   
 
@@ -2509,72 +1971,42 @@ Q. How to repeat an element n times using JSX?
 
 export  default  function  App() {
 
-  
-
-let  inputFields = [];
-
-for (let  i = 0; i < 5; ++i) {
-
-inputFields.push(
-
-<div> Field {i}: <input  type="text"  placeholder="Search" /> </div>
-
-);
-
-}
-
-  
-
-return (
-
-<>
-
-<h2> Repeat an element n times using JSX </h2>
-
-<div>{inputFields}</div>
-
-</>
-
-);
+    let  inputFields = [];
+    for (let  i = 0; i < 5; ++i) {
+        inputFields.push(
+            <div> Field {i}: <input  type="text"  placeholder="Search" /> </div>
+        );
+    }
+    return (
+        <>
+            <h2> Repeat an element n times using JSX </h2>
+            <div>{inputFields}</div>
+        </>
+    );
 
 }
 
 ```
 
   
-
-
-  
   
 
 Q. How can I set a cookie in react?
-
   
 
 ```js
 
 import { CookiesProvider } from  "react-cookie";
-
 import  ReactDOM  from  "react-dom";
-
-  
 
 import  App  from  "./App";
 
-  
-
 const  rootElement = document.getElementById("root");
-
 ReactDOM.render(
-
-<CookiesProvider>
-
-<App />
-
-</CookiesProvider>,
-
+    <CookiesProvider>
+        <App />
+    </CookiesProvider>,
 rootElement
-
 );
 
 ```
@@ -2584,59 +2016,37 @@ rootElement
 ```js
 
 import  React, { useState } from  "react";
-
 import { useCookies } from  "react-cookie";
 
   
-
 const  App = () => {
+    const [name, setName] = useState("");
+    const [cookies, setCookie] = useCookies(["user"]);
 
-  
+    const  handle = () => {
+        setCookie("name", name, { path: "/" });
 
-const [name, setName] = useState("");
+    };
 
-const [cookies, setCookie] = useCookies(["user"]);
+    return (
 
-  
+        <div  className="App">
+            <h1> Cookies in React </h1>
+            <input
+                placeholder="Cookie value"
+                value={name}
+                onChange={(e) =>  setName(e.target.value)}
+            />
 
-const  handle = () => {
-
-setCookie("name", name, { path: "/" });
-
+            <button  onClick={handle}>Set Cookie</button>   
+            
+            {cookies.name && (
+                <div>Name: {cookies.name}</div>
+            )}
+        </div>
+    );
 };
-
-return (
-
-<div  className="App">
-
-<h1> Cookies in React </h1>
-
-<input
-
-placeholder="Cookie value"
-
-value={name}
-
-onChange={(e) =>  setName(e.target.value)}
-
-/>
-
-<button  onClick={handle}>Set Cookie</button>
-
-{cookies.name && (
-
-<div>Name: {cookies.name}</div>
-
-)}
-
-</div>
-
-);
-
-};
-
 export  default  App;
-
 ```
 
   
@@ -2661,74 +2071,56 @@ Q. How to Create dependent dropdowns that populates data with each other in Reac
 import { useState } from  "react";
 const  data = [
 
-{ name: "California",
-	cities: ["Long Beach", "Los Angeles", "Sacramento", "San Diego", "San Francisco"]
-},
+    { name: "California",
+        cities: ["Long Beach", "Los Angeles", "Sacramento", "San Diego", "San Francisco"]
+    },
 
-{ name: "Michigan",
-	cities: ["Dearborn","Detroit", "Grand Rapids", "Pontiac", "Southfield"]
-},
+    { name: "Michigan",
+        cities: ["Dearborn","Detroit", "Grand Rapids", "Pontiac", "Southfield"]
+    },
 
-{ name: "New Mexico",
-	cities: ["Albuquerque", "Artesia", "Clovis", "Raton","Tularosa"]
-},
+    { name: "New Mexico",
+        cities: ["Albuquerque", "Artesia", "Clovis", "Raton","Tularosa"]
+    },
 
-{ name: "Texas",
-	cities: ["Austin", "Beaumont", "Corpus Christi", "Fort Worth", "Houston"]
-}
-
+    { name: "Texas",
+        cities: ["Austin", "Beaumont", "Corpus Christi", "Fort Worth", "Houston"]
+    }
 ];
 
   
 
 export  default  function  App()
-
 {
-	const [capitals, setCapitals] = useState("");
-	const [cities, setCities] = useState([]);
+        const [capitals, setCapitals] = useState("");
+        const [cities, setCities] = useState([]);
 
-function  updateSelect(e) {
+        function  updateSelect(e) {
+            setCapitals(e.target.value); // Saving state of current selected drop down 1
+            if(capitals !== undefined) {
+                // Finding and saving the data for drop dop 2 related to the data of drop down 1
+                setCities(data.find((data) =>  data.name === e.target.value).cities);
+            }
+        }
 
-setCapitals(e.target.value); // Saving state of current selected drop down 1
+    return (
+        <div>
+            <select  value={capitals}  onChange={updateSelect}>
+                <option  disabled> --- SELECT --- </option>
+                {data.map((capital) => {
+                    return <option  value={capital.name}>{capital.name}</option>;
+                })}
+            </select>
+            <select>
+                <option  selected  disabled> --- SELECT --- </option>
+                {cities.map((city) => {
+                    return <option  value={city}>{city}</option>;
 
-if (capitals !== undefined) {
+                })}
 
-// Finding and saving the data for drop dop 2 related to the data of drop down 1
+            </select>
 
-setCities(data.find((data) =>  data.name === e.target.value).cities);
-
+        </div>
+    );
 }
-
-}
-
-return (
-
-<div>
-
-<select  value={capitals}  onChange={updateSelect}>
-
-<option  disabled> --- SELECT --- </option>
-
-{data.map((capital) => {
-
-return <option  value={capital.name}>{capital.name}</option>;
-
-})}
-
-</select>
-
-<select>
-
-<option  selected  disabled> --- SELECT --- </option>
-
-{cities.map((city) => {
-
-return <option  value={city}>{city}</option>;
-
-})}
-
-</select>
-
-</div>
-
 ```
