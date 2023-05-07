@@ -248,8 +248,6 @@ function  App() {
 
   
 
-↥ back to top
-
   
   
 
@@ -333,15 +331,8 @@ const  App = () => {
 };
 
 ```
-
   
   
-
-↥ back to top
-
-  
-  
-
 Q. Create a ToDo list app using React?
 
 Answer
@@ -403,40 +394,40 @@ class  App  extends  Component {
 
   
 
-render() {
-	return (
-	<>
-	<h1>TODO LIST</h1>
-	<div>
-		<input
-		type="text"
-		placeholder="add item . . . "
-		value={this.state.userInput}
-		onChange={(item) =>  this.updateInput(item.target.value)}
-		/>
+	render() {
+		return (
+			<>
+			<h1>TODO LIST</h1>
+			<div>
+				<input
+				type="text"
+				placeholder="add item . . . "
+				value={this.state.userInput}
+				onChange={(item) =>  this.updateInput(item.target.value)}
+				/>
 
-		<input 
-		type="button" 
-		onClick={() =>  this.addItem()}  value="ADD"
-		/>
-	</div>
-	<div>
-		<ul>
-			{/* map over and print items */}
-			{this.state.list.map((item) => {
-				return (
-				<li  key={item.id}  onClick={() =>  this.deleteItem(item.id)}>
-			{item.value}
+				<input 
+				type="button" 
+				onClick={() =>  this.addItem()}  value="ADD"
+				/>
+			</div>
+			<div>
+				<ul>
+					{/* map over and print items */}
+					{this.state.list.map((item) => {
+						return (
+						<li  key={item.id}  onClick={() =>  this.deleteItem(item.id)}>
+					{item.value}
 
-				</li>
-			);
-			})}
-		</ul>
-	</div>
+						</li>
+					);
+					})}
+				</ul>
+			</div>
 
-	</>
-);
-}
+			</>
+		);
+	}
 }
 
 ```
@@ -693,11 +684,6 @@ export  default  function  App() {
 ```
 
   
-  
-
-↥ back to top
-
-  
 
 Q. How to update the parent state in React?
 
@@ -752,11 +738,6 @@ class  Child  extends  Component {
 ```
 
   
-  
-
-↥ back to top
-
-  
 
 Q. How do I reference a local image in React?
 
@@ -783,12 +764,6 @@ export  default  class  Header  extends  Component {
 }
 ```
 
-  
-  
-
-↥ back to top
-
-  
 
 Q. How to access a child state in React?
 
@@ -949,11 +924,6 @@ return (
 ```
 
   
-  
-  
-  
-
-↥ back to top
 
 Q. Write a program to delete an item from array in React?
 
@@ -1048,10 +1018,6 @@ onClick={() =>  this.onDeleteByIndex(index)}
 }
 
 ```
-
-  
-
-↥ back to top
 
   
 
@@ -1172,9 +1138,6 @@ render={(props) => (
 
 ```
 
-  
-
-↥ back to top
 
   
 
@@ -1303,11 +1266,6 @@ return <p  key={i}>{f}</p>;
 ```
 
   
-  
-
-↥ back to top
-
-  
 
 Q. How to generate unique IDs for form labels in React?
 
@@ -1396,11 +1354,7 @@ return (
 
 ```
 
-  
-
-↥ back to top
-
-  
+ 
 
 Q. How can one tell the version of React running at runtime in the browser?
 
@@ -1433,10 +1387,6 @@ return (
 }
 
 ```
-
-  
-
-↥ back to top
 
   
 
@@ -1480,9 +1430,6 @@ return <h3>Current Time: {this.state.time} </h3>;
 
 ```
 
-  
-
-↥ back to top
 
   
 
@@ -1524,7 +1471,6 @@ return (
 
   
 
-↥ back to top
 
 Q. Instance vs state variables in React
 
@@ -1582,9 +1528,6 @@ return (
 
 ```
 
-  
-
-↥ back to top
 
   
 
@@ -1634,9 +1577,6 @@ return (
 
 ```
 
-  
-
-↥ back to top
 
   
 
@@ -1702,8 +1642,6 @@ No! 👎
 ```
 
   
-
-↥ back to top
 
   
 
@@ -1799,8 +1737,6 @@ rootElement
 );
 
 ```
-
-↥ back to top
 
   
 
@@ -2110,8 +2046,6 @@ rootElement
   
   
 
-↥ back to top
-
 Q. How do I set multipart in axios with react?
 
   
@@ -2280,10 +2214,7 @@ return (
 ```
 
   
-  
-
-↥ back to top
-
+ 
   
 
 Q. How to implement default or NotFound page?
@@ -2354,11 +2285,6 @@ return (
 
 ```
 
-  
-
-↥ back to top
-
-  
   
 
 Q. How to focus an input element on page load?
@@ -2535,8 +2461,6 @@ return (
   
   
 
-↥ back to top
-
   
 
 Q. How to use SVGs in React?
@@ -2576,10 +2500,6 @@ width="200px"
 ```
 
   
-  
-
-↥ back to top
-
   
   
 
@@ -2622,9 +2542,7 @@ return (
 ```
 
   
-  
 
-↥ back to top
 
   
   
