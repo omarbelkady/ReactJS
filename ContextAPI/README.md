@@ -56,6 +56,12 @@ import myAppContext from "./Context/myAppContext"
 
 
 const HiThere = () => {
+
+    /*
+        hook enables you to consume the nearest context value provided by 
+        a Context. Provider component higher up in the component tree. It 
+        provides a way to access shared data without passing props through intermediate components.
+    */
     const myWebSName = useContext(myAppContext);
 
     return(
