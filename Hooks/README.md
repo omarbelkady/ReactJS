@@ -17,7 +17,7 @@
 
 
 ####  The useState Hook
-- This hook is used so that it can enable you to have a certain state within your functional component
+- Enables you to manage state within your functional component
 - The way its used is by passing as an argument the initial state to the function(useState) and it outputs the current state
 - However, another function must be present to update the value of the state because you must remember to never update the state directly
 
@@ -33,6 +33,7 @@
 - useMemo is the process of using Memoization
 - Memoization is an optimization utility where I pass a complex function in order for it to be memoized
 - When using memoization the result is remembered whenever I pass in the same parameters in the future
+- Memoizing a computed value based on expensive calculations in a data-intensive app.
 
 ##### Without memoization
 ```js
