@@ -71,10 +71,9 @@ export  default  function  App() {
 const [users, setUsers] = useState([]);
 
 useEffect(() => {
-	axios.get("https://reqres.in/api/users?page=1").then((response) => {
-	setUsers(response.data.data);
-});
-
+	axios.get("https://reqres.in/api/users?page=1")
+        .then(response =>  setUsers(response.data));
+        .catch(err => console.log(err))
 }, []);
   
 
