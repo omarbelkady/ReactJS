@@ -261,6 +261,32 @@ npm create vite@4.1.0
   
 
 ```
+### 4. React Spring Boot Project Layout
+```
+/my-springboot-react-app
+|-- /backend
+|   |-- /src
+|   |   |-- /main
+|   |   |   |-- /java
+|   |   |   |   |-- /com
+|   |   |   |       |-- /myapp
+|   |   |   |           |── /controller
+|   |   |   |           |── /model
+|   |   |   |           |── /repository
+|   |   |   |           |── /service
+|   |   |   |── /resources
+|   |   |       |── /application.properties
+|── /frontend
+|   |── /public
+|   |   |-- index.html
+|   |── /src
+|   |   |-- /components
+|   |   |-- App.js
+|   |   |-- index.js
+|── pom.xml
+|── package.json
+```
+
 
 ## For Projects
 
@@ -269,7 +295,6 @@ npm create vite@4.1.0
 ### 5. Create a components folder in your src folder
 
 ```
-
 ├── README.md
 
 ├── node_modules
