@@ -270,22 +270,29 @@ npm create vite@4.1.0
 |   |   |   |-- /java
 |   |   |   |   |-- /com
 |   |   |   |       |-- /myapp
-|   |   |   |           |── /controller
-|   |   |   |           |── /model
-|   |   |   |           |── /repository
-|   |   |   |           |── /service
+|   |   |   |           |── /controller  .....Contains Spring MVC controllers to handle HTTP requests.
+|   |   |   |           |── /model ..... Defines data models or entities for the application.
+|   |   |   |           |── /repository ..... Contains Spring Data repositories to interact with the database.
+|   |   |   |           |── /service ..... Implements business logic and interacts with repositories.
 |   |   |   |── /resources
-|   |   |       |── /application.properties
+|   |   |       |── /application.properties ..... Configuration file for Spring Boot application properties.
 |── /frontend
 |   |── /public
-|   |   |-- index.html
+|   |   |-- index.html ..... HTML template for the React application.
 |   |── /src
-|   |   |-- /components
-|   |   |-- App.js
-|   |   |-- index.js
-|── pom.xml
+|   |   |-- /components ..... Storage for all your React Components
+|   |   |-- App.js .....  Main React component that serves as the entry point of the frontend.
+|   |   |-- index.js ..... Entry point for the React application, where it's connected to the DOM.
+|── pom.xml   ..... must have Backend (Maven - pom.xml): Maven-based Java projects to define project information, manage project dependencies, and configure various build aspects
 |── package.json
 ```
+
+#### Within pom.xml I must have the following dependencies:
+
+- Spring Boot Starter Web
+- Spring Boot Starter Data JPA
+- H2 Database (or any database of your choice)
+- Spring Boot Starter Test (for testing)
 
 
 ## For Projects
