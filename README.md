@@ -611,35 +611,39 @@ npx express-generator --no-view api
 
 ### Free Hosting Providers
 
-- Most Common
+** Most Common **
 
-- Heroku
+- GitHub   Pages https://pages.github.com/
 
-- Netlify
+- Heroku   https://heroku.com/
 
-- Vercel
+- Netlify   https://www.netlify.com/
 
-- Firebase
+- Vercel  https://www.vercel.com/
 
+- AWS Free Tier   https://aws.amazon.com/free/
+
+- Firebase  https://firebase.google.com/products/hosting/
+
+- Begin    https://begin.com/
+
+- Cyclic    https://cyclic.sh
+
+- Deta   https://deta.space/
+
+- Fleek   https://fleek.co/
+
+- Fly    https://fly.io/
+
+- Glitch   https://glitch.com/
+
+- Hostman    https://hostman.com/
+
+- Render    https://www.render.com/
   
+- Stormkit    https://www.stormkit.io/
 
-- Others
-
-- Begin
-
-- Fleek
-
-- Fly
-
-- Glitch
-
-- Hostman
-
-- Render
-
-- Stormkit
-
-- Surge
+- Surge     https://surge.sh/
 
   
 
