@@ -585,6 +585,8 @@ npx express-generator --no-view api
 
 - Netlify
 
+- Odoo
+
 - Vercel
 
 - Firebase

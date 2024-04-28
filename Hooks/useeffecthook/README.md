@@ -1,8 +1,5 @@
 ### The UseEffect Hook In React
 
-<br />
-
-
 - Determine a set of events that are going to happen everytime that the page rerender
 - happens after the component has rendered to the DOM
 - UseEffect can determine things everytime the page rerenders
@@ -24,9 +21,6 @@
   - DOM Manipulation
   - Subscriptions
   - Cleanup Tasks
-
-<br />
-
 - Use Effect takes two arguments:
 1. callback function which contains the side effect logic
 2. Dependency where you can supply an array of dependencies of your choice
@@ -43,8 +37,6 @@ React Class Lifecycle Methods
 ```js
 useEffect(<function>, <dependency>)
 ```
-
-<br />
 
 ### UseEffect In Detail
 
@@ -73,20 +65,19 @@ function MyComponent(){
 ### Part II explanation of function syntax in detail
 
 ```js
-useEffect(<function>, <dependency>)
+useEffect(< function/>, <dependency/>);
+
 /*
 first argument is the effect function called after the component
 has rendered and its where you place the code for your side effect
 
 second argument is the array of dependencies optional 
-Case 1- Empty: if the dependency array is empty the effect will only
- run once
+Case 1- Empty: if the dependency array is empty the effect will only run once
 
 Case 2- if the dependency array is not provided, the effect will run after every render of the component
 
-Case 3- If the dependency array contains variables, the effect will onlbe 
+Case 3- If the dependency array contains variables, the effect will only be 
 re-executed when any of those variables change
-
 */
 
 ```
