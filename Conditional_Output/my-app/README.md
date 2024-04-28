@@ -118,4 +118,8 @@ const Component = () => {
 };
 
 export default Compnent;
+<<<<<<< HEAD
 ```
+=======
+```
+>>>>>>> 8485e6f9c79537d3917adb32e8ef19e345bf29ec

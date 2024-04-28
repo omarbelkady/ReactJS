@@ -261,6 +261,39 @@ npm create vite@4.1.0
   
 
 ```
+### 4. React Spring Boot Project Layout
+```
+/my-springboot-react-app
+|-- /backend
+|   |-- /src
+|   |   |-- /main
+|   |   |   |-- /java
+|   |   |   |   |-- /com
+|   |   |   |       |-- /myapp
+|   |   |   |           |── /controller  .....Contains Spring MVC controllers to handle HTTP requests.
+|   |   |   |           |── /model ..... Defines data models or entities for the application.
+|   |   |   |           |── /repository ..... Contains Spring Data repositories to interact with the database.
+|   |   |   |           |── /service ..... Implements business logic and interacts with repositories.
+|   |   |   |── /resources
+|   |   |       |── /application.properties ..... Configuration file for Spring Boot application properties.
+|── /frontend
+|   |── /public
+|   |   |-- index.html ..... HTML template for the React application.
+|   |── /src
+|   |   |-- /components ..... Storage for all your React Components
+|   |   |-- App.js .....  Main React component that serves as the entry point of the frontend.
+|   |   |-- index.js ..... Entry point for the React application, where it's connected to the DOM.
+|── pom.xml   ..... must have Backend (Maven - pom.xml): Maven-based Java projects to define project information, manage project dependencies, and configure various build aspects
+|── package.json
+```
+
+#### Within pom.xml I must have the following dependencies:
+
+- Spring Boot Starter Web
+- Spring Boot Starter Data JPA
+- H2 Database (or any database of your choice)
+- Spring Boot Starter Test (for testing)
+
 
 ## For Projects
 
@@ -269,7 +302,6 @@ npm create vite@4.1.0
 ### 5. Create a components folder in your src folder
 
 ```
-
 ├── README.md
 
 ├── node_modules
@@ -579,37 +611,45 @@ npx express-generator --no-view api
 
 ### Free Hosting Providers
 
-- Most Common
+** Most Common **
 
-- Heroku
+- GitHub   Pages https://pages.github.com/
 
-- Netlify
+- Heroku   https://heroku.com/
 
+<<<<<<< HEAD
 - Odoo
 
 - Vercel
+=======
+- Netlify   https://www.netlify.com/
+>>>>>>> 8485e6f9c79537d3917adb32e8ef19e345bf29ec
 
-- Firebase
+- Vercel  https://www.vercel.com/
 
+- AWS Free Tier   https://aws.amazon.com/free/
+
+- Firebase  https://firebase.google.com/products/hosting/
+
+- Begin    https://begin.com/
+
+- Cyclic    https://cyclic.sh
+
+- Deta   https://deta.space/
+
+- Fleek   https://fleek.co/
+
+- Fly    https://fly.io/
+
+- Glitch   https://glitch.com/
+
+- Hostman    https://hostman.com/
+
+- Render    https://www.render.com/
   
+- Stormkit    https://www.stormkit.io/
 
-- Others
-
-- Begin
-
-- Fleek
-
-- Fly
-
-- Glitch
-
-- Hostman
-
-- Render
-
-- Stormkit
-
-- Surge
+- Surge     https://surge.sh/
 
   
 
