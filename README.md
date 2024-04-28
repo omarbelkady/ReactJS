@@ -20,9 +20,7 @@
 ### Fragments In React:
 
 ```
-
 <> </>
-
 ```
 
   
@@ -617,13 +615,11 @@ npx express-generator --no-view api
 
 - Heroku   https://heroku.com/
 
-<<<<<<< HEAD
-- Odoo
+- Odoo     https://www.odoo.com/
 
-- Vercel
-=======
+- Vercel    https://vercel.com/
+
 - Netlify   https://www.netlify.com/
->>>>>>> 8485e6f9c79537d3917adb32e8ef19e345bf29ec
 
 - Vercel  https://www.vercel.com/
 
